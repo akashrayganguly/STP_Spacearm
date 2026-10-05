@@ -148,6 +148,12 @@ class SpaceRobotSim:
     def tcp_body(self) -> np.ndarray:
         return self.world_to_body(self.tcp_world())
 
+    def tcp_velocity(self) -> np.ndarray:
+        """Linear velocity of the TCP in the inertial frame (m/s)."""
+        s = p.getLinkState(self.robot, self.tcp_link, computeLinkVelocity=1, computeForwardKinematics=True,
+                           physicsClientId=self.cid)
+        return np.array(s[6])
+
     def system_com(self) -> np.ndarray:
         """Centre of mass of the whole system in the inertial frame."""
         total, acc = 0.0, np.zeros(3)

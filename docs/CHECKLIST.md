@@ -38,10 +38,10 @@ Targets come from `DESIGN.md` §8. Record your numbers in the "got" column.
 - [x] `runs\level1\results.json` + table saved; commit — cloud: `reports/level1/results.{json,md}` (CLAUDE.md §5)
 
 ## Phase 5 — Level-2 environment
-- [ ] `pytest tests\test_p5_env.py` -> all passed (includes gymnasium `check_env`)
-- [ ] `play_env.py`: obstacles appear mid-episode; prior-only collides with some of them
-- [ ] Prior-only baseline at d = 0 and d = 1 recorded — got: ____ / ____
-- [ ] Commit
+- [x] `pytest tests\test_p5_env.py` -> all passed (includes gymnasium `check_env`) — 15 passed
+- [x] `play_env.py`: obstacles appear mid-episode; prior-only collides with some of them — cloud: offscreen MP4/PNG; obstacles appear (72 % of d = 1 episodes); the prior stalls in front of them, 0/40 collisions (spawn rule keeps obstacles from being born inside the arm)
+- [x] Prior-only baseline at d = 0 and d = 1 recorded — got: 72.5 % success, 0 % collisions / 35.0 % success, 0 % collisions (40 episodes each)
+- [x] Commit
 
 ## Phase 6 — PPO-Lagrangian
 - [ ] `pytest tests\test_p6_ppo_lag.py` -> all passed

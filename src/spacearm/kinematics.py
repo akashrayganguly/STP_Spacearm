@@ -73,14 +73,20 @@ class ArmKinematics:
 
     def jacobian(self, q) -> torch.Tensor:
         """Analytic positional Jacobian d tcp / d q, shape (..., 3, 7): column i = z_i x (p_tcp - p_i)."""
-        R, t = self.forward(q)
+        return self.jacobian_from(*self.forward(q))
+
+    def jacobian_from(self, R: torch.Tensor, t: torch.Tensor) -> torch.Tensor:
+        """Jacobian from an existing `forward` result (avoids a second FK pass)."""
         z = torch.stack([R[..., i, :, a] for i, a in enumerate(self.axes)], dim=-2)     # (..., 7, 3)
         r = t[..., -1:, :] - t[..., : self.n_joints, :]                                  # (..., 7, 3)
         return torch.linalg.cross(z, r, dim=-1).transpose(-1, -2)
 
     def capsules(self, q) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
         """Arm capsules: segment start a (..., 7, 3), end b (..., 7, 3), radii r (7,)."""
-        R, t = self.forward(q)
+        return self.capsules_from(*self.forward(q))
+
+    def capsules_from(self, R: torch.Tensor, t: torch.Tensor) -> tuple[torch.Tensor, torch.Tensor, torch.Tensor]:
+        """Capsules from an existing `forward` result (avoids a second FK pass)."""
         a = t[..., : self.n_joints, :]
         b = a + R[..., : self.n_joints, :, 2] * self.link_lengths[:, None]
         return a, b, self.radii
