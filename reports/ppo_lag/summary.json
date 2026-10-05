@@ -1,0 +1,31 @@
+{
+  "steps": 256000,
+  "total_steps": 3000000,
+  "updates": 125,
+  "best_eval": {
+    "success": 0.7,
+    "collision": 0.1,
+    "cost": 0.35,
+    "return": 10.616708835952538,
+    "length": 111.4,
+    "success_length": 91.42857142857143,
+    "n_episodes": 20,
+    "update": 100,
+    "steps": 204800
+  },
+  "prior_eval": {
+    "success": 0.45,
+    "collision": 0.15,
+    "cost": 0.35,
+    "return": 9.66554887489569,
+    "length": 128.05,
+    "success_length": 95.55555555555556,
+    "n_episodes": 20
+  },
+  "beats_prior": true,
+  "segment_minutes": 8.873162608383335,
+  "n_envs": 4,
+  "n_steps": 512,
+  "eval_seed": 20000,
+  "eval_episodes": 20
+}
