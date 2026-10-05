@@ -1,0 +1,37 @@
+{
+  "fk_max_error_m": 1.216859955022187e-07,
+  "com_drift_m": 1.973775549445236e-05,
+  "base_rotation_deg": 2.8187825292013007,
+  "joint_tracking_error_rad": 0.0006000939908146208,
+  "capsule_vs_pybullet_max_error_m": 4.996003610813204e-16,
+  "ghost_sweep": {
+    "min_distance_m": -0.15953593731923432,
+    "com_drift_m": 2.7965590994630567e-05,
+    "q2_after_2s": 0.9970690212527279,
+    "q2_expected": 1.0
+  },
+  "acm_worst_distance_m": {
+    "link1-bus": 0.03999999999999998,
+    "link1-panel_left": 0.7470111385370872,
+    "link1-panel_right": 0.7470111385370872,
+    "link1-payload": 0.24,
+    "link1-link3": 0.053217681102772835,
+    "link2-link4": 0.05320643509363851,
+    "link3-link5": 0.05320643509363843,
+    "link4-link6": 0.0632108248109562,
+    "link5-link7": 0.02124757736766942
+  },
+  "acm_n_configs": 20000,
+  "query_ms_per_config": 0.16205231019998792,
+  "uniform_collision_share": {
+    "any": 0.1336,
+    "body": 0.1336,
+    "self": 0.0006,
+    "n": 5000
+  },
+  "n_pairs": {
+    "body": 30,
+    "self": 10
+  },
+  "total_mass_kg": 212.01
+}

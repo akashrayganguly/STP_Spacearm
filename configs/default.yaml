@@ -34,6 +34,7 @@ robot:
     max_velocity: 0.5          # rad/s, every joint
     max_torque: 100.0          # N*m, velocity-motor force limit
     tool_offset: 0.15          # tool centre point (TCP) along link7 +z
+    tcp_mass: 0.01             # kg, the TCP frame is a link of its own (DESIGN §4 table)
   # Allowed-collision matrix: pairs never checked (parent-child pairs are skipped automatically).
   # Each pair below either never changes distance with q, or is "structurally adjacent"
   # (always < 0.10 m apart yet unable to collide within joint limits). test_p1 verifies this.

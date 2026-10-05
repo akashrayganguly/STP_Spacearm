@@ -10,11 +10,11 @@ Targets come from `DESIGN.md` §8. Record your numbers in the "got" column.
 - [x] First commit made — `Phase 0: cloud environment and progress log`
 
 ## Phase 1 — World model
-- [ ] `pytest tests\test_p1_robot_sim.py tests\test_p1_kinematics.py` -> 18 passed
-- [ ] FK matches PyBullet (< 1e-5 m) — got: ____
-- [ ] Free-floating: CoM drift < 2 mm, base rotates > 0.5° in the 2 s test — got: ____ / ____
-- [ ] `view_robot.py`: sliders move the arm; clearance turns negative when folded onto the deck
-- [ ] Commit
+- [x] `pytest tests\test_p1_robot_sim.py tests\test_p1_kinematics.py` -> 18 passed
+- [x] FK matches PyBullet (< 1e-5 m) — got: 1.2e-7 m
+- [x] Free-floating: CoM drift < 2 mm, base rotates > 0.5° in the 2 s test — got: 0.02 mm / 2.8°
+- [x] `view_robot.py`: sliders move the arm; clearance turns negative when folded onto the deck — cloud: `render_robot.py` offscreen (folded: d_body −36 cm); `view_robot.py` written for the workstation, not run here (no display)
+- [x] Commit
 
 ## Phase 2 — Dataset
 - [ ] `pytest tests\test_p2_datagen.py` -> all passed
