@@ -170,6 +170,7 @@ class SpaceReachEnv(gym.Env):
             self.spawn_vel = direction * rng.uniform(0.0, o["max_speed"]) if moving else np.zeros(3)
 
         self.t = 0
+        self.shield_interventions = 0
         self.prev_cmd = np.zeros(7)
         self.prev_action = np.zeros(7)
         self._true = self._true_clearances()
@@ -217,7 +218,9 @@ class SpaceReachEnv(gym.Env):
         info = self._info(cost, success, collision)
         info.update(cmd=cmd, tcp_speed=speed)
         if shield_info is not None:
+            self.shield_interventions += int(shield_info["intervened"])
             info["shield"] = shield_info
+            info["shield_interventions"] = self.shield_interventions
         return obs, float(reward), terminated, truncated, info
 
     def close(self) -> None:

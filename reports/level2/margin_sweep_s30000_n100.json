@@ -1,0 +1,111 @@
+{
+  "seed_base": 30000,
+  "episodes": 100,
+  "scenario": "S4",
+  "margins": {
+    "0.050": {
+      "prior+shield": {
+        "n": 100,
+        "success": 0.52,
+        "collision": 0.0,
+        "mean_cost": 0.0,
+        "time_to_reach_s": 10.944230769230767,
+        "base_rotation_deg": 5.483702172019171,
+        "shield_interventions_per_episode": 6.09,
+        "shield_intervention_rate": 0.039827349421228175,
+        "policy_ms_per_step": 0.0032956332614489737,
+        "env_step_ms": 3.627383860334944
+      },
+      "rl+shield": {
+        "n": 100,
+        "success": 0.64,
+        "collision": 0.0,
+        "mean_cost": 0.0,
+        "time_to_reach_s": 7.9625,
+        "base_rotation_deg": 5.880203211467246,
+        "shield_interventions_per_episode": 9.93,
+        "shield_intervention_rate": 0.08075797007156799,
+        "policy_ms_per_step": 0.1363337745548427,
+        "env_step_ms": 3.482555348619308
+      }
+    },
+    "0.060": {
+      "prior+shield": {
+        "n": 100,
+        "success": 0.5,
+        "collision": 0.0,
+        "mean_cost": 0.0,
+        "time_to_reach_s": 10.618,
+        "base_rotation_deg": 5.445308669878586,
+        "shield_interventions_per_episode": 10.31,
+        "shield_intervention_rate": 0.06734600561761056,
+        "policy_ms_per_step": 0.003367324393392157,
+        "env_step_ms": 3.640895863048982
+      },
+      "rl+shield": {
+        "n": 100,
+        "success": 0.62,
+        "collision": 0.0,
+        "mean_cost": 0.0,
+        "time_to_reach_s": 8.053225806451614,
+        "base_rotation_deg": 5.833315639697833,
+        "shield_interventions_per_episode": 16.33,
+        "shield_intervention_rate": 0.12967521639005797,
+        "policy_ms_per_step": 0.1367727550637949,
+        "env_step_ms": 3.5259920118058763
+      }
+    },
+    "0.070": {
+      "prior+shield": {
+        "n": 100,
+        "success": 0.5,
+        "collision": 0.0,
+        "mean_cost": 0.0,
+        "time_to_reach_s": 10.9,
+        "base_rotation_deg": 5.235609404332421,
+        "shield_interventions_per_episode": 23.91,
+        "shield_intervention_rate": 0.15475728155339805,
+        "policy_ms_per_step": 0.0033415458609861812,
+        "env_step_ms": 3.659069715988685
+      },
+      "rl+shield": {
+        "n": 100,
+        "success": 0.6,
+        "collision": 0.0,
+        "mean_cost": 0.0,
+        "time_to_reach_s": 8.345000000000002,
+        "base_rotation_deg": 5.768442625370626,
+        "shield_interventions_per_episode": 28.15,
+        "shield_intervention_rate": 0.21642192665487814,
+        "policy_ms_per_step": 0.1381441747480177,
+        "env_step_ms": 3.6042738699128063
+      }
+    },
+    "0.080": {
+      "prior+shield": {
+        "n": 100,
+        "success": 0.39,
+        "collision": 0.0,
+        "mean_cost": 0.0,
+        "time_to_reach_s": 10.117948717948718,
+        "base_rotation_deg": 4.684212730024118,
+        "shield_interventions_per_episode": 63.29,
+        "shield_intervention_rate": 0.3919856311160659,
+        "policy_ms_per_step": 0.003358306407348133,
+        "env_step_ms": 3.693951845054428
+      },
+      "rl+shield": {
+        "n": 100,
+        "success": 0.55,
+        "collision": 0.0,
+        "mean_cost": 0.0,
+        "time_to_reach_s": 8.312727272727274,
+        "base_rotation_deg": 5.327151289010284,
+        "shield_interventions_per_episode": 54.22,
+        "shield_intervention_rate": 0.3994989684644857,
+        "policy_ms_per_step": 0.13916080158533922,
+        "env_step_ms": 3.664949130404273
+      }
+    }
+  }
+}
