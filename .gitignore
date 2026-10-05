@@ -1,0 +1,22 @@
+# Generated, never committed (CLAUDE.md §5): regenerate data/ with `python scripts/gen_data.py`
+data/
+runs/
+videos/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+build/
+dist/
+.venv/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Claude Code local (per-user) settings; the shared .claude/settings.json is committed
+.claude/settings.local.json

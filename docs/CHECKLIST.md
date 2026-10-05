@@ -3,11 +3,11 @@
 Targets come from `DESIGN.md` §8. Record your numbers in the "got" column.
 
 ## Phase 0 — Setup
-- [ ] `conda --version` >= 23.10 (or Miniforge/mamba available); git installed
-- [ ] Project in a path without spaces, outside OneDrive; git repo initialised or cloned
-- [ ] `conda env create -f environment.yml` succeeded; `conda activate spacearm`; `pip install -e .`
-- [ ] PyBullet GUI window opens; `torch`, `gymnasium`, `onnxruntime` import
-- [ ] First commit made
+- [x] `conda --version` >= 23.10 (or Miniforge/mamba available); git installed — cloud: uv + git
+- [x] Project in a path without spaces, outside OneDrive; git repo initialised or cloned — cloud: `/home/user/STP_Spacearm` (clone)
+- [x] `conda env create -f environment.yml` succeeded; `conda activate spacearm`; `pip install -e .` — cloud: `cloud/setup.sh` venv (Py 3.11.13) + SessionStart hook
+- [x] PyBullet GUI window opens; `torch`, `gymnasium`, `onnxruntime` import — cloud: offscreen DIRECT + TinyRenderer render OK; imports OK
+- [x] First commit made — `Phase 0: cloud environment and progress log`
 
 ## Phase 1 — World model
 - [ ] `pytest tests\test_p1_robot_sim.py tests\test_p1_kinematics.py` -> 18 passed
