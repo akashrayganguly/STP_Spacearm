@@ -17,10 +17,10 @@ Targets come from `DESIGN.md` §8. Record your numbers in the "got" column.
 - [x] Commit
 
 ## Phase 2 — Dataset
-- [ ] `pytest tests\test_p2_datagen.py` -> all passed
-- [ ] `data\kinematics_dataset.npz` (200k) and `data\kinematics_test.npz` (20k) exist
-- [ ] Collision share: ~12 % uniform, ~20 % with boundary samples — got: ____
-- [ ] Commit (code only)
+- [x] `pytest tests\test_p2_datagen.py` -> all passed (6 passed)
+- [x] `data\kinematics_dataset.npz` (200k) and `data\kinematics_test.npz` (20k) exist
+- [x] Collision share: ~12 % uniform, ~20 % with boundary samples — got: 13.0 % / 21.5 %
+- [x] Commit (code only)
 
 ## Phase 3 — DistanceNet
 - [ ] Unit tests pass before training; acceptance test passes after training
