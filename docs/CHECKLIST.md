@@ -44,13 +44,13 @@ Targets come from `DESIGN.md` §8. Record your numbers in the "got" column.
 - [x] Commit
 
 ## Phase 6 — PPO-Lagrangian
-- [ ] `pytest tests\test_p6_ppo_lag.py` -> all passed
-- [ ] `pytest -m slow tests\test_p6_ppo_lag.py` -> toy task solved (success >= 80 %, cost <= 1.5)
-- [ ] 200k-step smoke run finished without errors
-- [ ] Full run finished; curves saved (success, cost, lambda, collision vs steps)
-- [ ] Periodic deterministic evaluation logged next to the prior-only score; best checkpoint kept in `models\ppo_lag.pt`
-- [ ] Best evaluation success ____ vs prior ____ (if RL never beats the prior: note it, keep prior + shield as the system)
-- [ ] Commit
+- [x] `pytest tests\test_p6_ppo_lag.py` -> all passed (8 fast)
+- [x] `pytest -m slow tests\test_p6_ppo_lag.py` -> toy task solved (success >= 80 %, cost <= 1.5) — 100 % / 0.86 (after making the curriculum opt-in)
+- [x] 200k-step smoke run finished without errors (7.5 min)
+- [x] Full run finished; curves saved (success, cost, lambda, collision vs steps) — 3.0 M steps, `reports/ppo_lag/curves.png`
+- [x] Periodic deterministic evaluation logged next to the prior-only score; best checkpoint kept in `models\ppo_lag.pt`
+- [x] Best evaluation success 85 % (20-episode selection; 67 % on 100 unseen episodes) vs prior 45 % (47 % on the same 100) — RL beats the prior
+- [x] Commit
 
 ## Phase 7 — Shield, evaluation, deployment
 - [ ] `pytest tests\test_p7_shield_export.py` -> all passed

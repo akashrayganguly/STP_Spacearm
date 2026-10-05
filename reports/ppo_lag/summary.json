@@ -1,7 +1,7 @@
 {
-  "steps": 2816000,
+  "steps": 3000320,
   "total_steps": 3000000,
-  "updates": 1375,
+  "updates": 1465,
   "best_eval": {
     "success": 0.85,
     "collision": 0.05,
@@ -23,7 +23,7 @@
     "n_episodes": 20
   },
   "beats_prior": true,
-  "segment_minutes": 8.282487828933336,
+  "segment_minutes": 6.777849306366686,
   "n_envs": 4,
   "n_steps": 512,
   "eval_seed": 20000,
