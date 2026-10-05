@@ -69,6 +69,10 @@ class SpaceReachEnv(gym.Env):
         self.v_max = float(cfg["robot"]["arm"]["max_velocity"])
         self.max_steps = int(self.e["max_steps"])
         self.clip_dist = float(cfg["sim"]["max_query_dist"])
+        r = cfg["robot"]
+        # Shoulder = joint 2 (fixed in the body frame); reach = links 2..6 + tool at full stretch.
+        self.shoulder = np.array(r["mount_xyz"]) + [0.0, 0.0, r["pedestal"]["length"] + r["arm"]["link_lengths"][0]]
+        self.max_reach = float(sum(r["arm"]["link_lengths"][1:6]) + r["arm"]["tool_offset"])
         self.mid = (self.sim.lower + self.sim.upper) / 2
         self.half = (self.sim.upper - self.sim.lower) / 2
         self.difficulty = float(np.clip(difficulty, 0.0, 1.0))
@@ -136,7 +140,8 @@ class SpaceReachEnv(gym.Env):
         while True:
             q_t = self._free_config(rng)
             target = self._tcp_fk(q_t)
-            if np.linalg.norm(target - tcp_start) >= self.cfg["traj"]["min_target_dist"]:
+            if (np.linalg.norm(target - tcp_start) >= self.cfg["traj"]["min_target_dist"]
+                    and np.linalg.norm(target - self.shoulder) <= e["target_reach_frac"] * self.max_reach):
                 break
         self.sim.reset(q=q_start)                          # base at the origin: body frame == inertial frame
         self.target_w = target

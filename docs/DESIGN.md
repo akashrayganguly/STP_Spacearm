@@ -136,7 +136,7 @@ arm links x spacecraft parts (30 pairs) and non-adjacent arm–arm pairs (10 pai
 ## 6. Level 2
 
 ### 6.1 Environment (`envs/space_reach_env.py`), gymnasium API
-* **Reset**: random collision-free start (clearance > 5 cm) and target (TCP of another free configuration, >= 0.2 m away). The target is **fixed in the inertial frame**, so base drift matters.
+* **Reset**: random collision-free start (clearance > 5 cm) and target (TCP of another free configuration, >= 0.2 m away, and within `env.target_reach_frac` = 85 % of the arm's reach from the shoulder). The target is **fixed in the inertial frame**, so base drift matters. (Changed in Phase 5: with targets up to full stretch, ~20 % of nominal episodes became unwinnable because the base recoil carried the target out of reach.)
 * **Action**: `(1, 7)` in [−1, 1]. Residual mode: command = `clip(prior + 0.5·fade·action)` with `fade = min(1, distance_to_target / 10 cm)`, joint velocity = command x 0.5 rad/s. The residual has half authority and fades out near the target, so the prior alone does the final precise approach.
 * **Observation** `{"actor": (1, 56), "critic": (90,)}`
 

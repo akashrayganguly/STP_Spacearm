@@ -119,6 +119,8 @@ env:
   max_steps: 200               # 20 s at 10 Hz
   self_clearance: net          # "net" = Level-1 distance net (deployment-faithful), "sim" = PyBullet (tests)
   distance_net_path: models/distance_net.pt
+  target_reach_frac: 0.85      # targets lie within this fraction of the arm's reach from the shoulder (joint 2);
+                               # near-full-stretch targets drift out of reach as the base recoils (Phase 5 finding)
   success_dist: 0.02
   success_speed: 0.05
   reward: {progress: 10.0, action_rate: 0.01, time: 0.005, success: 5.0, residual: 0.02}
