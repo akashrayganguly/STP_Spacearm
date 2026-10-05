@@ -23,11 +23,11 @@ Targets come from `DESIGN.md` §8. Record your numbers in the "got" column.
 - [x] Commit (code only)
 
 ## Phase 3 — DistanceNet
-- [ ] Unit tests pass before training; acceptance test passes after training
-- [ ] MAE all <= 1.0 cm — got: ____ ; MAE |d|<10 cm <= 2.0 cm — got: ____
-- [ ] Sign accuracy >= 97 % — got: ____ ; false-safe @ 3 cm <= 0.5 % — got: ____
-- [ ] `models\distance_net.pt` + `runs\distance_net\metrics.json` saved
-- [ ] Commit
+- [x] Unit tests pass before training; acceptance test passes after training (7 passed + 1 skipped -> 8 passed)
+- [x] MAE all <= 1.0 cm — got: 0.68 cm ; MAE |d|<10 cm <= 2.0 cm — got: 1.22 cm
+- [x] Sign accuracy >= 97 % — got: 98.3 % ; false-safe @ 3 cm <= 0.5 % — got: 0.12 %
+- [x] `models\distance_net.pt` + `runs\distance_net\metrics.json` saved — cloud: `reports/distance_net/metrics.json` (CLAUDE.md §5)
+- [x] Commit
 
 ## Phase 4 — Level-1 planner
 - [ ] `pytest tests\test_p4_trajectory.py` -> all passed (acceptance test included after training)
