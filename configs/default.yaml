@@ -1,0 +1,152 @@
+# =====================================================================
+# spacearm — single source of truth for every parameter in the project.
+# Units: metres, kilograms, seconds, radians (keys ending in _deg are degrees).
+# Change values here, never hard-code them in modules or tests.
+# =====================================================================
+seed: 0
+
+paths:
+  urdf: assets/space_robot.urdf          # written by scripts/make_urdf.py (for viewing only)
+  data_dir: data                         # generated datasets (git-ignored)
+  models_dir: models                     # trained weights (git-ignored except final exports)
+  runs_dir: runs                         # training logs (git-ignored)
+
+# ---------------------------------------------------------------------
+# Robot: free-floating spacecraft (bus + 2 solar panels) carrying one
+# 7-DOF S-R-S arm (shoulder 3, elbow 1, wrist 3), KUKA-iiwa-like sizes.
+# Body frame B = bus centre (= bus centre of mass), z up through the
+# arm-mount face, y along the solar panels.
+# ---------------------------------------------------------------------
+robot:
+  bus:    {size: [1.0, 1.0, 1.0], mass: 150.0}
+  panels: {size: [0.8, 1.6, 0.02], mass: 10.0, gap: 0.05}   # centred at y = ±(0.5 + gap + 0.8)
+  payloads:                                                 # rigid boxes on the bus (obstacles for the arm)
+    - {name: payload, size: [0.40, 0.50, 0.30], xyz: [-0.20, 0.0, 0.65], mass: 20.0}
+  mount_xyz: [0.30, 0.0, 0.50]                              # arm base on the +z face
+  pedestal: {length: 0.10, radius: 0.07, mass: 4.0}
+  arm:
+    axes:         [z, y, z, y, z, y, z]
+    link_lengths: [0.24, 0.20, 0.20, 0.20, 0.20, 0.14, 0.12]  # link1..link7; joint i+1 sits at the end of link i
+    link_radii:   [0.06, 0.06, 0.06, 0.06, 0.06, 0.05, 0.04]  # capsule radius per link
+    link_masses:  [4.0, 3.0, 3.0, 2.5, 2.5, 1.5, 1.5]
+    lower_deg:    [-170, -120, -170, -120, -170, -120, -175]
+    upper_deg:    [ 170,  120,  170,  120,  170,  120,  175]
+    max_velocity: 0.5          # rad/s, every joint
+    max_torque: 100.0          # N*m, velocity-motor force limit
+    tool_offset: 0.15          # tool centre point (TCP) along link7 +z
+  # Allowed-collision matrix: pairs never checked (parent-child pairs are skipped automatically).
+  # Each pair below either never changes distance with q, or is "structurally adjacent"
+  # (always < 0.10 m apart yet unable to collide within joint limits). test_p1 verifies this.
+  acm_skip:
+    - [link1, bus]
+    - [link1, panel_left]
+    - [link1, panel_right]
+    - [link1, payload]
+    - [link1, link3]
+    - [link2, link4]
+    - [link3, link5]
+    - [link4, link6]
+    - [link5, link7]
+
+sim:
+  physics_hz: 240              # PyBullet step 1/240 s
+  control_hz: 10               # policy / planner rate -> 24 physics substeps per control step
+  max_query_dist: 0.30         # distance queries are clipped at this value
+
+collision:
+  plan_margin: 0.05            # Level-1 clearance the planner keeps
+  cost_dist: 0.02              # Level-2 near-miss distance -> cost = 1
+
+# ----------------------------- Level 1 --------------------------------
+data:
+  n_samples: 200000
+  boundary_frac: 0.25          # share of samples re-drawn near the collision surface
+  boundary_band: 0.05          # |distance| < band counts as "near the surface"
+  boundary_sigma: 0.05         # rad, perturbation for boundary samples
+  limit_frac: 0.98             # sample inside 98 % of each joint range
+
+distance_net:
+  hidden: 256
+  layers: 3
+  tau: 0.01                    # smooth-min temperature (m)
+  clip: [-0.05, 0.30]          # training-target clipping (m)
+  near_band: 0.05
+  near_weight: 10.0
+  lr: 2.0e-3                   # cosine-decayed to 0
+  batch: 1024
+  epochs: 60
+
+traj:
+  degree: 7                    # Bezier degree -> 8 control points (P0=P1=start, P6=P7=goal)
+  hidden: 512
+  layers: 3
+  t_train: 16                  # curve samples used in the training loss
+  t_verify: 100                # curve samples checked in PyBullet
+  w_reach: 100.0
+  w_coll: 1000.0
+  w_smooth: 0.1
+  lr: 3.0e-4                   # cosine-decayed to 0
+  batch: 256
+  steps: 10000
+  refine_steps: 30             # test-time Adam steps on the network output
+  retry_refine_steps: 100      # second attempt if PyBullet verification fails
+  refine_lr: 0.05
+  polish_iters: 10             # damped-least-squares IK steps on the exact FK (mm precision)
+  success_tol: 0.02            # m, reach tolerance
+  min_target_dist: 0.20        # m, start TCP to target
+
+# ----------------------------- Level 2 --------------------------------
+prior:                         # classical reflex layer; the RL policy learns a residual on top
+  k_p: 1.0                     # 1/s, Cartesian gain on the vision-measured TCP->target vector
+  v_max: 0.15                  # m/s, Cartesian speed cap
+  damping: 0.05                # DLS damping (singularity robustness)
+  k_null: 0.5                  # rad/s, null-space push away from the spacecraft body (uses the 7th DOF)
+  null_activation: 0.10        # m, null-space push starts below this self-clearance
+  k_obs: 0.5                   # rad/s, obstacle repulsion reflex (0 = ablation: avoidance learned from scratch)
+  obs_activation: 0.15         # m, repulsion starts below this obstacle clearance
+
+env:
+  n_arms: 1                    # 2 = stretch goal (MAPPO-Lagrangian)
+  residual: true               # command = clip(prior + scale * fade * policy); false = pure RL (ablation)
+  residual_scale: 0.5          # residual authority (0.5 = up to half the joint speed limit)
+  residual_fade: 0.10          # m, residual fades to 0 inside this distance to the target
+  max_steps: 200               # 20 s at 10 Hz
+  self_clearance: net          # "net" = Level-1 distance net (deployment-faithful), "sim" = PyBullet (tests)
+  distance_net_path: models/distance_net.pt
+  success_dist: 0.02
+  success_speed: 0.05
+  reward: {progress: 10.0, action_rate: 0.01, time: 0.005, success: 5.0, residual: 0.02}
+  obstacle: {prob: 0.8, radius: [0.05, 0.12], spawn_time: [1.0, 5.0], move_prob: 0.5, max_speed: 0.03}
+  faults:   {enabled: true, bias_deg: 2.0, gain_min: 0.7, slip_prob: 0.3, slip_deg: 3.0}
+  noise:    {enabled: true, encoder_deg: 0.1, vision_m: 0.005, gyro: 0.002}
+
+ppo:
+  n_envs: 8
+  n_steps: 256                 # per env per update -> 2048 transitions
+  total_steps: 3000000
+  epochs: 10
+  minibatches: 8
+  gamma: 0.99
+  gae_lambda: 0.95
+  clip: 0.2
+  lr: 3.0e-4                   # critics
+  actor_lr: 1.0e-4             # smaller steps for the actor: the residual starts at the prior and must not drift
+  actor_warmup_updates: 10     # train the critics first (actor frozen) so early advantages are not noise
+  vf_coef: 0.5
+  max_grad_norm: 0.5
+  target_kl: 0.02
+  actor_hidden: [64, 64]
+  critic_hidden: [256, 256]
+  log_std_init: -1.6           # sigma ~0.2: small exploration around the prior (residual RL)
+  cost_limit: 1.0              # expected near-miss steps per episode
+  lambda_init: 0.1
+  lambda_lr: 0.05
+  lambda_max: 10.0
+  curriculum_frac: 0.5         # difficulty ramps 0 -> 1 over this share of training
+
+shield:
+  self_margin: 0.05            # covers DistanceNet error + encoder bias (validation: 3 cm let 5 % collide, 5 cm 2.5 %)
+  obstacle_margin: 0.05
+  lookahead_steps: 2
+  scales: [1.0, 0.5, 0.25]
+  escape_speed: 0.5

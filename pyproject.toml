@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "spacearm"
+version = "0.1.0"
+description = "Neural kinematics + constrained RL for collision-free 7-DOF space manipulator path planning"
+requires-python = ">=3.11"
+# Dependencies are installed by environment.yml (conda-forge) + pip (torch); nothing is pulled here on purpose.
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra -m \"not slow\""
+markers = [
+    "slow: learning checks that take minutes (run with: pytest -m slow)",
+    "needs_models: needs trained weights in models/ (skipped automatically if missing)",
+]
+filterwarnings = ["ignore::DeprecationWarning"]

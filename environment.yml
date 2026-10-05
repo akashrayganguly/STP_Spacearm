@@ -1,0 +1,25 @@
+# Create with (Anaconda Prompt, inside the project folder):
+#     conda env create -f environment.yml        (or: mamba env create -f environment.yml)
+# Only conda-forge is used (no Anaconda "defaults" channel).
+name: spacearm
+channels:
+  - conda-forge
+  - nodefaults
+dependencies:
+  - python=3.11            # onnxruntime needs >= 3.11; every package below has 3.11 builds
+  - pybullet               # conda-forge ships Windows builds; pip would have to compile C++ on Windows
+  - numpy
+  - scipy
+  - pyyaml
+  - matplotlib
+  - pandas
+  - tqdm
+  - pytest
+  - imageio
+  - imageio-ffmpeg         # bundled ffmpeg for the demo video (no system ffmpeg needed)
+  - pip
+  - pip:
+      - torch              # CPU build on Windows (enough here; see PLAN.md for the optional GPU build)
+      - gymnasium>=1.1,<2
+      - onnx
+      - onnxruntime
