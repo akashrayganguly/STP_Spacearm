@@ -30,12 +30,12 @@ Targets come from `DESIGN.md` §8. Record your numbers in the "got" column.
 - [x] Commit
 
 ## Phase 4 — Level-1 planner
-- [ ] `pytest tests\test_p4_trajectory.py` -> all passed (acceptance test included after training)
-- [ ] Random set: full planner success >= 95 % — got: ____ (baseline: ____)
-- [ ] Hard set: full planner success >= 90 % — got: ____ (baseline: 0 % by construction)
-- [ ] Median plan time < 0.5 s — got: ____
-- [ ] Open-loop free-floating check reported: inertial miss ____ cm, base rotation ____°
-- [ ] `runs\level1\results.json` + table saved; commit
+- [x] `pytest tests\test_p4_trajectory.py` -> all passed (acceptance test included after training) — 10 passed
+- [x] Random set: full planner success >= 95 % — got: 100 % (baseline: 92 %)
+- [x] Hard set: full planner success >= 90 % — got: 100 % (baseline: 0 % by construction)
+- [x] Median plan time < 0.5 s — got: 99 ms (1 thread; 114 ms incl. PyBullet verification)
+- [x] Open-loop free-floating check reported: inertial miss 17.2 cm median (33.3 max), base rotation 6.4° median (12.4° max)
+- [x] `runs\level1\results.json` + table saved; commit — cloud: `reports/level1/results.{json,md}` (CLAUDE.md §5)
 
 ## Phase 5 — Level-2 environment
 - [ ] `pytest tests\test_p5_env.py` -> all passed (includes gymnasium `check_env`)

@@ -89,12 +89,15 @@ traj:
   w_coll: 1000.0
   w_smooth: 0.1
   lr: 3.0e-4                   # cosine-decayed to 0
+  weight_decay: 0.01           # AdamW (= PyTorch default, pinned here)
+  grad_clip: 1.0               # gradient-norm clip (validation-build lesson 9)
   batch: 256
   steps: 10000
   refine_steps: 30             # test-time Adam steps on the network output
   retry_refine_steps: 100      # second attempt if PyBullet verification fails
   refine_lr: 0.05
   polish_iters: 10             # damped-least-squares IK steps on the exact FK (mm precision)
+  polish_damping: 0.01         # DLS damping of the polish step (DESIGN §5.4)
   success_tol: 0.02            # m, reach tolerance
   min_target_dist: 0.20        # m, start TCP to target
 
