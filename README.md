@@ -41,30 +41,30 @@ Targets: random ≥ 95 %, hard ≥ 90 %, median plan time < 0.5 s; all met. Play
 | Scenario | Method | Success | Collisions | Near-miss cost / ep. | Time to reach |
 |---|---|---|---|---|---|
 | S1 nominal | prior (reflex) | 88 % | 5 % | 0.38 | 9.7 s |
-| S1 nominal | prior + shield | 87 % | 0 % | 0.04 | 10.0 s |
+| S1 nominal | prior + shield | 83 % | 0 % | 0.00 | 9.9 s |
 | S1 nominal | RL | 94 % | 2 % | 0.40 | 6.6 s |
-| S1 nominal | **RL + shield** | **91 %** | **0 %** | **0.00** | 7.0 s |
+| S1 nominal | **RL + shield** | **89 %** | **0 %** | 0.00 | 6.9 s |
 | S2 obstacles only | prior | 58 % | 6 % | 0.66 | 10.4 s |
-| S2 obstacles only | prior + shield | 56 % | 0 % | 0.41 | 10.6 s |
+| S2 obstacles only | prior + shield | 53 % | 1 % | 0.30 | 10.2 s |
 | S2 obstacles only | RL | 71 % | 4 % | 0.53 | 7.5 s |
-| S2 obstacles only | **RL + shield** | **68 %** | **0 %** | **0.00** | 7.7 s |
+| S2 obstacles only | **RL + shield** | **68 %** | **0 %** | 0.00 | 7.9 s |
 | S2 obstacles only | ablation: prior, reflex off | 39 % | 59 % | 2.20 | 8.3 s |
 | S3 faults + noise only | prior | 85 % | 3 % | 0.56 | 11.2 s |
-| S3 faults + noise only | prior + shield | 84 % | 0 % | 0.00 | 11.5 s |
+| S3 faults + noise only | prior + shield | 77 % | 0 % | 0.00 | 11.0 s |
 | S3 faults + noise only | RL | 92 % | 3 % | 0.38 | 7.8 s |
-| S3 faults + noise only | **RL + shield** | **89 %** | **1 %** | 0.24 | 8.2 s |
+| S3 faults + noise only | **RL + shield** | **87 %** | **0 %** | 0.12 | 8.2 s |
 | S4 everything | prior | 45 % | 7 % | 0.71 | 11.2 s |
-| S4 everything | prior + shield | 45 % | 1 % | 0.05 | 11.5 s |
+| S4 everything | prior + shield | 41 % | 1 % | 0.05 | 10.9 s |
 | S4 everything | RL | 61 % | 4 % | 0.38 | 8.0 s |
-| S4 everything | **RL + shield** | **59 %** | **2 %** | 0.35 | 8.3 s |
+| S4 everything | **RL + shield** | **58 %** | **0 %** | 0.09 | 8.2 s |
 | S4 everything | ablation: prior, reflex off | 34 % | 60 % | 2.67 | 9.5 s |
 
 Full table with base rotation and shield intervention rates: [`reports/level2/results.md`](reports/level2/results.md).
 
-* **The S4 target is met:** RL + shield has 2 % collisions (target ≤ 3 %) and 59 % success, against the prior's 45 %. The stretch goal (≥ 70 % success) is not met.
-* **S1:** success is not worse than the prior's (91 % vs 88 %) and there are no near-misses (0.00 vs 0.38 per episode).
+* **The S4 target is met:** RL + shield has 0 % collisions (target ≤ 3 %) and 58 % success, against the prior's 45 % / 7 %. The stretch goal (≥ 70 % success) is not met.
+* **S1:** success is not worse than the prior's (89 % vs 88 %) and there are no near-misses (0.00 vs 0.38 per episode).
 * **The RL residual** adds 6–16 points of success in every scenario and reaches targets about 30 % faster.
-* **The shield** removes most collisions: across S1–S4, 20 of 21 for the prior and 10 of 13 for RL. The cost is 0–3 points of success.
+* **The shield**, with a 6 cm self-margin, removes every RL collision in S1–S4 (13 → 0) and almost all prior collisions (21 → 2). The cost is 3–5 points of success for RL.
 * **The reflex matters:** without it the prior collides in about 60 % of obstacle episodes.
 
 Latency on one CPU thread (control period 100 ms):
@@ -78,10 +78,7 @@ Latency on one CPU thread (control period 100 ms):
 | Full control step incl. physics, features, policy, prior, shield | 4.5 ms | 7.3 ms |
 
 ### Honest limits
-* **The Level-2 acceptance test fails at DESIGN's 5 cm shield margin.** `test_trained_policy_is_safe_and_not_worse_than_the_prior` uses the first 40 of the 100 evaluation episodes, and both of the 2 S4 collisions fall inside them (2/40 = 5 % > 3 %). Both were spacecraft grazes: the robot's own clearance estimate (DistanceNet on encoder angles carrying up to 3.6° of bias after a slip) was about 5.5 cm too optimistic.
-  * On 100 independent episodes (seeds 30000+), RL + shield has **0 %** collisions at 5 cm.
-  * A 6 cm margin removes both collisions on the test seeds and costs about 2 points of success (`reports/level2/margin_sweep_*.json`).
-  * Changing the margin is a DESIGN decision, pending the engineer.
+* **Shield margin raised from 5 to 6 cm (Phase 7, agreed).** At 5 cm, 2 of the 100 S4 episodes, both inside the 40 used by the acceptance test, grazed the spacecraft. The robot's own clearance estimate (DistanceNet on encoder angles carrying up to 3.6° of bias after a slip) was about 5.5 cm too optimistic. At 6 cm: 0 collisions in all four scenarios, for about 2 points of success (`reports/level2/margin_sweep_*.json`).
 * **The shield is a model-based filter, not a proof:** it only knows the measured joint angles, the DistanceNet and the obstacle as seen by vision.
 * **Targets are sampled within 85 % of the arm's reach.** With unrestricted targets, about 20 % of nominal episodes were unwinnable: the base recoil carried near-full-stretch targets out of reach.
 * **The PPO-Lagrangian constraint (≤ 1 near-miss step per episode) rarely bound** (λ ≤ 0.45). Collision safety comes mostly from the reflex and the shield, not from the learned constraint.
@@ -95,9 +92,11 @@ REM Python 3.11 + PyBullet from conda-forge (PLAN.md Phase 0), then this package
 conda env create -f environment.yml
 conda activate spacearm
 pip install -e .
-REM fast tests (about 15 s); add -m "slow or not slow" for everything (about 2 min)
+REM fast tests (about 15 s); add -m "slow or not slow" for everything (about 2 min, 77 tests)
 pytest
 REM evaluations with the committed models
+python scripts\gen_data.py
+REM   (data\ is not in git: about 1 min, needed by eval_level1)
 python scripts\eval_level1.py
 python scripts\eval_level2.py
 python scripts\export_policy.py
@@ -105,6 +104,8 @@ python scripts\demo_video.py
 REM GUI viewers (workstation only)
 python scripts\view_robot.py
 python scripts\play_env.py --gui --difficulty 1.0 --episodes 3
+REM watch the trained policy behind the shield
+python scripts\play_env.py --gui --policy models\ppo_lag.pt --shield --difficulty 1.0 --episodes 5
 ```
 To retrain from scratch, run each phase's script in order (each one takes `--config` and `--seed`):
 ```bat

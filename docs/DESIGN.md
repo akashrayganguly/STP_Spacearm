@@ -178,8 +178,8 @@ Critic = actor features + 34 privileged values: true joint angles, encoder bias,
 * Always run the slow toy test first: if PPO-Lagrangian cannot solve `PointHazardEnv`, do not start the arm run.
 
 ### 6.4 Safety shield (`safety/shield.py`)
-Predict `q' = q + s·a·v_max·0.2 s` (2 control steps) for s in {1, 0.5, 0.25}; accept the largest s with `h(q') >= 0`, where `h = min(DistanceNet clearance − 5 cm, obstacle clearance − 5 cm)` (obstacle clearance = analytic sphere–capsule distance on exact FK). If none is safe, command `0.5·∇h/|∇h|∞` (escape), or zero if escaping does not help.
-* The shield only knows the **measured** joint angles, which carry up to ~5° of encoder bias + slip. The 5 cm self-margin covers that plus the DistanceNet error (validation: a 3 cm margin let 5 % of S4 episodes graze the bus; 5 cm: 2.5 %).
+Predict `q' = q + s·a·v_max·0.2 s` (2 control steps) for s in {1, 0.5, 0.25}; accept the largest s with `h(q') >= 0`, where `h = min(DistanceNet clearance − 6 cm, obstacle clearance − 5 cm)` (obstacle clearance = analytic sphere–capsule distance on exact FK). If none is safe, command `0.5·∇h/|∇h|∞` (escape), or zero if escaping does not help.
+* The shield only knows the **measured** joint angles, which carry up to ~5° of encoder bias + slip. The 6 cm self-margin covers that plus the DistanceNet error (validation: a 3 cm margin let 5 % of S4 episodes graze the bus; 5 cm: 2.5 %). Changed from 5 to 6 cm in Phase 7: with 5 cm, 2 of the 40 acceptance episodes grazed the bus because the robot's clearance estimate was ~5.5 cm too optimistic (joint-1 encoder bias up to 3.6° after a slip); 6 cm removed both at no success cost on those seeds and ~2 points on independent seeds.
 
 ### 6.5 Deployment (`export.py`)
 Actor with observation normalisation baked in -> **NumPy `.npz`** (3 matmuls, ~10 µs) and **ONNX** (opset 17). Report parameter count, p50/p99 latency of actor, prior, shield and full step on one CPU thread.

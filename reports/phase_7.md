@@ -1,4 +1,4 @@
-## Phase 7 — Shield, Level-2 evaluation, deployment, demo: DONE (one decision pending)
+## Phase 7 — Shield, Level-2 evaluation, deployment, demo: DONE
 
 Built:
 * `src/spacearm/safety/shield.py` — `SafetyShield`: 0.2 s lookahead at scales 1 / ½ / ¼ (one batched evaluation), h = min(DistanceNet clearance − 5 cm, obstacle clearance − 5 cm), escape along ∇h otherwise (via `autograd.grad`, no side effects on the DistanceNet). `shield_from_config`. The env counts interventions per episode.
@@ -64,3 +64,20 @@ Decisions / deviations and why:
 * **Not done:** `git tag v1.0`. The work sits on a feature branch; tag `main` after the merge.
 
 Next: decide (A)/(B) for the shield margin, merge the PR into `main`, tag v1.0. Phase 8 (dual arm) is the optional stretch.
+
+---
+### Update — decision (B) applied: `shield.self_margin` 5 → 6 cm
+Changed the config and DESIGN §6.4 (no test change needed), re-ran the full Level-2 evaluation and the demo, and ran the complete test suite.
+Also added `play_env.py --policy ... --shield`, so the trained policy can be watched live in the GUI, and the missing `gen_data.py` step in the README's run instructions.
+
+| Scenario (100 identical episodes, seeds 10000+) | Prior | RL + shield @ 5 cm | **RL + shield @ 6 cm** |
+|---|---|---|---|
+| S1 nominal: success / collisions | 88 % / 5 % | 91 % / 0 % | **89 % / 0 %** |
+| S2 obstacles only | 58 % / 6 % | 68 % / 0 % | **68 % / 0 %** |
+| S3 faults + noise only | 85 % / 3 % | 89 % / 1 % | **87 % / 0 %** |
+| S4 everything | 45 % / 7 % | 59 % / 2 % | **58 % / 0 %** |
+
+* RL + shield: 0 collisions in 400 episodes (was 3). The shield now removes 13 of 13 RL collisions and 19 of 21 prior collisions, at a cost of 3–5 points of RL success.
+* `python -m pytest -m "slow or not slow"`: **77 passed** (the Level-2 acceptance test now passes).
+* The demo picked the same episode (seed 10017): the prior times out 3.3 cm short; RL + shield arrives at 11.1 s.
+* Next: merge the PR into `main`, tag `v1.0` on `main`. Phase 8 (dual arm) is optional.

@@ -1,5 +1,6 @@
-"""Run prior-only episodes (zero residual) in the Level-2 environment, print each episode's outcome,
-save summary statistics and render the first episode(s) offscreen.
+"""Run episodes in the Level-2 environment (prior only by default, or a trained policy with --policy,
+optionally behind the safety shield with --shield), print each episode's outcome, save summary statistics
+and render the first episode(s) offscreen.
 
   reports/level2/prior_d<d>.json          success / collision / cost / timing over the episodes
   reports/level2/play_d<d>_ep<k>.mp4       offscreen video (10 fps)
@@ -7,6 +8,8 @@ save summary statistics and render the first episode(s) offscreen.
 
     python scripts/play_env.py --difficulty 1.0 --episodes 3 [--render 1] [--seed 0] [--config ...]
     python scripts/play_env.py --gui ...    (workstation only: PyBullet window instead of offscreen frames)
+    python scripts/play_env.py --gui --policy models/ppo_lag.pt --shield --difficulty 1.0 --episodes 5
+                                            (watch the trained RL residual + shield)
 """
 from __future__ import annotations
 
@@ -22,7 +25,12 @@ import matplotlib.pyplot as plt  # noqa: E402
 import numpy as np  # noqa: E402
 
 from spacearm.config import ROOT, load_config  # noqa: E402
+import torch  # noqa: E402
+
 from spacearm.envs.space_reach_env import SpaceReachEnv  # noqa: E402
+from spacearm.models.distance_net import DistanceNet  # noqa: E402
+from spacearm.rl.ppo_lag import PPOLagAgent  # noqa: E402
+from spacearm.safety.shield import shield_from_config  # noqa: E402
 
 STRIP_FRAMES = 6
 INK = "#0b0b0b"
@@ -48,17 +56,26 @@ def main() -> None:
     ap.add_argument("--seed", type=int, default=0, help="episode k uses seed + k")
     ap.add_argument("--render", type=int, default=1, help="number of episodes to render (0 = none)")
     ap.add_argument("--gui", action="store_true", help="PyBullet GUI (workstation only)")
+    ap.add_argument("--policy", default=None, help="trained policy (e.g. models/ppo_lag.pt); default: prior only")
+    ap.add_argument("--shield", action="store_true", help="filter commands through the safety shield")
     args = ap.parse_args()
 
     cfg = load_config(args.config)
     env = SpaceReachEnv(cfg, difficulty=args.difficulty, gui=args.gui)
+    if args.shield:
+        dnet = DistanceNet.from_config(cfg)
+        dnet.load_state_dict(torch.load(ROOT / cfg["env"]["distance_net_path"], map_location="cpu"))
+        env.set_shield(shield_from_config(env.kin, cfg, dnet))
+    agent = PPOLagAgent.load(ROOT / args.policy) if args.policy else None
     out = ROOT / "reports" / "level2"
     out.mkdir(parents=True, exist_ok=True)
-    tag = f"d{args.difficulty:g}"
+    name = ("rl" if agent else "prior") + ("_shield" if args.shield else "")
+    tag = f"d{args.difficulty:g}" if name == "prior" else f"{name}_d{args.difficulty:g}"
     zero = np.zeros((1, 7), np.float32)
+    obs = None
     eps, step_times = [], []
     for k in range(args.episodes):
-        _, info = env.reset(seed=args.seed + k)
+        obs, info = env.reset(seed=args.seed + k)
         d0 = info["d_tcp"]
         render = (not args.gui) and k < args.render
         frames, titles = [], []
@@ -69,7 +86,7 @@ def main() -> None:
                 frames.append(env.render())
                 titles.append(f"t={env.t / 10:.1f}s d={info['d_tcp'] * 100:.0f}cm clr={info['clearance'] * 100:.0f}cm")
             t0 = time.perf_counter()
-            _, r, te, tr, info = env.step(zero)
+            obs, r, te, tr, info = env.step(agent.act(obs["actor"]) if agent else zero)
             step_times.append(time.perf_counter() - t0)
             ret += r
             cost += info["cost"]
@@ -105,11 +122,13 @@ def main() -> None:
                "collision_with_obstacle": rate("collision", lambda e: e["obstacle"]),
                "step_ms_median": float(np.median(step_times) * 1e3), "step_ms_p95": float(np.percentile(step_times, 95) * 1e3),
                "episodes_detail": eps}
-    (out / f"prior_{tag}.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
-    print(f"\nprior only, d = {args.difficulty:g}, {len(eps)} episodes: success {100 * summary['success']:.1f} %, "
+    summary_file = out / (f"prior_{tag}.json" if name == "prior" else f"play_{tag}.json")
+    summary_file.write_text(json.dumps(summary, indent=2), encoding="utf-8")
+    label = {"prior": "prior only", "prior_shield": "prior + shield", "rl": "RL", "rl_shield": "RL + shield"}[name]
+    print(f"\n{label}, d = {args.difficulty:g}, {len(eps)} episodes: success {100 * summary['success']:.1f} %, "
           f"collisions {100 * summary['collision']:.1f} %, mean cost {summary['mean_cost']:.2f}, "
           f"obstacles in {100 * summary['obstacle_share']:.0f} % of episodes, env step {summary['step_ms_median']:.2f} ms (median)")
-    print(f"saved {out / f'prior_{tag}.json'}" + (f" and renders play_{tag}_ep*.mp4/.png" if args.render and not args.gui else ""))
+    print(f"saved {summary_file}" + (f" and renders play_{tag}_ep*.mp4/.png" if args.render and not args.gui else ""))
 
 
 if __name__ == "__main__":

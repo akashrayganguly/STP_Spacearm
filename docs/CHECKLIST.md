@@ -54,11 +54,11 @@ Targets come from `DESIGN.md` §8. Record your numbers in the "got" column.
 
 ## Phase 7 — Shield, evaluation, deployment
 - [x] `pytest tests\test_p7_shield_export.py` -> all passed (9 fast)
-- [x] Level-2 table S1–S4 x {prior, prior + shield, RL, RL + shield} saved — S4 RL + shield: success 59 % (prior: 45 %), collisions 2 % (target <= 3 %) — 100 episodes, `reports/level2/results.md`
+- [x] Level-2 table S1–S4 x {prior, prior + shield, RL, RL + shield} saved — S4 RL + shield: success 58 % (prior: 45 %), collisions 0 % (target <= 3 %) — 100 episodes, 6 cm shield margin, `reports/level2/results.md`
 - [x] Actor exported to `.npz` and `.onnx`; latency p50/p99 recorded — got: NumPy 0.012 / 0.029 ms, ONNX 0.008 / 0.024 ms, full step 4.5 / 7.3 ms
 - [x] Demo video `videos\demo.mp4` shows re-routing around a surprise obstacle — cloud: `reports/demo.mp4` (seed 10017: prior times out, RL + shield arrives at 11.1 s)
-- [x] `pytest -m "slow or not slow"` -> all passed or the failing targets are explained in the README — 76 passed, 1 failed (S4 acceptance on 40 episodes: 2/40 collisions at the 5 cm shield margin; explained, 6 cm option pending)
-- [ ] README results section written; `git tag v1.0` — README done; tag `main` after the merge (shield-margin decision pending)
+- [x] `pytest -m "slow or not slow"` -> all passed or the failing targets are explained in the README — 77 passed (after raising the shield margin to 6 cm; at 5 cm the S4 acceptance test had 2/40 collisions)
+- [ ] README results section written; `git tag v1.0` — README done; tag `v1.0` on `main` after the PR is merged
 
 ## Phase 8 — Stretch (optional)
 - [ ] Dual-arm tests written first; env with `n_arms = 2`; MAPPO-Lagrangian trained; comparison table

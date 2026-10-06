@@ -13,20 +13,20 @@
       "base_rotation_deg": 5.857629674384128,
       "shield_interventions_per_episode": 0.0,
       "shield_intervention_rate": 0.0,
-      "policy_ms_per_step": 0.003138450802320427,
-      "env_step_ms": 2.95951022085444
+      "policy_ms_per_step": 0.002943272887843579,
+      "env_step_ms": 2.6683187697307384
     },
     "prior+shield": {
       "n": 100,
-      "success": 0.56,
-      "collision": 0.0,
-      "mean_cost": 0.41,
-      "time_to_reach_s": 10.587500000000002,
-      "base_rotation_deg": 5.916775057874532,
-      "shield_interventions_per_episode": 12.69,
-      "shield_intervention_rate": 0.08615656188471722,
-      "policy_ms_per_step": 0.003332361979541256,
-      "env_step_ms": 3.758475168007202
+      "success": 0.53,
+      "collision": 0.01,
+      "mean_cost": 0.3,
+      "time_to_reach_s": 10.167924528301887,
+      "base_rotation_deg": 5.879469452718607,
+      "shield_interventions_per_episode": 15.35,
+      "shield_intervention_rate": 0.10414546441413935,
+      "policy_ms_per_step": 0.0028042610527842377,
+      "env_step_ms": 3.1488232301193646
     },
     "rl": {
       "n": 100,
@@ -37,20 +37,20 @@
       "base_rotation_deg": 6.369854804182604,
       "shield_interventions_per_episode": 0.0,
       "shield_intervention_rate": 0.0,
-      "policy_ms_per_step": 0.13615335373127782,
-      "env_step_ms": 2.931805262368796
+      "policy_ms_per_step": 0.11342714583067384,
+      "env_step_ms": 2.488068761320111
     },
     "rl+shield": {
       "n": 100,
       "success": 0.68,
       "collision": 0.0,
       "mean_cost": 0.0,
-      "time_to_reach_s": 7.738235294117648,
-      "base_rotation_deg": 6.404318152648846,
-      "shield_interventions_per_episode": 9.98,
-      "shield_intervention_rate": 0.08557708797804836,
-      "policy_ms_per_step": 0.14502341750432687,
-      "env_step_ms": 3.701090583767423
+      "time_to_reach_s": 7.927941176470589,
+      "base_rotation_deg": 6.397745887621166,
+      "shield_interventions_per_episode": 13.64,
+      "shield_intervention_rate": 0.11568145195488085,
+      "policy_ms_per_step": 0.11452378188295934,
+      "env_step_ms": 2.998043313840161
     },
     "prior (reflex off)": {
       "n": 100,
@@ -61,8 +61,8 @@
       "base_rotation_deg": 4.763157533277619,
       "shield_interventions_per_episode": 0.0,
       "shield_intervention_rate": 0.0,
-      "policy_ms_per_step": 0.003343597423511655,
-      "env_step_ms": 2.9103098071148317
+      "policy_ms_per_step": 0.002896894472180775,
+      "env_step_ms": 2.4676399676271803
     }
   },
   "episodes_detail": {
@@ -78,8 +78,8 @@
         "min_clearance_cm": 7.77632689400844,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.003281329728897037,
-        "env_step_ms": 2.309933712820837
+        "policy_ms": 0.003385765958131394,
+        "env_step_ms": 2.232072489361074
       },
       {
         "seed": 10001,
@@ -92,8 +92,8 @@
         "min_clearance_cm": 7.750113858944975,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.004404077501508447,
-        "env_step_ms": 3.5561443309118874
+        "policy_ms": 0.003000852112302735,
+        "env_step_ms": 3.115729901409536
       },
       {
         "seed": 10002,
@@ -106,8 +106,8 @@
         "min_clearance_cm": 4.454990597004145,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.003269398223739571,
-        "env_step_ms": 2.1423212036467776
+        "policy_ms": 0.002764566371414111,
+        "env_step_ms": 1.921922867255646
       },
       {
         "seed": 10003,
@@ -120,8 +120,8 @@
         "min_clearance_cm": 9.736248481713815,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0034713648961474677,
-        "env_step_ms": 3.890617979728582
+        "policy_ms": 0.003070310809774226,
+        "env_step_ms": 3.437353547299361
       },
       {
         "seed": 10004,
@@ -134,8 +134,8 @@
         "min_clearance_cm": 7.775471548881765,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.002888512517529307,
-        "env_step_ms": 2.693487974920572
+        "policy_ms": 0.0029762999993465655,
+        "env_step_ms": 2.6312653875002923
       },
       {
         "seed": 10005,
@@ -148,8 +148,8 @@
         "min_clearance_cm": 10.543622348269771,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0031611299891665112,
-        "env_step_ms": 3.635970815030305
+        "policy_ms": 0.002955304999403552,
+        "env_step_ms": 3.1143305499998064
       },
       {
         "seed": 10006,
@@ -162,8 +162,8 @@
         "min_clearance_cm": 7.776388779585075,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.003046601499987528,
-        "env_step_ms": 2.147245548859841
+        "policy_ms": 0.0029816165433435926,
+        "env_step_ms": 2.0778697669153905
       },
       {
         "seed": 10007,
@@ -176,8 +176,8 @@
         "min_clearance_cm": 0.6167933659492864,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.002956810600484129,
-        "env_step_ms": 3.3737868637382977
+        "policy_ms": 0.0028807424242951597,
+        "env_step_ms": 3.3198263484846944
       },
       {
         "seed": 10008,
@@ -190,8 +190,8 @@
         "min_clearance_cm": 2.2729447471569353,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0029666810813319773,
-        "env_step_ms": 3.2338585948497798
+        "policy_ms": 0.0032123706898213138,
+        "env_step_ms": 2.8246722068968113
       },
       {
         "seed": 10009,
@@ -204,8 +204,8 @@
         "min_clearance_cm": 8.159798249189187,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.003091850030614296,
-        "env_step_ms": 2.9753041100320843
+        "policy_ms": 0.0025676900003190894,
+        "env_step_ms": 2.6584074750003595
       },
       {
         "seed": 10010,
@@ -218,8 +218,8 @@
         "min_clearance_cm": 9.235798441286583,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0028613778138403883,
-        "env_step_ms": 2.2748390222760566
+        "policy_ms": 0.0029034222222890094,
+        "env_step_ms": 2.2609989111104927
       },
       {
         "seed": 10011,
@@ -232,8 +232,8 @@
         "min_clearance_cm": 15.665610136905883,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0030340204236325714,
-        "env_step_ms": 2.2739774286696495
+        "policy_ms": 0.003145122450150109,
+        "env_step_ms": 2.351952183672364
       },
       {
         "seed": 10012,
@@ -246,8 +246,8 @@
         "min_clearance_cm": 13.793822059018652,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.002924119144154247,
-        "env_step_ms": 2.1224297617144265
+        "policy_ms": 0.00303259523634768,
+        "env_step_ms": 2.0171565714298096
       },
       {
         "seed": 10013,
@@ -260,8 +260,8 @@
         "min_clearance_cm": 7.772166257432339,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0029599000481539406,
-        "env_step_ms": 3.350568850073614
+        "policy_ms": 0.0025010150014281862,
+        "env_step_ms": 3.0205427299991072
       },
       {
         "seed": 10014,
@@ -274,8 +274,8 @@
         "min_clearance_cm": 6.044763302041647,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.003175228229061442,
-        "env_step_ms": 3.4579007011099905
+        "policy_ms": 0.003128597826024984,
+        "env_step_ms": 3.349693565218289
       },
       {
         "seed": 10015,
@@ -288,8 +288,8 @@
         "min_clearance_cm": 4.064706948266743,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.002627508396379476,
-        "env_step_ms": 2.0189137627250786
+        "policy_ms": 0.0024911186459329487,
+        "env_step_ms": 1.8299511864389557
       },
       {
         "seed": 10016,
@@ -302,8 +302,8 @@
         "min_clearance_cm": 7.776224396946885,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.003153864918203908,
-        "env_step_ms": 3.474324599983447
+        "policy_ms": 0.0031365999987542637,
+        "env_step_ms": 2.980349260001134
       },
       {
         "seed": 10017,
@@ -316,8 +316,8 @@
         "min_clearance_cm": 5.938294299967191,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.003791064946199185,
-        "env_step_ms": 3.434662700046829
+        "policy_ms": 0.0030056700002489833,
+        "env_step_ms": 2.8664555749996623
       },
       {
         "seed": 10018,
@@ -330,8 +330,8 @@
         "min_clearance_cm": 1.7314000511862646,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.002975375027745031,
-        "env_step_ms": 4.033448194941229
+        "policy_ms": 0.0029713899999705973,
+        "env_step_ms": 3.2867346900007988
       },
       {
         "seed": 10019,
@@ -344,8 +344,8 @@
         "min_clearance_cm": 9.665070852258678,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.003006295082741417,
-        "env_step_ms": 3.2841236149761244
+        "policy_ms": 0.002983894999175618,
+        "env_step_ms": 2.8543916200001718
       },
       {
         "seed": 10020,
@@ -358,8 +358,8 @@
         "min_clearance_cm": 7.133252843944559,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.00339916496159276,
-        "env_step_ms": 3.7043137350883626
+        "policy_ms": 0.003211954998505462,
+        "env_step_ms": 3.2074010600001657
       },
       {
         "seed": 10021,
@@ -372,8 +372,8 @@
         "min_clearance_cm": 6.597477979236044,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0030083350884524407,
-        "env_step_ms": 3.658213074950254
+        "policy_ms": 0.0027763349993392694,
+        "env_step_ms": 3.346954440000758
       },
       {
         "seed": 10022,
@@ -386,8 +386,8 @@
         "min_clearance_cm": 3.0633679483037644,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0032497397388733464,
-        "env_step_ms": 2.821537753396563
+        "policy_ms": 0.002697589040815118,
+        "env_step_ms": 2.1468994452047356
       },
       {
         "seed": 10023,
@@ -400,8 +400,8 @@
         "min_clearance_cm": 6.067242983143167,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.00296446723652599,
-        "env_step_ms": 2.9967413032506154
+        "policy_ms": 0.002609852459522326,
+        "env_step_ms": 2.6259368688518867
       },
       {
         "seed": 10024,
@@ -414,8 +414,8 @@
         "min_clearance_cm": 8.388244704937906,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.003146087788321127,
-        "env_step_ms": 2.3785037894668406
+        "policy_ms": 0.003611701755975797,
+        "env_step_ms": 2.142927035087021
       },
       {
         "seed": 10025,
@@ -428,8 +428,8 @@
         "min_clearance_cm": 7.776115292933689,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.00308386493211524,
-        "env_step_ms": 2.1417983513471497
+        "policy_ms": 0.002643252252704081,
+        "env_step_ms": 2.100574279281189
       },
       {
         "seed": 10026,
@@ -442,8 +442,8 @@
         "min_clearance_cm": 7.772163455656525,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0031211199802783085,
-        "env_step_ms": 3.931829880039004
+        "policy_ms": 0.0030948799997077003,
+        "env_step_ms": 3.3029627700004482
       },
       {
         "seed": 10027,
@@ -456,8 +456,8 @@
         "min_clearance_cm": -0.27225755165102977,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0035560833566705696,
-        "env_step_ms": 2.2404280834962265
+        "policy_ms": 0.0023517708355550817,
+        "env_step_ms": 1.8641698333308199
       },
       {
         "seed": 10028,
@@ -470,8 +470,8 @@
         "min_clearance_cm": 4.467581686642682,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0029414249547699,
-        "env_step_ms": 3.400410945114345
+        "policy_ms": 0.003507685000698757,
+        "env_step_ms": 3.106950885001112
       },
       {
         "seed": 10029,
@@ -484,8 +484,8 @@
         "min_clearance_cm": 8.18762451196613,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0034153849719587015,
-        "env_step_ms": 3.4951207550147956
+        "policy_ms": 0.0030069949991684553,
+        "env_step_ms": 3.3444076700008907
       },
       {
         "seed": 10030,
@@ -498,8 +498,8 @@
         "min_clearance_cm": 7.77628872611045,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.002795355012494838,
-        "env_step_ms": 3.690962894943368
+        "policy_ms": 0.0033469900003524344,
+        "env_step_ms": 3.5421309349992214
       },
       {
         "seed": 10031,
@@ -512,8 +512,8 @@
         "min_clearance_cm": 7.776362265683179,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0028716187102872937,
-        "env_step_ms": 3.6164676124485595
+        "policy_ms": 0.002729806250023614,
+        "env_step_ms": 3.0164403687496844
       },
       {
         "seed": 10032,
@@ -526,8 +526,8 @@
         "min_clearance_cm": 9.020043943782522,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0037312725293918744,
-        "env_step_ms": 2.55468292219463
+        "policy_ms": 0.00293397402530203,
+        "env_step_ms": 2.3047579220788035
       },
       {
         "seed": 10033,
@@ -540,8 +540,8 @@
         "min_clearance_cm": 10.271545658707138,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0031527000282949302,
-        "env_step_ms": 3.238011444982476
+        "policy_ms": 0.0030284299988636576,
+        "env_step_ms": 3.2962565200021743
       },
       {
         "seed": 10034,
@@ -554,8 +554,8 @@
         "min_clearance_cm": 16.3951675289437,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0029905223704217725,
-        "env_step_ms": 2.1988339701251722
+        "policy_ms": 0.0036417611944833976,
+        "env_step_ms": 2.1277150597024415
       },
       {
         "seed": 10035,
@@ -568,8 +568,8 @@
         "min_clearance_cm": 7.776166316600561,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0031014779071685756,
-        "env_step_ms": 2.356493322076858
+        "policy_ms": 0.0025755333328763503,
+        "env_step_ms": 2.221973555554592
       },
       {
         "seed": 10036,
@@ -582,8 +582,8 @@
         "min_clearance_cm": 7.776197607451962,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.003247601497626016,
-        "env_step_ms": 3.438414037581034
+        "policy_ms": 0.0032932781969544807,
+        "env_step_ms": 3.230676503759819
       },
       {
         "seed": 10037,
@@ -596,8 +596,8 @@
         "min_clearance_cm": 9.325164856586149,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0031005700516847385,
-        "env_step_ms": 2.9250185439275556
+        "policy_ms": 0.0033204649105599807,
+        "env_step_ms": 2.889553403511563
       },
       {
         "seed": 10038,
@@ -610,8 +610,8 @@
         "min_clearance_cm": -0.03299361592620231,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0025807410026943587,
-        "env_step_ms": 2.4706987035945835
+        "policy_ms": 0.0026325555569218085,
+        "env_step_ms": 2.4170030000029192
       },
       {
         "seed": 10039,
@@ -624,8 +624,8 @@
         "min_clearance_cm": 12.321948029040247,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0033443182088156004,
-        "env_step_ms": 2.1899076968883024
+        "policy_ms": 0.0025823181834477345,
+        "env_step_ms": 1.918462772726078
       },
       {
         "seed": 10040,
@@ -638,8 +638,8 @@
         "min_clearance_cm": 14.524601662296362,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0029859638743801042,
-        "env_step_ms": 2.2362914818564517
+        "policy_ms": 0.003784108436463272,
+        "env_step_ms": 2.2582484457806657
       },
       {
         "seed": 10041,
@@ -652,8 +652,8 @@
         "min_clearance_cm": 7.771441397090825,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0035947200467489893,
-        "env_step_ms": 3.7214405349095614
+        "policy_ms": 0.003129965000852053,
+        "env_step_ms": 3.4212120100009713
       },
       {
         "seed": 10042,
@@ -666,8 +666,8 @@
         "min_clearance_cm": 9.482212888281982,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.003815486100696338,
-        "env_step_ms": 3.852884798637509
+        "policy_ms": 0.003070812501270047,
+        "env_step_ms": 3.1681765138880595
       },
       {
         "seed": 10043,
@@ -680,8 +680,8 @@
         "min_clearance_cm": 7.77594591940688,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0029411949708446627,
-        "env_step_ms": 3.6598121201586764
+        "policy_ms": 0.0027746799999306404,
+        "env_step_ms": 3.4014412150006024
       },
       {
         "seed": 10044,
@@ -694,8 +694,8 @@
         "min_clearance_cm": 7.764088020656161,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.002973655731478576,
-        "env_step_ms": 3.0032985055137247
+        "policy_ms": 0.003250774194575276,
+        "env_step_ms": 2.8899538279577146
       },
       {
         "seed": 10045,
@@ -708,8 +708,8 @@
         "min_clearance_cm": 7.775991649611052,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0028525726551550208,
-        "env_step_ms": 2.153635170947786
+        "policy_ms": 0.0026783504299348554,
+        "env_step_ms": 1.7931035299144382
       },
       {
         "seed": 10046,
@@ -722,8 +722,8 @@
         "min_clearance_cm": 7.613635199255192,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.003226295038984972,
-        "env_step_ms": 3.368309689913076
+        "policy_ms": 0.003201689998633128,
+        "env_step_ms": 3.0716016750012898
       },
       {
         "seed": 10047,
@@ -736,8 +736,8 @@
         "min_clearance_cm": 8.078945841201362,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0031207199845084688,
-        "env_step_ms": 3.284506264990341
+        "policy_ms": 0.002964800000881951,
+        "env_step_ms": 2.9971191449999424
       },
       {
         "seed": 10048,
@@ -750,8 +750,8 @@
         "min_clearance_cm": 12.860028671452381,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0042805436153329265,
-        "env_step_ms": 1.9989634562949978
+        "policy_ms": 0.002930847827542493,
+        "env_step_ms": 1.9372314999990838
       },
       {
         "seed": 10049,
@@ -764,8 +764,8 @@
         "min_clearance_cm": 10.220163045979291,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.003238539267069275,
-        "env_step_ms": 3.551441560332823
+        "policy_ms": 0.0033780261799701296,
+        "env_step_ms": 3.1881183979053227
       },
       {
         "seed": 10050,
@@ -778,8 +778,8 @@
         "min_clearance_cm": 7.553485202958354,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.003298654067425245,
-        "env_step_ms": 3.307297333313332
+        "policy_ms": 0.003262389938730185,
+        "env_step_ms": 3.058297163521137
       },
       {
         "seed": 10051,
@@ -792,8 +792,8 @@
         "min_clearance_cm": 7.775582050647381,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.003351199957251083,
-        "env_step_ms": 3.418915465117607
+        "policy_ms": 0.0036669900012498147,
+        "env_step_ms": 3.120995079999318
       },
       {
         "seed": 10052,
@@ -806,8 +806,8 @@
         "min_clearance_cm": 7.998028795870379,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0033723650176398223,
-        "env_step_ms": 3.2477388849292765
+        "policy_ms": 0.00324917500094557,
+        "env_step_ms": 3.2029783699998404
       },
       {
         "seed": 10053,
@@ -820,8 +820,8 @@
         "min_clearance_cm": 4.341516681397345,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0032457549423270393,
-        "env_step_ms": 3.8641682749766915
+        "policy_ms": 0.002618270001022438,
+        "env_step_ms": 3.324700834999703
       },
       {
         "seed": 10054,
@@ -834,8 +834,8 @@
         "min_clearance_cm": 3.7799554851459507,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.003158748772992299,
-        "env_step_ms": 3.5302011179457904
+        "policy_ms": 0.0030846717959612316,
+        "env_step_ms": 3.1427917076920644
       },
       {
         "seed": 10055,
@@ -848,8 +848,8 @@
         "min_clearance_cm": 12.983047751525758,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0029214046922528985,
-        "env_step_ms": 2.2314757856552854
+        "policy_ms": 0.002736547619704089,
+        "env_step_ms": 2.019479714284617
       },
       {
         "seed": 10056,
@@ -862,8 +862,8 @@
         "min_clearance_cm": 11.14841984147534,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.002925246764033392,
-        "env_step_ms": 2.2999982726554213
+        "policy_ms": 0.003191675321287138,
+        "env_step_ms": 2.378556532470192
       },
       {
         "seed": 10057,
@@ -876,8 +876,8 @@
         "min_clearance_cm": 7.776089990364338,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0029412137655915422,
-        "env_step_ms": 2.563136529793583
+        "policy_ms": 0.002425307692963807,
+        "env_step_ms": 2.1763226410256657
       },
       {
         "seed": 10058,
@@ -890,8 +890,8 @@
         "min_clearance_cm": 5.580651131830075,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.002940780022981926,
-        "env_step_ms": 3.7275828649762843
+        "policy_ms": 0.0027637150007819855,
+        "env_step_ms": 3.1047854749996873
       },
       {
         "seed": 10059,
@@ -904,8 +904,8 @@
         "min_clearance_cm": 15.148653710188595,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.002888083599827951,
-        "env_step_ms": 2.1256271038131067
+        "policy_ms": 0.004163729166487921,
+        "env_step_ms": 1.968540208331741
       },
       {
         "seed": 10060,
@@ -918,8 +918,8 @@
         "min_clearance_cm": 8.839494612954873,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0031549799587082816,
-        "env_step_ms": 3.049845519990413
+        "policy_ms": 0.0035978550002369047,
+        "env_step_ms": 3.1816520000002413
       },
       {
         "seed": 10061,
@@ -932,8 +932,8 @@
         "min_clearance_cm": 4.287471729036414,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0032218149499385618,
-        "env_step_ms": 3.472542735053139
+        "policy_ms": 0.0026203849999717477,
+        "env_step_ms": 2.8458506149996765
       },
       {
         "seed": 10062,
@@ -946,8 +946,8 @@
         "min_clearance_cm": 6.79261080518756,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0033810049808380427,
-        "env_step_ms": 3.579590140025175
+        "policy_ms": 0.002823504999440729,
+        "env_step_ms": 3.064366995000256
       },
       {
         "seed": 10063,
@@ -960,8 +960,8 @@
         "min_clearance_cm": 6.542528354039398,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0028201050099596614,
-        "env_step_ms": 3.844627830103491
+        "policy_ms": 0.0030894899994393654,
+        "env_step_ms": 3.6431596100001684
       },
       {
         "seed": 10064,
@@ -974,8 +974,8 @@
         "min_clearance_cm": 8.488670308957188,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0033065175489012397,
-        "env_step_ms": 3.172936251305612
+        "policy_ms": 0.0030675929653954707,
+        "env_step_ms": 2.9421227537680172
       },
       {
         "seed": 10065,
@@ -988,8 +988,8 @@
         "min_clearance_cm": 8.414533311070052,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0029803334150023553,
-        "env_step_ms": 2.1661599334846766
+        "policy_ms": 0.0024664666676067603,
+        "env_step_ms": 1.8736775777761574
       },
       {
         "seed": 10066,
@@ -1002,8 +1002,8 @@
         "min_clearance_cm": 8.202815656734805,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.00333777500600263,
-        "env_step_ms": 3.2684641599917086
+        "policy_ms": 0.0027413849994673,
+        "env_step_ms": 2.671227565000862
       },
       {
         "seed": 10067,
@@ -1016,8 +1016,8 @@
         "min_clearance_cm": -0.07755434129700575,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0030524582598445704,
-        "env_step_ms": 2.3021626249980423
+        "policy_ms": 0.0026108916659476713,
+        "env_step_ms": 1.9645014416674655
       },
       {
         "seed": 10068,
@@ -1030,8 +1030,8 @@
         "min_clearance_cm": 7.776265235273428,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0028317830329733836,
-        "env_step_ms": 2.23400419374173
+        "policy_ms": 0.002756217054279342,
+        "env_step_ms": 1.9785651007762772
       },
       {
         "seed": 10069,
@@ -1044,8 +1044,8 @@
         "min_clearance_cm": 9.468202481175513,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0028998273874408214,
-        "env_step_ms": 2.076320586136968
+        "policy_ms": 0.0024311379287029985,
+        "env_step_ms": 1.786051827587957
       },
       {
         "seed": 10070,
@@ -1058,8 +1058,8 @@
         "min_clearance_cm": 7.774385245306584,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0030918149877834367,
-        "env_step_ms": 3.888697244974537
+        "policy_ms": 0.0026429099987979043,
+        "env_step_ms": 3.209631665000643
       },
       {
         "seed": 10071,
@@ -1072,8 +1072,8 @@
         "min_clearance_cm": 7.774447864407829,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.002950985026473063,
-        "env_step_ms": 3.3338893200016173
+        "policy_ms": 0.0027141200011726596,
+        "env_step_ms": 2.8012846699996885
       },
       {
         "seed": 10072,
@@ -1086,8 +1086,8 @@
         "min_clearance_cm": 5.847054738142134,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.002918925092671998,
-        "env_step_ms": 3.4847454299597302
+        "policy_ms": 0.0032915299988189872,
+        "env_step_ms": 3.3508771750001642
       },
       {
         "seed": 10073,
@@ -1100,8 +1100,8 @@
         "min_clearance_cm": 7.776350152695382,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.00313841933788236,
-        "env_step_ms": 3.484843922600586
+        "policy_ms": 0.0027925419379742733,
+        "env_step_ms": 3.088887632257396
       },
       {
         "seed": 10074,
@@ -1114,8 +1114,8 @@
         "min_clearance_cm": 9.458038896847972,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0027579815785564415,
-        "env_step_ms": 2.051184129548481
+        "policy_ms": 0.0027503888883597095,
+        "env_step_ms": 1.7909848703733697
       },
       {
         "seed": 10075,
@@ -1128,8 +1128,8 @@
         "min_clearance_cm": 7.998594046039845,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0027275083236114974,
-        "env_step_ms": 2.2985658499843944
+        "policy_ms": 0.0029749333336326345,
+        "env_step_ms": 2.143176008333588
       },
       {
         "seed": 10076,
@@ -1142,8 +1142,8 @@
         "min_clearance_cm": 15.875654180568905,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.005203294088406598,
-        "env_step_ms": 2.0509063529061677
+        "policy_ms": 0.003551279413179199,
+        "env_step_ms": 1.9246279117640717
       },
       {
         "seed": 10077,
@@ -1156,8 +1156,8 @@
         "min_clearance_cm": 4.777142174231717,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.003296684981251019,
-        "env_step_ms": 3.328395044982244
+        "policy_ms": 0.002739274998333485,
+        "env_step_ms": 3.0668337850023875
       },
       {
         "seed": 10078,
@@ -1170,8 +1170,8 @@
         "min_clearance_cm": 7.774447247410454,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.00277340797382701,
-        "env_step_ms": 2.2508184078297315
+        "policy_ms": 0.0025615263151292453,
+        "env_step_ms": 1.8848369210524807
       },
       {
         "seed": 10079,
@@ -1184,8 +1184,8 @@
         "min_clearance_cm": 6.485273057755962,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.003074340575777397,
-        "env_step_ms": 3.2794903026778894
+        "policy_ms": 0.0030056810802565254,
+        "env_step_ms": 2.8563306216217614
       },
       {
         "seed": 10080,
@@ -1198,8 +1198,8 @@
         "min_clearance_cm": 7.775699975434705,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0027376666814292088,
-        "env_step_ms": 2.218874746090261
+        "policy_ms": 0.002700476191165084,
+        "env_step_ms": 2.0070569206347773
       },
       {
         "seed": 10081,
@@ -1212,8 +1212,8 @@
         "min_clearance_cm": 3.7621097179922347,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0032598749839962693,
-        "env_step_ms": 3.447498105097111
+        "policy_ms": 0.0024770000011642423,
+        "env_step_ms": 3.0826783299984584
       },
       {
         "seed": 10082,
@@ -1226,8 +1226,8 @@
         "min_clearance_cm": 13.528384524232347,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.002897884110427475,
-        "env_step_ms": 2.1188273767356938
+        "policy_ms": 0.0025599420309285106,
+        "env_step_ms": 1.7826834202899267
       },
       {
         "seed": 10083,
@@ -1240,8 +1240,8 @@
         "min_clearance_cm": 7.873582252850161,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0031787404824512163,
-        "env_step_ms": 2.3296395724562426
+        "policy_ms": 0.0025860610702162405,
+        "env_step_ms": 2.091454007634036
       },
       {
         "seed": 10084,
@@ -1254,8 +1254,8 @@
         "min_clearance_cm": 7.999989103826152,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.002884599948797754,
-        "env_step_ms": 3.612001281578193
+        "policy_ms": 0.0031552814799919427,
+        "env_step_ms": 3.2853131407423293
       },
       {
         "seed": 10085,
@@ -1268,8 +1268,8 @@
         "min_clearance_cm": 9.71147170083115,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0031913151835159742,
-        "env_step_ms": 3.024620663085364
+        "policy_ms": 0.0026205869570207064,
+        "env_step_ms": 2.5775356413034793
       },
       {
         "seed": 10086,
@@ -1282,8 +1282,8 @@
         "min_clearance_cm": 11.640887677191245,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0028534190364769615,
-        "env_step_ms": 2.045841914358399
+        "policy_ms": 0.0031190666672522467,
+        "env_step_ms": 1.8649430666663473
       },
       {
         "seed": 10087,
@@ -1296,8 +1296,8 @@
         "min_clearance_cm": 7.999078785621141,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0030199399770935997,
-        "env_step_ms": 3.2586573000116914
+        "policy_ms": 0.0027416199996821433,
+        "env_step_ms": 2.8372721700000625
       },
       {
         "seed": 10088,
@@ -1310,8 +1310,8 @@
         "min_clearance_cm": 7.998186011871519,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0027259001009432332,
-        "env_step_ms": 2.3647400713213886
+        "policy_ms": 0.0027217000012212467,
+        "env_step_ms": 2.071009842854973
       },
       {
         "seed": 10089,
@@ -1324,8 +1324,8 @@
         "min_clearance_cm": 15.397355005949873,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.004779629072741485,
-        "env_step_ms": 2.2028276937142497
+        "policy_ms": 0.002591548389505665,
+        "env_step_ms": 1.890407758064465
       },
       {
         "seed": 10090,
@@ -1338,8 +1338,8 @@
         "min_clearance_cm": -0.03119089026525773,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0026555580704954863,
-        "env_step_ms": 2.25504095354598
+        "policy_ms": 0.002564813951795618,
+        "env_step_ms": 2.159002883721568
       },
       {
         "seed": 10091,
@@ -1352,8 +1352,8 @@
         "min_clearance_cm": -0.3143549823316133,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0025963287809741145,
-        "env_step_ms": 2.3510557763601305
+        "policy_ms": 0.002425684210032542,
+        "env_step_ms": 2.1331823157917023
       },
       {
         "seed": 10092,
@@ -1366,8 +1366,8 @@
         "min_clearance_cm": 10.07483074506759,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0034693504671733347,
-        "env_step_ms": 3.6346240513245367
+        "policy_ms": 0.003396940170762944,
+        "env_step_ms": 3.2652705726506697
       },
       {
         "seed": 10093,
@@ -1380,8 +1380,8 @@
         "min_clearance_cm": 3.2255908779727207,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.003102704986304161,
-        "env_step_ms": 4.053861274987867
+        "policy_ms": 0.002668419999594107,
+        "env_step_ms": 3.3043509150013506
       },
       {
         "seed": 10094,
@@ -1394,8 +1394,8 @@
         "min_clearance_cm": 7.343173022101979,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0031950897163112993,
-        "env_step_ms": 3.3624764359140102
+        "policy_ms": 0.002965538461679875,
+        "env_step_ms": 2.9747666025638884
       },
       {
         "seed": 10095,
@@ -1408,8 +1408,8 @@
         "min_clearance_cm": 7.998954212413064,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.002801369992084801,
-        "env_step_ms": 3.30581626498315
+        "policy_ms": 0.0029048199992587342,
+        "env_step_ms": 3.306164470000965
       },
       {
         "seed": 10096,
@@ -1422,8 +1422,8 @@
         "min_clearance_cm": -0.11990979466548132,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0029198901636966063,
-        "env_step_ms": 3.4382764174601967
+        "policy_ms": 0.0028169560429042967,
+        "env_step_ms": 3.052777681317481
       },
       {
         "seed": 10097,
@@ -1436,8 +1436,8 @@
         "min_clearance_cm": 7.776067335922629,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0031890599802864017,
-        "env_step_ms": 3.5239766099311964
+        "policy_ms": 0.002780764999386065,
+        "env_step_ms": 3.017413244999716
       },
       {
         "seed": 10098,
@@ -1450,8 +1450,8 @@
         "min_clearance_cm": 8.036259098447212,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.002818696639530643,
-        "env_step_ms": 2.498901370682085
+        "policy_ms": 0.002809280898594643,
+        "env_step_ms": 2.180598988764926
       },
       {
         "seed": 10099,
@@ -1464,8 +1464,8 @@
         "min_clearance_cm": 16.214052587321945,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.002726597025983536,
-        "env_step_ms": 2.0063004177965054
+        "policy_ms": 0.0034730746266184234,
+        "env_step_ms": 1.9498631044779928
       }
     ],
     "prior+shield": [
@@ -1480,8 +1480,8 @@
         "min_clearance_cm": 7.77632689400844,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0032877126207669326,
-        "env_step_ms": 2.6182168298390103
+        "policy_ms": 0.002788223405501567,
+        "env_step_ms": 2.3715130425538873
       },
       {
         "seed": 10001,
@@ -1494,8 +1494,8 @@
         "min_clearance_cm": 7.750113858944975,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0033050282197532206,
-        "env_step_ms": 4.364951352060967
+        "policy_ms": 0.002903098592369902,
+        "env_step_ms": 3.7380616126762414
       },
       {
         "seed": 10002,
@@ -1504,12 +1504,12 @@
         "cost": 0.0,
         "length": 200,
         "time_to_reach_s": null,
-        "base_rotation_deg": 11.105707421366795,
-        "min_clearance_cm": 6.437528562710734,
+        "base_rotation_deg": 10.899754148039758,
+        "min_clearance_cm": 7.4131126735747985,
         "obstacle": false,
-        "shield_interventions": 66,
-        "policy_ms": 0.00291545992695319,
-        "env_step_ms": 2.6863681951090257
+        "shield_interventions": 85,
+        "policy_ms": 0.002454529999198485,
+        "env_step_ms": 2.219249084999433
       },
       {
         "seed": 10003,
@@ -1522,8 +1522,8 @@
         "min_clearance_cm": 9.736248481713815,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0035005270448793353,
-        "env_step_ms": 4.699221972911087
+        "policy_ms": 0.003101668918292477,
+        "env_step_ms": 4.10007971621753
       },
       {
         "seed": 10004,
@@ -1536,8 +1536,8 @@
         "min_clearance_cm": 7.775471548881765,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.003456162471593416,
-        "env_step_ms": 2.9551386750199526
+        "policy_ms": 0.0027220624996715514,
+        "env_step_ms": 2.6850496875006513
       },
       {
         "seed": 10005,
@@ -1550,8 +1550,8 @@
         "min_clearance_cm": 10.543622348269771,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0032960600037768018,
-        "env_step_ms": 4.680397194988473
+        "policy_ms": 0.002960124999731306,
+        "env_step_ms": 4.160417340000606
       },
       {
         "seed": 10006,
@@ -1564,22 +1564,22 @@
         "min_clearance_cm": 7.776388779585075,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.003390579015678285,
-        "env_step_ms": 2.958475330776029
+        "policy_ms": 0.0026985037610965557,
+        "env_step_ms": 2.174323436090181
       },
       {
         "seed": 10007,
-        "success": true,
+        "success": false,
         "collision": false,
         "cost": 0.0,
-        "length": 197,
-        "time_to_reach_s": 19.700000000000003,
-        "base_rotation_deg": 8.676505373251718,
-        "min_clearance_cm": 4.501092302473015,
+        "length": 200,
+        "time_to_reach_s": null,
+        "base_rotation_deg": 7.893849996138748,
+        "min_clearance_cm": 5.345685450659499,
         "obstacle": true,
-        "shield_interventions": 66,
-        "policy_ms": 0.003383355303832949,
-        "env_step_ms": 4.549592436564735
+        "shield_interventions": 93,
+        "policy_ms": 0.0031001149997678112,
+        "env_step_ms": 3.9108683549996215
       },
       {
         "seed": 10008,
@@ -1588,12 +1588,12 @@
         "cost": 0.0,
         "length": 200,
         "time_to_reach_s": null,
-        "base_rotation_deg": 5.29052080376147,
+        "base_rotation_deg": 5.136777064262619,
         "min_clearance_cm": 5.103630048540431,
         "obstacle": true,
-        "shield_interventions": 85,
-        "policy_ms": 0.003114359997198335,
-        "env_step_ms": 4.682154954971338
+        "shield_interventions": 93,
+        "policy_ms": 0.0028488499989975935,
+        "env_step_ms": 3.850745405000282
       },
       {
         "seed": 10009,
@@ -1606,8 +1606,8 @@
         "min_clearance_cm": 8.159798249189187,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.003307839933768264,
-        "env_step_ms": 3.8663419600015914
+        "policy_ms": 0.0030692849992419724,
+        "env_step_ms": 3.59079518499982
       },
       {
         "seed": 10010,
@@ -1620,8 +1620,8 @@
         "min_clearance_cm": 9.235798441286583,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0029622221821531034,
-        "env_step_ms": 2.889907888715647
+        "policy_ms": 0.002501222223827426,
+        "env_step_ms": 2.325329444444909
       },
       {
         "seed": 10011,
@@ -1634,8 +1634,8 @@
         "min_clearance_cm": 15.665610136905883,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.003010163338182551,
-        "env_step_ms": 2.4885194080915034
+        "policy_ms": 0.002814795920483225,
+        "env_step_ms": 2.4286478163243634
       },
       {
         "seed": 10012,
@@ -1648,8 +1648,8 @@
         "min_clearance_cm": 13.793822059018652,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0036258572349435695,
-        "env_step_ms": 2.5164014046562704
+        "policy_ms": 0.00297752381024046,
+        "env_step_ms": 2.217022166666046
       },
       {
         "seed": 10013,
@@ -1662,8 +1662,8 @@
         "min_clearance_cm": 7.772166257432339,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0027172300542588346,
-        "env_step_ms": 4.089970724880914
+        "policy_ms": 0.002995764998843242,
+        "env_step_ms": 3.7147866150006337
       },
       {
         "seed": 10014,
@@ -1676,22 +1676,22 @@
         "min_clearance_cm": 6.044763302041647,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0037156250092938653,
-        "env_step_ms": 4.350800152214225
+        "policy_ms": 0.0028489021731064913,
+        "env_step_ms": 3.685815461957183
       },
       {
         "seed": 10015,
-        "success": true,
+        "success": false,
         "collision": false,
         "cost": 0.0,
-        "length": 177,
-        "time_to_reach_s": 17.7,
-        "base_rotation_deg": 2.447285642419325,
-        "min_clearance_cm": 6.488592030451029,
+        "length": 200,
+        "time_to_reach_s": null,
+        "base_rotation_deg": 2.264107285381367,
+        "min_clearance_cm": 7.775821995270238,
         "obstacle": false,
-        "shield_interventions": 93,
-        "policy_ms": 0.002920581944553855,
-        "env_step_ms": 2.843383610257856
+        "shield_interventions": 149,
+        "policy_ms": 0.002570044999856691,
+        "env_step_ms": 2.5418729900006554
       },
       {
         "seed": 10016,
@@ -1704,8 +1704,8 @@
         "min_clearance_cm": 7.776224396946885,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.002927470077338512,
-        "env_step_ms": 4.202236019955308
+        "policy_ms": 0.0029539199999817356,
+        "env_step_ms": 3.687122740000177
       },
       {
         "seed": 10017,
@@ -1718,8 +1718,8 @@
         "min_clearance_cm": 5.938294299967191,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.003195515037077712,
-        "env_step_ms": 3.967249004954283
+        "policy_ms": 0.0027879049997636685,
+        "env_step_ms": 3.5861324600004707
       },
       {
         "seed": 10018,
@@ -1728,12 +1728,12 @@
         "cost": 0.0,
         "length": 200,
         "time_to_reach_s": null,
-        "base_rotation_deg": 2.5950234272153216,
+        "base_rotation_deg": 2.5736358559716392,
         "min_clearance_cm": 7.775978317384985,
         "obstacle": true,
-        "shield_interventions": 73,
-        "policy_ms": 0.002987904981637257,
-        "env_step_ms": 4.953323544941668
+        "shield_interventions": 81,
+        "policy_ms": 0.0025206750001416367,
+        "env_step_ms": 4.159224345001036
       },
       {
         "seed": 10019,
@@ -1746,8 +1746,8 @@
         "min_clearance_cm": 9.665070852258678,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0035010698502446758,
-        "env_step_ms": 4.250376519976271
+        "policy_ms": 0.003226740000314976,
+        "env_step_ms": 3.6344320999994295
       },
       {
         "seed": 10020,
@@ -1760,8 +1760,8 @@
         "min_clearance_cm": 7.133252843944559,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0034919549943879247,
-        "env_step_ms": 4.458726300017588
+        "policy_ms": 0.003039745001274241,
+        "env_step_ms": 3.7358590649991186
       },
       {
         "seed": 10021,
@@ -1774,8 +1774,8 @@
         "min_clearance_cm": 6.597477979236044,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.003080179976677755,
-        "env_step_ms": 4.590944450010284
+        "policy_ms": 0.002690514998278104,
+        "env_step_ms": 3.9199325099997395
       },
       {
         "seed": 10022,
@@ -1788,8 +1788,8 @@
         "min_clearance_cm": 3.0633679483037644,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.003436794467645136,
-        "env_step_ms": 2.871848637032724
+        "policy_ms": 0.0025547054807568874,
+        "env_step_ms": 2.405849321916257
       },
       {
         "seed": 10023,
@@ -1802,8 +1802,8 @@
         "min_clearance_cm": 6.067242983143167,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0034225819990006427,
-        "env_step_ms": 3.781486622950174
+        "policy_ms": 0.0028256147556539575,
+        "env_step_ms": 3.1607083196722314
       },
       {
         "seed": 10024,
@@ -1816,8 +1816,8 @@
         "min_clearance_cm": 8.388244704937906,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.003947614140199954,
-        "env_step_ms": 2.977623596387658
+        "policy_ms": 0.0026798421047938624,
+        "env_step_ms": 2.326439877189538
       },
       {
         "seed": 10025,
@@ -1830,8 +1830,8 @@
         "min_clearance_cm": 7.776115292933689,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.003510360329528339,
-        "env_step_ms": 2.7136027387117596
+        "policy_ms": 0.0028547747754125775,
+        "env_step_ms": 2.286275360361216
       },
       {
         "seed": 10026,
@@ -1844,22 +1844,22 @@
         "min_clearance_cm": 7.772163455656525,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.004248510031175101,
-        "env_step_ms": 4.739127294933496
+        "policy_ms": 0.0026166350006917583,
+        "env_step_ms": 3.803263284999474
       },
       {
         "seed": 10027,
         "success": false,
         "collision": false,
-        "cost": 4.0,
+        "cost": 0.0,
         "length": 200,
         "time_to_reach_s": null,
-        "base_rotation_deg": 3.436849895506604,
-        "min_clearance_cm": 1.7508046418172967,
+        "base_rotation_deg": 3.376424260873638,
+        "min_clearance_cm": 2.8802270516995443,
         "obstacle": false,
-        "shield_interventions": 129,
-        "policy_ms": 0.0029291299688338768,
-        "env_step_ms": 3.080917820043396
+        "shield_interventions": 134,
+        "policy_ms": 0.002703624999753629,
+        "env_step_ms": 2.6539206500004298
       },
       {
         "seed": 10028,
@@ -1868,12 +1868,12 @@
         "cost": 0.0,
         "length": 200,
         "time_to_reach_s": null,
-        "base_rotation_deg": 8.226433296725205,
-        "min_clearance_cm": 5.938822650592666,
+        "base_rotation_deg": 7.786089693845416,
+        "min_clearance_cm": 6.313010855727944,
         "obstacle": true,
-        "shield_interventions": 111,
-        "policy_ms": 0.0029304250983841484,
-        "env_step_ms": 5.320933884950136
+        "shield_interventions": 115,
+        "policy_ms": 0.0031715049999547773,
+        "env_step_ms": 4.4563072399985515
       },
       {
         "seed": 10029,
@@ -1886,8 +1886,8 @@
         "min_clearance_cm": 8.18762451196613,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0031331649734056555,
-        "env_step_ms": 4.4535601349980425
+        "policy_ms": 0.0030009050004764504,
+        "env_step_ms": 3.953647764998749
       },
       {
         "seed": 10030,
@@ -1900,8 +1900,8 @@
         "min_clearance_cm": 7.77628872611045,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0033483849620097317,
-        "env_step_ms": 4.504755770076372
+        "policy_ms": 0.0026952799981927456,
+        "env_step_ms": 3.724993215001291
       },
       {
         "seed": 10031,
@@ -1914,8 +1914,8 @@
         "min_clearance_cm": 7.776362265683179,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0031284124702324334,
-        "env_step_ms": 4.234788043743265
+        "policy_ms": 0.0026703812519457415,
+        "env_step_ms": 3.7304605687490167
       },
       {
         "seed": 10032,
@@ -1928,8 +1928,8 @@
         "min_clearance_cm": 9.020043943782522,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.00381636364890456,
-        "env_step_ms": 2.9393573895268
+        "policy_ms": 0.0026712857133334893,
+        "env_step_ms": 2.55166850649525
       },
       {
         "seed": 10033,
@@ -1942,8 +1942,8 @@
         "min_clearance_cm": 10.271545658707138,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0031089199273992563,
-        "env_step_ms": 4.091797720066097
+        "policy_ms": 0.0028884799993988963,
+        "env_step_ms": 3.554956235000759
       },
       {
         "seed": 10034,
@@ -1956,8 +1956,8 @@
         "min_clearance_cm": 16.3951675289437,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.003514014923581923,
-        "env_step_ms": 2.5998885074257676
+        "policy_ms": 0.002682880599524597,
+        "env_step_ms": 2.1845382388055983
       },
       {
         "seed": 10035,
@@ -1970,8 +1970,8 @@
         "min_clearance_cm": 7.776166316600561,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0032424333160937144,
-        "env_step_ms": 2.78164963334954
+        "policy_ms": 0.0027273000013236823,
+        "env_step_ms": 2.3562782777793876
       },
       {
         "seed": 10036,
@@ -1984,8 +1984,8 @@
         "min_clearance_cm": 7.776197607451962,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0029078497268221013,
-        "env_step_ms": 4.22141399989537
+        "policy_ms": 0.0027471052616115607,
+        "env_step_ms": 3.615251082707939
       },
       {
         "seed": 10037,
@@ -1998,22 +1998,22 @@
         "min_clearance_cm": 9.325164856586149,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0033313597732717824,
-        "env_step_ms": 3.7483735438415846
+        "policy_ms": 0.003233245611985088,
+        "env_step_ms": 3.085199026316126
       },
       {
         "seed": 10038,
-        "success": true,
+        "success": false,
         "collision": false,
         "cost": 0.0,
-        "length": 166,
-        "time_to_reach_s": 16.6,
-        "base_rotation_deg": 2.0753041487901354,
-        "min_clearance_cm": 7.766289597096076,
+        "length": 200,
+        "time_to_reach_s": null,
+        "base_rotation_deg": 2.248636573534109,
+        "min_clearance_cm": 7.776142774282832,
         "obstacle": false,
-        "shield_interventions": 140,
-        "policy_ms": 0.0029445783260905363,
-        "env_step_ms": 3.09143709037893
+        "shield_interventions": 178,
+        "policy_ms": 0.0029608850007889487,
+        "env_step_ms": 2.571889435000969
       },
       {
         "seed": 10039,
@@ -2026,8 +2026,8 @@
         "min_clearance_cm": 12.321948029040247,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.007351242416144955,
-        "env_step_ms": 2.531753894056072
+        "policy_ms": 0.0025170151547392766,
+        "env_step_ms": 2.1522947575750675
       },
       {
         "seed": 10040,
@@ -2040,8 +2040,8 @@
         "min_clearance_cm": 14.524601662296362,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0030769879888695472,
-        "env_step_ms": 2.6256254215520336
+        "policy_ms": 0.0026747228914070754,
+        "env_step_ms": 2.2890440843382405
       },
       {
         "seed": 10041,
@@ -2054,8 +2054,8 @@
         "min_clearance_cm": 7.771441397090825,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0028459700934035936,
-        "env_step_ms": 4.555035934999978
+        "policy_ms": 0.00278660500171668,
+        "env_step_ms": 3.789189404999007
       },
       {
         "seed": 10042,
@@ -2068,8 +2068,8 @@
         "min_clearance_cm": 9.482212888281982,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.003521770799529299,
-        "env_step_ms": 4.121692944459533
+        "policy_ms": 0.002693326387791394,
+        "env_step_ms": 3.503882604167588
       },
       {
         "seed": 10043,
@@ -2082,8 +2082,8 @@
         "min_clearance_cm": 7.77594591940688,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0031487449814449064,
-        "env_step_ms": 4.454906259989002
+        "policy_ms": 0.0029066399999067016,
+        "env_step_ms": 4.042769085000799
       },
       {
         "seed": 10044,
@@ -2096,8 +2096,8 @@
         "min_clearance_cm": 7.764088020656161,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0030544946717801853,
-        "env_step_ms": 3.741959946168091
+        "policy_ms": 0.003510537633931279,
+        "env_step_ms": 3.492658397849433
       },
       {
         "seed": 10045,
@@ -2110,8 +2110,8 @@
         "min_clearance_cm": 7.775991649611052,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0027482051220244896,
-        "env_step_ms": 2.669318846124548
+        "policy_ms": 0.0024050854698578826,
+        "env_step_ms": 2.1373528632468277
       },
       {
         "seed": 10046,
@@ -2124,8 +2124,8 @@
         "min_clearance_cm": 7.613635199255192,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.003447714952926617,
-        "env_step_ms": 4.135601900043184
+        "policy_ms": 0.0029942300000129762,
+        "env_step_ms": 3.4385036450014184
       },
       {
         "seed": 10047,
@@ -2138,8 +2138,8 @@
         "min_clearance_cm": 8.078945841201362,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.003295900014563813,
-        "env_step_ms": 4.041261204965849
+        "policy_ms": 0.0030766100002210806,
+        "env_step_ms": 3.5365637449991993
       },
       {
         "seed": 10048,
@@ -2152,8 +2152,8 @@
         "min_clearance_cm": 12.860028671452381,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.004531108733436154,
-        "env_step_ms": 2.3931594130218676
+        "policy_ms": 0.002809891304136529,
+        "env_step_ms": 2.2135484782585704
       },
       {
         "seed": 10049,
@@ -2166,8 +2166,8 @@
         "min_clearance_cm": 10.220163045979291,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0033049110000305786,
-        "env_step_ms": 4.566629973841853
+        "policy_ms": 0.0036966335072694256,
+        "env_step_ms": 4.026424628273043
       },
       {
         "seed": 10050,
@@ -2180,8 +2180,8 @@
         "min_clearance_cm": 7.553485202958354,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0037925219543661877,
-        "env_step_ms": 4.5191678050830415
+        "policy_ms": 0.0026193836470299386,
+        "env_step_ms": 3.4064743144665215
       },
       {
         "seed": 10051,
@@ -2194,8 +2194,8 @@
         "min_clearance_cm": 7.775582050647381,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0035309699887875468,
-        "env_step_ms": 3.9880538650322706
+        "policy_ms": 0.0028937500009362793,
+        "env_step_ms": 3.392411425000006
       },
       {
         "seed": 10052,
@@ -2208,8 +2208,8 @@
         "min_clearance_cm": 7.998028795870379,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0030776501262153033,
-        "env_step_ms": 4.031614439900295
+        "policy_ms": 0.003018849999421036,
+        "env_step_ms": 3.635753060000866
       },
       {
         "seed": 10053,
@@ -2218,12 +2218,12 @@
         "cost": 0.0,
         "length": 200,
         "time_to_reach_s": null,
-        "base_rotation_deg": 14.014869259976363,
+        "base_rotation_deg": 14.162819076411807,
         "min_clearance_cm": 7.035738070586792,
         "obstacle": true,
-        "shield_interventions": 6,
-        "policy_ms": 0.0029496099978132406,
-        "env_step_ms": 4.988499760020204
+        "shield_interventions": 10,
+        "policy_ms": 0.002863865001074828,
+        "env_step_ms": 4.142784529999801
       },
       {
         "seed": 10054,
@@ -2236,8 +2236,8 @@
         "min_clearance_cm": 3.7799554851459507,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0031315486781890146,
-        "env_step_ms": 4.589100846183451
+        "policy_ms": 0.0025598666656361066,
+        "env_step_ms": 3.5780670461538953
       },
       {
         "seed": 10055,
@@ -2250,8 +2250,8 @@
         "min_clearance_cm": 12.983047751525758,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0052860475642817276,
-        "env_step_ms": 2.752137166680768
+        "policy_ms": 0.002526666665268013,
+        "env_step_ms": 2.1414309285718436
       },
       {
         "seed": 10056,
@@ -2264,8 +2264,8 @@
         "min_clearance_cm": 11.14841984147534,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0029792207861682038,
-        "env_step_ms": 2.6749331167617103
+        "policy_ms": 0.0031182986998675158,
+        "env_step_ms": 2.384294779221006
       },
       {
         "seed": 10057,
@@ -2278,8 +2278,8 @@
         "min_clearance_cm": 7.776089990364338,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0027991280724089514,
-        "env_step_ms": 3.021048068452122
+        "policy_ms": 0.002746547008727302,
+        "env_step_ms": 2.4798777094010664
       },
       {
         "seed": 10058,
@@ -2292,8 +2292,8 @@
         "min_clearance_cm": 5.580651131830075,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0031389549440064,
-        "env_step_ms": 4.722872935099076
+        "policy_ms": 0.002657755001109763,
+        "env_step_ms": 3.817534855000133
       },
       {
         "seed": 10059,
@@ -2306,8 +2306,8 @@
         "min_clearance_cm": 15.148653710188595,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.004692770896023528,
-        "env_step_ms": 2.6235736667103993
+        "policy_ms": 0.0024911666661372087,
+        "env_step_ms": 2.0781633750015516
       },
       {
         "seed": 10060,
@@ -2320,8 +2320,8 @@
         "min_clearance_cm": 8.839494612954873,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.003158349927616655,
-        "env_step_ms": 3.927890365057465
+        "policy_ms": 0.003230225000407927,
+        "env_step_ms": 3.333776250000824
       },
       {
         "seed": 10061,
@@ -2334,8 +2334,8 @@
         "min_clearance_cm": 5.006580928573127,
         "obstacle": true,
         "shield_interventions": 7,
-        "policy_ms": 0.0030329899345815647,
-        "env_step_ms": 4.152972335014056
+        "policy_ms": 0.0027047599998297756,
+        "env_step_ms": 3.620120684999506
       },
       {
         "seed": 10062,
@@ -2348,8 +2348,8 @@
         "min_clearance_cm": 6.79261080518756,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0032411400661658263,
-        "env_step_ms": 4.574117974980254
+        "policy_ms": 0.002745915001156618,
+        "env_step_ms": 3.5765430799997944
       },
       {
         "seed": 10063,
@@ -2358,12 +2358,12 @@
         "cost": 0.0,
         "length": 200,
         "time_to_reach_s": null,
-        "base_rotation_deg": 8.10797417748208,
-        "min_clearance_cm": 7.126764521681989,
+        "base_rotation_deg": 7.34292401421706,
+        "min_clearance_cm": 7.775316677960825,
         "obstacle": true,
-        "shield_interventions": 48,
-        "policy_ms": 0.003234744990550098,
-        "env_step_ms": 4.743432214954737
+        "shield_interventions": 98,
+        "policy_ms": 0.0026394550009456452,
+        "env_step_ms": 3.9982335249997902
       },
       {
         "seed": 10064,
@@ -2372,12 +2372,12 @@
         "cost": 0.0,
         "length": 200,
         "time_to_reach_s": null,
-        "base_rotation_deg": 7.315695948584493,
+        "base_rotation_deg": 7.286455936101822,
         "min_clearance_cm": 8.488670308957188,
         "obstacle": true,
-        "shield_interventions": 17,
-        "policy_ms": 0.003400645064175478,
-        "env_step_ms": 4.350386845026151
+        "shield_interventions": 31,
+        "policy_ms": 0.0032090500010895084,
+        "env_step_ms": 3.4735558750004714
       },
       {
         "seed": 10065,
@@ -2390,8 +2390,8 @@
         "min_clearance_cm": 8.414533311070052,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0027383111753604477,
-        "env_step_ms": 2.5684264221328905
+        "policy_ms": 0.003601399999474274,
+        "env_step_ms": 2.243724066666649
       },
       {
         "seed": 10066,
@@ -2404,8 +2404,8 @@
         "min_clearance_cm": 8.202815656734805,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.003274650016464875,
-        "env_step_ms": 4.293244489963399
+        "policy_ms": 0.0026235100006033463,
+        "env_step_ms": 3.2845240449996993
       },
       {
         "seed": 10067,
@@ -2414,12 +2414,12 @@
         "cost": 0.0,
         "length": 200,
         "time_to_reach_s": null,
-        "base_rotation_deg": 10.849360896747005,
-        "min_clearance_cm": 4.750654612176701,
+        "base_rotation_deg": 10.707523408313264,
+        "min_clearance_cm": 6.105406166977563,
         "obstacle": false,
-        "shield_interventions": 75,
-        "policy_ms": 0.0030816950038570212,
-        "env_step_ms": 2.7620310350175714
+        "shield_interventions": 84,
+        "policy_ms": 0.002351644999407654,
+        "env_step_ms": 2.2857023600003856
       },
       {
         "seed": 10068,
@@ -2432,8 +2432,8 @@
         "min_clearance_cm": 7.776265235273428,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.003024426278411844,
-        "env_step_ms": 2.8677424728699377
+        "policy_ms": 0.00297594573559989,
+        "env_step_ms": 2.3357601860465005
       },
       {
         "seed": 10069,
@@ -2446,8 +2446,8 @@
         "min_clearance_cm": 9.468202481175513,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.002743068950527733,
-        "env_step_ms": 2.4310859311111113
+        "policy_ms": 0.0026133793094937447,
+        "env_step_ms": 2.177560896551109
       },
       {
         "seed": 10070,
@@ -2460,8 +2460,8 @@
         "min_clearance_cm": 7.774385245306584,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0033984450237767305,
-        "env_step_ms": 5.156204160011839
+        "policy_ms": 0.0026043100011463594,
+        "env_step_ms": 3.8865614149983685
       },
       {
         "seed": 10071,
@@ -2474,8 +2474,8 @@
         "min_clearance_cm": 7.774447864407829,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.004065794946654933,
-        "env_step_ms": 4.325940790040477
+        "policy_ms": 0.002799480000561516,
+        "env_step_ms": 3.558016915000337
       },
       {
         "seed": 10072,
@@ -2488,8 +2488,8 @@
         "min_clearance_cm": 5.847054738142134,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0032905699936236488,
-        "env_step_ms": 4.563250585015339
+        "policy_ms": 0.002702720000939962,
+        "env_step_ms": 3.6683768900000757
       },
       {
         "seed": 10073,
@@ -2502,8 +2502,8 @@
         "min_clearance_cm": 7.776350152695382,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.003137148357176733,
-        "env_step_ms": 5.100046309692721
+        "policy_ms": 0.0026369096760405345,
+        "env_step_ms": 3.8891441032277387
       },
       {
         "seed": 10074,
@@ -2516,8 +2516,8 @@
         "min_clearance_cm": 9.458038896847972,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.002947777728776499,
-        "env_step_ms": 2.5321809443994425
+        "policy_ms": 0.0027211666672723434,
+        "env_step_ms": 2.1843264999990586
       },
       {
         "seed": 10075,
@@ -2530,8 +2530,8 @@
         "min_clearance_cm": 7.998594046039845,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0030340835110109765,
-        "env_step_ms": 2.7254169916280566
+        "policy_ms": 0.002622250001612277,
+        "env_step_ms": 2.27039521666678
       },
       {
         "seed": 10076,
@@ -2544,8 +2544,8 @@
         "min_clearance_cm": 15.875654180568905,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.004375617797503604,
-        "env_step_ms": 3.9649630146360484
+        "policy_ms": 0.002734691178866743,
+        "env_step_ms": 2.107907735292425
       },
       {
         "seed": 10077,
@@ -2558,8 +2558,8 @@
         "min_clearance_cm": 4.777142174231717,
         "obstacle": true,
         "shield_interventions": 10,
-        "policy_ms": 0.0030326949763548328,
-        "env_step_ms": 4.371558955044748
+        "policy_ms": 0.002746970001084037,
+        "env_step_ms": 3.6445708500001217
       },
       {
         "seed": 10078,
@@ -2572,8 +2572,8 @@
         "min_clearance_cm": 7.774447247410454,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.003477921118725422,
-        "env_step_ms": 2.6791797630673835
+        "policy_ms": 0.0025645263159384214,
+        "env_step_ms": 2.343071486844837
       },
       {
         "seed": 10079,
@@ -2586,8 +2586,8 @@
         "min_clearance_cm": 6.485273057755962,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.003108454050537123,
-        "env_step_ms": 4.196963427012953
+        "policy_ms": 0.0027077513525885456,
+        "env_step_ms": 3.5515328378371454
       },
       {
         "seed": 10080,
@@ -2600,8 +2600,8 @@
         "min_clearance_cm": 7.775699975434705,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.003864761888435746,
-        "env_step_ms": 2.7227235714235576
+        "policy_ms": 0.002524841269250251,
+        "env_step_ms": 2.2516050317458323
       },
       {
         "seed": 10081,
@@ -2610,12 +2610,12 @@
         "cost": 0.0,
         "length": 200,
         "time_to_reach_s": null,
-        "base_rotation_deg": 0.6549687815411137,
-        "min_clearance_cm": 5.60315341109427,
+        "base_rotation_deg": 0.6038904962251901,
+        "min_clearance_cm": 6.7311123018463395,
         "obstacle": true,
-        "shield_interventions": 89,
-        "policy_ms": 0.0028249200113350525,
-        "env_step_ms": 4.825993875010681
+        "shield_interventions": 104,
+        "policy_ms": 0.0025726049996421807,
+        "env_step_ms": 3.951072120000987
       },
       {
         "seed": 10082,
@@ -2628,8 +2628,8 @@
         "min_clearance_cm": 13.528384524232347,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0029602606841565475,
-        "env_step_ms": 2.553074637773165
+        "policy_ms": 0.0025486376815492344,
+        "env_step_ms": 2.1231446086967085
       },
       {
         "seed": 10083,
@@ -2642,8 +2642,8 @@
         "min_clearance_cm": 7.873582252850161,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.003099694548357804,
-        "env_step_ms": 2.8551668398022714
+        "policy_ms": 0.002580267174790044,
+        "env_step_ms": 2.5400073129761402
       },
       {
         "seed": 10084,
@@ -2656,8 +2656,8 @@
         "min_clearance_cm": 7.999989103826152,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0032957926763359595,
-        "env_step_ms": 4.724919755527582
+        "policy_ms": 0.0028953999994293417,
+        "env_step_ms": 3.776042925926504
       },
       {
         "seed": 10085,
@@ -2670,8 +2670,8 @@
         "min_clearance_cm": 9.71147170083115,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.00352057611013626,
-        "env_step_ms": 4.0237507064573395
+        "policy_ms": 0.002742706519328571,
+        "env_step_ms": 3.2206579130461397
       },
       {
         "seed": 10086,
@@ -2684,8 +2684,8 @@
         "min_clearance_cm": 11.640887677191245,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0033590476440232514,
-        "env_step_ms": 2.55129592392006
+        "policy_ms": 0.0027173047626439214,
+        "env_step_ms": 2.205969885713308
       },
       {
         "seed": 10087,
@@ -2698,8 +2698,8 @@
         "min_clearance_cm": 7.999078785621141,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.003442800043558236,
-        "env_step_ms": 4.437928479956099
+        "policy_ms": 0.003240625000557884,
+        "env_step_ms": 3.9799637350012063
       },
       {
         "seed": 10088,
@@ -2712,8 +2712,8 @@
         "min_clearance_cm": 7.998186011871519,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0033725140903178336,
-        "env_step_ms": 2.776675328667417
+        "policy_ms": 0.002593185715227264,
+        "env_step_ms": 2.3971684714272863
       },
       {
         "seed": 10089,
@@ -2726,8 +2726,8 @@
         "min_clearance_cm": 15.397355005949873,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.00305499997921288,
-        "env_step_ms": 3.0317202097120894
+        "policy_ms": 0.0025216935491992063,
+        "env_step_ms": 2.2032262903222994
       },
       {
         "seed": 10090,
@@ -2736,12 +2736,12 @@
         "cost": 0.0,
         "length": 200,
         "time_to_reach_s": null,
-        "base_rotation_deg": 4.351585863469388,
-        "min_clearance_cm": 4.048829585999446,
+        "base_rotation_deg": 4.434423489060561,
+        "min_clearance_cm": 5.304646631143245,
         "obstacle": true,
-        "shield_interventions": 24,
-        "policy_ms": 0.003258200031268643,
-        "env_step_ms": 4.356393689977267
+        "shield_interventions": 30,
+        "policy_ms": 0.0030430200008879638,
+        "env_step_ms": 3.629981474997521
       },
       {
         "seed": 10091,
@@ -2750,12 +2750,12 @@
         "cost": 0.0,
         "length": 200,
         "time_to_reach_s": null,
-        "base_rotation_deg": 6.490446082615073,
-        "min_clearance_cm": 4.885964412446572,
+        "base_rotation_deg": 5.138061324932416,
+        "min_clearance_cm": 4.561108242944274,
         "obstacle": false,
-        "shield_interventions": 124,
-        "policy_ms": 0.0028227350321685662,
-        "env_step_ms": 3.023138729877246
+        "shield_interventions": 156,
+        "policy_ms": 0.0025659150011847487,
+        "env_step_ms": 2.853493394999873
       },
       {
         "seed": 10092,
@@ -2768,8 +2768,8 @@
         "min_clearance_cm": 10.07483074506759,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.003637153903170664,
-        "env_step_ms": 4.577589923086572
+        "policy_ms": 0.003009341879643939,
+        "env_step_ms": 3.876317871796097
       },
       {
         "seed": 10093,
@@ -2782,8 +2782,8 @@
         "min_clearance_cm": 3.392041079932482,
         "obstacle": true,
         "shield_interventions": 2,
-        "policy_ms": 0.0032694849960535066,
-        "env_step_ms": 4.926579360007963
+        "policy_ms": 0.002646985001035773,
+        "env_step_ms": 3.8795506449987727
       },
       {
         "seed": 10094,
@@ -2796,8 +2796,8 @@
         "min_clearance_cm": 7.343173022101979,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0031721538806987856,
-        "env_step_ms": 4.493280141011779
+        "policy_ms": 0.0027286602557862164,
+        "env_step_ms": 3.496863647435716
       },
       {
         "seed": 10095,
@@ -2810,22 +2810,22 @@
         "min_clearance_cm": 7.998954212413064,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.003065190003326279,
-        "env_step_ms": 4.2495287049951
+        "policy_ms": 0.0030382250002958244,
+        "env_step_ms": 3.822167444999991
       },
       {
         "seed": 10096,
         "success": false,
-        "collision": false,
-        "cost": 37.0,
-        "length": 200,
+        "collision": true,
+        "cost": 30.0,
+        "length": 150,
         "time_to_reach_s": null,
-        "base_rotation_deg": 1.2740870311241206,
-        "min_clearance_cm": 0.6823122846322138,
+        "base_rotation_deg": 1.3266849116742234,
+        "min_clearance_cm": -0.009780110476934056,
         "obstacle": true,
-        "shield_interventions": 104,
-        "policy_ms": 0.0031874849810265005,
-        "env_step_ms": 5.9801640599380335
+        "shield_interventions": 75,
+        "policy_ms": 0.003170966666819671,
+        "env_step_ms": 4.641992613333438
       },
       {
         "seed": 10097,
@@ -2838,8 +2838,8 @@
         "min_clearance_cm": 7.776067335922629,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0029342249490582617,
-        "env_step_ms": 4.220424375034781
+        "policy_ms": 0.002841334999885703,
+        "env_step_ms": 3.57029734000065
       },
       {
         "seed": 10098,
@@ -2852,8 +2852,8 @@
         "min_clearance_cm": 8.036259098447212,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0034506515527191165,
-        "env_step_ms": 3.17283584277657
+        "policy_ms": 0.0025698876381636763,
+        "env_step_ms": 2.4056550674194996
       },
       {
         "seed": 10099,
@@ -2866,8 +2866,8 @@
         "min_clearance_cm": 16.214052587321945,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0031457909529702044,
-        "env_step_ms": 2.494089850717582
+        "policy_ms": 0.002512328357265212,
+        "env_step_ms": 2.085789597016197
       }
     ],
     "rl": [
@@ -2882,8 +2882,8 @@
         "min_clearance_cm": 13.477551320876577,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.12075920343612147,
-        "env_step_ms": 2.124004050883587
+        "policy_ms": 0.11188864407098648,
+        "env_step_ms": 1.8743219999996423
       },
       {
         "seed": 10001,
@@ -2896,8 +2896,8 @@
         "min_clearance_cm": 5.720207396435701,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.1407344215669368,
-        "env_step_ms": 3.565266235419389
+        "policy_ms": 0.11887649019644966,
+        "env_step_ms": 2.964001833334453
       },
       {
         "seed": 10002,
@@ -2910,8 +2910,8 @@
         "min_clearance_cm": -0.03498042817742866,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.13148887497167874,
-        "env_step_ms": 2.2810719204823147
+        "policy_ms": 0.11474703409255292,
+        "env_step_ms": 1.9913997727239907
       },
       {
         "seed": 10003,
@@ -2924,8 +2924,8 @@
         "min_clearance_cm": 9.10362794501338,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.14462263157168453,
-        "env_step_ms": 3.832301821048053
+        "policy_ms": 0.11462964210379237,
+        "env_step_ms": 3.060087715790647
       },
       {
         "seed": 10004,
@@ -2938,8 +2938,8 @@
         "min_clearance_cm": 5.94675877527686,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.13334184989616915,
-        "env_step_ms": 3.541535000058502
+        "policy_ms": 0.1206835900013914,
+        "env_step_ms": 3.2352889799994955
       },
       {
         "seed": 10005,
@@ -2952,8 +2952,8 @@
         "min_clearance_cm": 11.320028722067189,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.1358016251818602,
-        "env_step_ms": 2.5157751457906365
+        "policy_ms": 0.10430839583186469,
+        "env_step_ms": 2.1604018125014335
       },
       {
         "seed": 10006,
@@ -2966,8 +2966,8 @@
         "min_clearance_cm": 5.55139715199382,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.1257385895434326,
-        "env_step_ms": 2.1683137894510045
+        "policy_ms": 0.10487285263138801,
+        "env_step_ms": 1.8234176842105698
       },
       {
         "seed": 10007,
@@ -2980,8 +2980,8 @@
         "min_clearance_cm": 1.7566095692846284,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.14939245466690815,
-        "env_step_ms": 3.386523826483133
+        "policy_ms": 0.11474681818107689,
+        "env_step_ms": 2.6851766033064073
       },
       {
         "seed": 10008,
@@ -2994,8 +2994,8 @@
         "min_clearance_cm": -0.019300526447685318,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.12731117348433757,
-        "env_step_ms": 2.996727877500086
+        "policy_ms": 0.11228292857231978,
+        "env_step_ms": 2.64854738775406
       },
       {
         "seed": 10009,
@@ -3008,8 +3008,8 @@
         "min_clearance_cm": 7.244067815188079,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.14258878008149622,
-        "env_step_ms": 3.263004185009777
+        "policy_ms": 0.11779498500033014,
+        "env_step_ms": 2.822167234999
       },
       {
         "seed": 10010,
@@ -3022,8 +3022,8 @@
         "min_clearance_cm": 9.263469595935844,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.12596500011803133,
-        "env_step_ms": 2.0957468710079294
+        "policy_ms": 0.10304625806248448,
+        "env_step_ms": 1.7808323225802913
       },
       {
         "seed": 10011,
@@ -3036,8 +3036,8 @@
         "min_clearance_cm": 15.73906714809208,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.12376311119792431,
-        "env_step_ms": 2.047446259152989
+        "policy_ms": 0.12968277777897835,
+        "env_step_ms": 2.0155038148164683
       },
       {
         "seed": 10012,
@@ -3050,8 +3050,8 @@
         "min_clearance_cm": 13.325337848504832,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.12410696444931091,
-        "env_step_ms": 2.104454071416382
+        "policy_ms": 0.111712392859025,
+        "env_step_ms": 1.8271921071420902
       },
       {
         "seed": 10013,
@@ -3064,8 +3064,8 @@
         "min_clearance_cm": 7.112478931929242,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.13715893499465892,
-        "env_step_ms": 3.2526337150284235
+        "policy_ms": 0.11566170499875739,
+        "env_step_ms": 2.810123750000031
       },
       {
         "seed": 10014,
@@ -3078,8 +3078,8 @@
         "min_clearance_cm": -0.07355591872889727,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.16714373383582398,
-        "env_step_ms": 3.7243206239642666
+        "policy_ms": 0.11462022018282919,
+        "env_step_ms": 2.974121743119023
       },
       {
         "seed": 10015,
@@ -3092,8 +3092,8 @@
         "min_clearance_cm": 1.9280344763203825,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.13617729726664382,
-        "env_step_ms": 2.1340606216580382
+        "policy_ms": 0.10833756756728935,
+        "env_step_ms": 1.791937189189049
       },
       {
         "seed": 10016,
@@ -3106,8 +3106,8 @@
         "min_clearance_cm": 7.5263550095424945,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.13040157002251362,
-        "env_step_ms": 3.178743275029774
+        "policy_ms": 0.1205469800000003,
+        "env_step_ms": 2.91125855999951
       },
       {
         "seed": 10017,
@@ -3120,8 +3120,8 @@
         "min_clearance_cm": 5.819584784663061,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.14369878369285977,
-        "env_step_ms": 3.35844902700636
+        "policy_ms": 0.12268864864956192,
+        "env_step_ms": 2.831731162159854
       },
       {
         "seed": 10018,
@@ -3134,8 +3134,8 @@
         "min_clearance_cm": 2.0120386260939997,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.1253953615424565,
-        "env_step_ms": 2.6595999575836182
+        "policy_ms": 0.10341776595744685,
+        "env_step_ms": 2.1905394468082577
       },
       {
         "seed": 10019,
@@ -3148,8 +3148,8 @@
         "min_clearance_cm": 8.799289074911936,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.12861953506217105,
-        "env_step_ms": 3.2576996300576866
+        "policy_ms": 0.1126841100003162,
+        "env_step_ms": 2.864067110001116
       },
       {
         "seed": 10020,
@@ -3162,8 +3162,8 @@
         "min_clearance_cm": 5.275956272566232,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.14243273503780074,
-        "env_step_ms": 3.429467710029712
+        "policy_ms": 0.11719436000092287,
+        "env_step_ms": 2.8530208649991096
       },
       {
         "seed": 10021,
@@ -3176,8 +3176,8 @@
         "min_clearance_cm": 5.384755241013369,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.15706970002611342,
-        "env_step_ms": 3.6166763350229303
+        "policy_ms": 0.1123459050010922,
+        "env_step_ms": 2.8534263599996734
       },
       {
         "seed": 10022,
@@ -3190,8 +3190,8 @@
         "min_clearance_cm": 1.5238814030988943,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.13335581507901623,
-        "env_step_ms": 2.7450098151356
+        "policy_ms": 0.10429100840268757,
+        "env_step_ms": 2.1988691848748236
       },
       {
         "seed": 10023,
@@ -3204,8 +3204,8 @@
         "min_clearance_cm": 10.317000774342436,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.12128993639346426,
-        "env_step_ms": 2.033252365031836
+        "policy_ms": 0.10848334920504545,
+        "env_step_ms": 1.7924394920652185
       },
       {
         "seed": 10024,
@@ -3218,8 +3218,8 @@
         "min_clearance_cm": 9.048010438285448,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.13439813157770245,
-        "env_step_ms": 2.581077000094841
+        "policy_ms": 0.11015473684120766,
+        "env_step_ms": 2.1002194210546734
       },
       {
         "seed": 10025,
@@ -3232,8 +3232,8 @@
         "min_clearance_cm": 9.248583015565615,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.1298012222313056,
-        "env_step_ms": 2.213290936601374
+        "policy_ms": 0.10014336507875697,
+        "env_step_ms": 1.7632472063508338
       },
       {
         "seed": 10026,
@@ -3246,8 +3246,8 @@
         "min_clearance_cm": 7.77634794547703,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.1461080650551594,
-        "env_step_ms": 4.114432174956164
+        "policy_ms": 0.11600340999876835,
+        "env_step_ms": 3.3684893200002364
       },
       {
         "seed": 10027,
@@ -3260,8 +3260,8 @@
         "min_clearance_cm": 0.018138710342451708,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.12841347820737967,
-        "env_step_ms": 2.287533156492788
+        "policy_ms": 0.11748049565149497,
+        "env_step_ms": 2.15645697391378
       },
       {
         "seed": 10028,
@@ -3274,8 +3274,8 @@
         "min_clearance_cm": 8.317760518791767,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.13671597383939155,
-        "env_step_ms": 2.8510171392237837
+        "policy_ms": 0.10714966087176514,
+        "env_step_ms": 2.3363794260860784
       },
       {
         "seed": 10029,
@@ -3288,8 +3288,8 @@
         "min_clearance_cm": 7.776136252121571,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.13616732499940554,
-        "env_step_ms": 3.8221334950139862
+        "policy_ms": 0.11208455999934586,
+        "env_step_ms": 3.1781290800003603
       },
       {
         "seed": 10030,
@@ -3302,8 +3302,8 @@
         "min_clearance_cm": 7.776330390165715,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.13703810380766815,
-        "env_step_ms": 2.949935197940026
+        "policy_ms": 0.10814849056855093,
+        "env_step_ms": 2.3639383679239865
       },
       {
         "seed": 10031,
@@ -3316,8 +3316,8 @@
         "min_clearance_cm": 6.649235122061311,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.13213492200275592,
-        "env_step_ms": 3.5297629787082574
+        "policy_ms": 0.11720966666696427,
+        "env_step_ms": 2.9786836737604783
       },
       {
         "seed": 10032,
@@ -3330,8 +3330,8 @@
         "min_clearance_cm": 8.927028361415621,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.13179986680269293,
-        "env_step_ms": 2.335580710981352
+        "policy_ms": 0.11409815555478214,
+        "env_step_ms": 2.0338694666659447
       },
       {
         "seed": 10033,
@@ -3344,8 +3344,8 @@
         "min_clearance_cm": 8.691821936310005,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.14658240503194975,
-        "env_step_ms": 3.501730914977088
+        "policy_ms": 0.1087651749998031,
+        "env_step_ms": 2.765990404999741
       },
       {
         "seed": 10034,
@@ -3358,8 +3358,8 @@
         "min_clearance_cm": 16.041979372015852,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.12940773706903105,
-        "env_step_ms": 2.438040315562256
+        "policy_ms": 0.11147918421197812,
+        "env_step_ms": 2.0522016052614105
       },
       {
         "seed": 10035,
@@ -3372,8 +3372,8 @@
         "min_clearance_cm": 7.774876758972332,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.12842264862450287,
-        "env_step_ms": 2.363469608049805
+        "policy_ms": 0.11439552702700599,
+        "env_step_ms": 2.1137419594585043
       },
       {
         "seed": 10036,
@@ -3386,8 +3386,8 @@
         "min_clearance_cm": 7.999907485992116,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.14125616845182337,
-        "env_step_ms": 3.5695501123626947
+        "policy_ms": 0.11939149438185932,
+        "env_step_ms": 2.961734314606645
       },
       {
         "seed": 10037,
@@ -3400,8 +3400,8 @@
         "min_clearance_cm": 5.882657085236634,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.1424622522197593,
-        "env_step_ms": 3.138150634786934
+        "policy_ms": 0.1322021826099543,
+        "env_step_ms": 2.7704714695640513
       },
       {
         "seed": 10038,
@@ -3414,8 +3414,8 @@
         "min_clearance_cm": 5.030882721872336,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.13784534140296917,
-        "env_step_ms": 2.770527341653644
+        "policy_ms": 0.10987360975507993,
+        "env_step_ms": 2.26633178048881
       },
       {
         "seed": 10039,
@@ -3428,8 +3428,8 @@
         "min_clearance_cm": 13.38777989117903,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.12649902510020183,
-        "env_step_ms": 2.1121993500401004
+        "policy_ms": 0.11257419999850526,
+        "env_step_ms": 1.9064581750015464
       },
       {
         "seed": 10040,
@@ -3442,8 +3442,8 @@
         "min_clearance_cm": 14.736401596640292,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.14103336171172756,
-        "env_step_ms": 2.603067659483133
+        "policy_ms": 0.1045786382981513,
+        "env_step_ms": 1.98640157446956
       },
       {
         "seed": 10041,
@@ -3456,8 +3456,8 @@
         "min_clearance_cm": 7.774843417186195,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.14128286501545517,
-        "env_step_ms": 3.8291582200599805
+        "policy_ms": 0.1178324199999281,
+        "env_step_ms": 3.2703210800009685
       },
       {
         "seed": 10042,
@@ -3470,8 +3470,8 @@
         "min_clearance_cm": 8.775517095446638,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.13420436353753049,
-        "env_step_ms": 3.3298961428623772
+        "policy_ms": 0.11469002597343868,
+        "env_step_ms": 2.7470050519501195
       },
       {
         "seed": 10043,
@@ -3484,8 +3484,8 @@
         "min_clearance_cm": 7.776358879667833,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.1365167963660046,
-        "env_step_ms": 3.585005469039568
+        "policy_ms": 0.11655936283251217,
+        "env_step_ms": 3.17340384955629
       },
       {
         "seed": 10044,
@@ -3498,8 +3498,8 @@
         "min_clearance_cm": 8.994646930009639,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.15469480563802385,
-        "env_step_ms": 3.406410125030056
+        "policy_ms": 0.11834663888718763,
+        "env_step_ms": 2.6470332222230137
       },
       {
         "seed": 10045,
@@ -3512,8 +3512,8 @@
         "min_clearance_cm": 7.7720114197870505,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.12917419771389335,
-        "env_step_ms": 2.308523148162805
+        "policy_ms": 0.11319967901226004,
+        "env_step_ms": 1.9376947407391965
       },
       {
         "seed": 10046,
@@ -3526,8 +3526,8 @@
         "min_clearance_cm": 6.501058089995151,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.13966978999633284,
-        "env_step_ms": 3.3617513999888615
+        "policy_ms": 0.11059149500084686,
+        "env_step_ms": 2.7422670449985276
       },
       {
         "seed": 10047,
@@ -3540,8 +3540,8 @@
         "min_clearance_cm": 7.989678197306688,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.13145753002390848,
-        "env_step_ms": 3.196644940016995
+        "policy_ms": 0.11607479000105059,
+        "env_step_ms": 2.8443153649993747
       },
       {
         "seed": 10048,
@@ -3554,8 +3554,8 @@
         "min_clearance_cm": 12.90907715358603,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.1485815998603357,
-        "env_step_ms": 2.3906853199150646
+        "policy_ms": 0.11508875999766133,
+        "env_step_ms": 1.893452880001405
       },
       {
         "seed": 10049,
@@ -3568,8 +3568,8 @@
         "min_clearance_cm": 9.027556063068904,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.13631855175970423,
-        "env_step_ms": 3.5704964051829253
+        "policy_ms": 0.11995440517154066,
+        "env_step_ms": 3.16040784482764
       },
       {
         "seed": 10050,
@@ -3582,8 +3582,8 @@
         "min_clearance_cm": 6.188588326995469,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.1396666750042641,
-        "env_step_ms": 3.416738125069969
+        "policy_ms": 0.11228276999815989,
+        "env_step_ms": 2.7573404749999497
       },
       {
         "seed": 10051,
@@ -3596,8 +3596,8 @@
         "min_clearance_cm": 7.7729813190183155,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.12324474993455134,
-        "env_step_ms": 2.4275534615998575
+        "policy_ms": 0.106570615386112,
+        "env_step_ms": 2.12221901923088
       },
       {
         "seed": 10052,
@@ -3610,8 +3610,8 @@
         "min_clearance_cm": 10.693237969551014,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.14836711109940856,
-        "env_step_ms": 2.5102913612297724
+        "policy_ms": 0.1022795277710505,
+        "env_step_ms": 1.8488587777775303
       },
       {
         "seed": 10053,
@@ -3624,8 +3624,8 @@
         "min_clearance_cm": 4.8513642448205605,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.13729348501328786,
-        "env_step_ms": 3.78477938495962
+        "policy_ms": 0.11431033499889054,
+        "env_step_ms": 3.1106504900009213
       },
       {
         "seed": 10054,
@@ -3638,8 +3638,8 @@
         "min_clearance_cm": 5.384684286176617,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.1400756665878527,
-        "env_step_ms": 3.4340529818798657
+        "policy_ms": 0.1110479030301397,
+        "env_step_ms": 2.7824057212116617
       },
       {
         "seed": 10055,
@@ -3652,8 +3652,8 @@
         "min_clearance_cm": 13.00051341346839,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.12046669256121206,
-        "env_step_ms": 2.078470999899414
+        "policy_ms": 0.10493203846041209,
+        "env_step_ms": 1.7931704999993003
       },
       {
         "seed": 10056,
@@ -3666,8 +3666,8 @@
         "min_clearance_cm": 14.672908867170845,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.14618384004279505,
-        "env_step_ms": 2.470004899914784
+        "policy_ms": 0.10640088000059222,
+        "env_step_ms": 1.872801979998826
       },
       {
         "seed": 10057,
@@ -3680,8 +3680,8 @@
         "min_clearance_cm": 8.537838408962573,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.1354861862601669,
-        "env_step_ms": 2.4653658234527422
+        "policy_ms": 0.10983095097878513,
+        "env_step_ms": 2.0831380294130413
       },
       {
         "seed": 10058,
@@ -3694,8 +3694,8 @@
         "min_clearance_cm": 5.965542623406381,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.13754970502304786,
-        "env_step_ms": 3.7343911599691637
+        "policy_ms": 0.11428324999940287,
+        "env_step_ms": 3.1215774350005177
       },
       {
         "seed": 10059,
@@ -3708,8 +3708,8 @@
         "min_clearance_cm": 15.55643335343798,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.12028668554973722,
-        "env_step_ms": 2.0523331714814828
+        "policy_ms": 0.10829194285812653,
+        "env_step_ms": 1.8871719714281556
       },
       {
         "seed": 10060,
@@ -3722,8 +3722,8 @@
         "min_clearance_cm": 13.956064504367607,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.12346121431099684,
-        "env_step_ms": 2.1587196904095305
+        "policy_ms": 0.10420702381065353,
+        "env_step_ms": 1.8551521666646902
       },
       {
         "seed": 10061,
@@ -3736,8 +3736,8 @@
         "min_clearance_cm": 6.294888768179979,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.15255413971798965,
-        "env_step_ms": 3.9118250072480056
+        "policy_ms": 0.12262157353086256,
+        "env_step_ms": 3.220652919116669
       },
       {
         "seed": 10062,
@@ -3750,8 +3750,8 @@
         "min_clearance_cm": 2.364659618221105,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.13416445003713307,
-        "env_step_ms": 3.3470642050178867
+        "policy_ms": 0.11020769000026576,
+        "env_step_ms": 2.9090444049992925
       },
       {
         "seed": 10063,
@@ -3764,8 +3764,8 @@
         "min_clearance_cm": 7.7756611866528935,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.1344291500390682,
-        "env_step_ms": 3.875743955059079
+        "policy_ms": 0.11989540499968143,
+        "env_step_ms": 3.3270876799994653
       },
       {
         "seed": 10064,
@@ -3778,8 +3778,8 @@
         "min_clearance_cm": 8.445094662919427,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.14361020607828476,
-        "env_step_ms": 3.3421154656733623
+        "policy_ms": 0.11433276335927471,
+        "env_step_ms": 2.738914160306085
       },
       {
         "seed": 10065,
@@ -3792,8 +3792,8 @@
         "min_clearance_cm": 8.967700164946423,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.1440855714463396,
-        "env_step_ms": 2.3386772569210734
+        "policy_ms": 0.11040868571399187,
+        "env_step_ms": 1.9287772285736082
       },
       {
         "seed": 10066,
@@ -3806,8 +3806,8 @@
         "min_clearance_cm": 9.491774853653897,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.12346331257617749,
-        "env_step_ms": 2.212863203112647
+        "policy_ms": 0.10744604687618065,
+        "env_step_ms": 1.899760453124344
       },
       {
         "seed": 10067,
@@ -3820,8 +3820,8 @@
         "min_clearance_cm": 2.7214064671655795,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.13637491421312525,
-        "env_step_ms": 2.2373678999948816
+        "policy_ms": 0.10488071428531905,
+        "env_step_ms": 1.8415397428595628
       },
       {
         "seed": 10068,
@@ -3834,8 +3834,8 @@
         "min_clearance_cm": 7.776195127913349,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.14213693023965218,
-        "env_step_ms": 2.5395044186277733
+        "policy_ms": 0.10652526744114618,
+        "env_step_ms": 1.9077574186047344
       },
       {
         "seed": 10069,
@@ -3848,8 +3848,8 @@
         "min_clearance_cm": 9.630554704389047,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.1291987499826064,
-        "env_step_ms": 2.2324412002490135
+        "policy_ms": 0.10508524999863766,
+        "env_step_ms": 2.008946600000172
       },
       {
         "seed": 10070,
@@ -3862,8 +3862,8 @@
         "min_clearance_cm": 7.776339147353594,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.14006318475040666,
-        "env_step_ms": 3.5854265588195395
+        "policy_ms": 0.1165989589759274,
+        "env_step_ms": 3.02687904102244
       },
       {
         "seed": 10071,
@@ -3876,8 +3876,8 @@
         "min_clearance_cm": 7.641933135971349,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.13173144642072052,
-        "env_step_ms": 3.362049136967471
+        "policy_ms": 0.11405130356917106,
+        "env_step_ms": 2.8592128154778202
       },
       {
         "seed": 10072,
@@ -3890,8 +3890,8 @@
         "min_clearance_cm": 7.776291132511254,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.14304308955507256,
-        "env_step_ms": 2.9149663881329237
+        "policy_ms": 0.10530741790966434,
+        "env_step_ms": 2.2605454477603764
       },
       {
         "seed": 10073,
@@ -3904,8 +3904,8 @@
         "min_clearance_cm": 6.508847251375788,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.1396720349748648,
-        "env_step_ms": 3.505600670005151
+        "policy_ms": 0.12825783000025126,
+        "env_step_ms": 3.263454320000392
       },
       {
         "seed": 10074,
@@ -3918,8 +3918,8 @@
         "min_clearance_cm": 9.503238139302233,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.12733506879032638,
-        "env_step_ms": 2.13874337952865
+        "policy_ms": 0.101605206894866,
+        "env_step_ms": 1.7865769310360677
       },
       {
         "seed": 10075,
@@ -3932,8 +3932,8 @@
         "min_clearance_cm": 7.9976334669653895,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.12507156952779042,
-        "env_step_ms": 2.2940695416006442
+        "policy_ms": 0.10886540277649853,
+        "env_step_ms": 1.9631425138876404
       },
       {
         "seed": 10076,
@@ -3946,8 +3946,8 @@
         "min_clearance_cm": 16.29459186170022,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.14815037159548541,
-        "env_step_ms": 2.3243850572596005
+        "policy_ms": 0.10220291428351759,
+        "env_step_ms": 1.7737868000007697
       },
       {
         "seed": 10077,
@@ -3960,8 +3960,8 @@
         "min_clearance_cm": 3.980832720732968,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.1426748249832599,
-        "env_step_ms": 3.397140040015074
+        "policy_ms": 0.11879214499955992,
+        "env_step_ms": 3.0435285650004573
       },
       {
         "seed": 10078,
@@ -3974,8 +3974,8 @@
         "min_clearance_cm": 7.776247471881032,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.1414998262233617,
-        "env_step_ms": 2.5637659564381465
+        "policy_ms": 0.109167978258686,
+        "env_step_ms": 1.9514096087004627
       },
       {
         "seed": 10079,
@@ -3988,8 +3988,8 @@
         "min_clearance_cm": 6.392710951463314,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.12865235248682438,
-        "env_step_ms": 3.212851980828045
+        "policy_ms": 0.11562274358968312,
+        "env_step_ms": 2.870312538462007
       },
       {
         "seed": 10080,
@@ -4002,8 +4002,8 @@
         "min_clearance_cm": 7.776304274442497,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.14537518920307677,
-        "env_step_ms": 2.419802189300803
+        "policy_ms": 0.10391067567331595,
+        "env_step_ms": 1.8736642432471042
       },
       {
         "seed": 10081,
@@ -4016,8 +4016,8 @@
         "min_clearance_cm": 7.984251904932105,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.1312561250233557,
-        "env_step_ms": 3.555232574999536
+        "policy_ms": 0.12496847000065259,
+        "env_step_ms": 3.602627550000932
       },
       {
         "seed": 10082,
@@ -4030,8 +4030,8 @@
         "min_clearance_cm": 14.855896971347931,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.14788015152699893,
-        "env_step_ms": 2.438883636414451
+        "policy_ms": 0.13176251515160817,
+        "env_step_ms": 2.093727757575221
       },
       {
         "seed": 10083,
@@ -4044,8 +4044,8 @@
         "min_clearance_cm": 12.708026355792986,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.1299422666973745,
-        "env_step_ms": 2.4480161334213335
+        "policy_ms": 0.11341048000417686,
+        "env_step_ms": 2.1613458666638508
       },
       {
         "seed": 10084,
@@ -4058,8 +4058,8 @@
         "min_clearance_cm": 7.997882751300753,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.14699402266738948,
-        "env_step_ms": 3.193401409093481
+        "policy_ms": 0.10843077272940346,
+        "env_step_ms": 2.4564675227254766
       },
       {
         "seed": 10085,
@@ -4072,8 +4072,8 @@
         "min_clearance_cm": 8.254461729850501,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.1318365822861537,
-        "env_step_ms": 3.028268886081133
+        "policy_ms": 0.12319536708716868,
+        "env_step_ms": 2.8477604430402383
       },
       {
         "seed": 10086,
@@ -4086,8 +4086,8 @@
         "min_clearance_cm": 15.767920473547475,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.1381981186938701,
-        "env_step_ms": 2.2569668643404452
+        "policy_ms": 0.11233220338889453,
+        "env_step_ms": 1.8955442203412654
       },
       {
         "seed": 10087,
@@ -4100,8 +4100,8 @@
         "min_clearance_cm": 7.999445285994988,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.13150769490493985,
-        "env_step_ms": 3.354727300020386
+        "policy_ms": 0.11562935500151639,
+        "env_step_ms": 2.9534880849999468
       },
       {
         "seed": 10088,
@@ -4114,8 +4114,8 @@
         "min_clearance_cm": 7.999967088640495,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.146484999851581,
-        "env_step_ms": 2.723379868305193
+        "policy_ms": 0.10484849999975747,
+        "env_step_ms": 2.0416581842113146
       },
       {
         "seed": 10089,
@@ -4128,8 +4128,8 @@
         "min_clearance_cm": 17.548349164615576,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.12593111378836594,
-        "env_step_ms": 2.144466863683192
+        "policy_ms": 0.1122017499994854,
+        "env_step_ms": 1.9133143636370742
       },
       {
         "seed": 10090,
@@ -4142,8 +4142,8 @@
         "min_clearance_cm": 6.08208734204848,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.14304852498753462,
-        "env_step_ms": 3.299392219969377
+        "policy_ms": 0.12959652999953164,
+        "env_step_ms": 3.0416049550007074
       },
       {
         "seed": 10091,
@@ -4156,8 +4156,8 @@
         "min_clearance_cm": -0.8842098229800088,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.12324768515638963,
-        "env_step_ms": 2.419900555583741
+        "policy_ms": 0.11562207407467684,
+        "env_step_ms": 2.221507259257557
       },
       {
         "seed": 10092,
@@ -4170,8 +4170,8 @@
         "min_clearance_cm": 5.399451579622892,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.14557388877996474,
-        "env_step_ms": 3.9349462829043413
+        "policy_ms": 0.10990977777838554,
+        "env_step_ms": 3.126792838382742
       },
       {
         "seed": 10093,
@@ -4184,8 +4184,8 @@
         "min_clearance_cm": 6.849242470129862,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.1321863550310809,
-        "env_step_ms": 3.7546794999798294
+        "policy_ms": 0.11910189999952081,
+        "env_step_ms": 3.3955780150004955
       },
       {
         "seed": 10094,
@@ -4198,8 +4198,8 @@
         "min_clearance_cm": 6.2253934782643325,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.13316357806348988,
-        "env_step_ms": 3.2843478898822975
+        "policy_ms": 0.12907275229469106,
+        "env_step_ms": 3.123374256879945
       },
       {
         "seed": 10095,
@@ -4212,8 +4212,8 @@
         "min_clearance_cm": 6.35726056314094,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.13977003901288754,
-        "env_step_ms": 3.5079002266513726
+        "policy_ms": 0.11674549218732011,
+        "env_step_ms": 2.9840856328133825
       },
       {
         "seed": 10096,
@@ -4226,8 +4226,8 @@
         "min_clearance_cm": 3.9616343839445554,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.13741706951333083,
-        "env_step_ms": 3.061454095022552
+        "policy_ms": 0.10841237974653878,
+        "env_step_ms": 2.492633974684309
       },
       {
         "seed": 10097,
@@ -4240,8 +4240,8 @@
         "min_clearance_cm": 4.259081873518376,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.12788033996912418,
-        "env_step_ms": 3.7874270250995323
+        "policy_ms": 0.11756013000010057,
+        "env_step_ms": 3.4342030499990983
       },
       {
         "seed": 10098,
@@ -4254,8 +4254,8 @@
         "min_clearance_cm": 11.828107614240436,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.13500578247855985,
-        "env_step_ms": 2.708294043496489
+        "policy_ms": 0.12032121739233172,
+        "env_step_ms": 2.5217065217376606
       },
       {
         "seed": 10099,
@@ -4268,8 +4268,8 @@
         "min_clearance_cm": 17.166607848614255,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.13629802930047255,
-        "env_step_ms": 2.517582264826
+        "policy_ms": 0.13175514706380695,
+        "env_step_ms": 2.331456205877537
       }
     ],
     "rl+shield": [
@@ -4284,8 +4284,8 @@
         "min_clearance_cm": 13.477551320876577,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.1353424915454895,
-        "env_step_ms": 2.6079314238351365
+        "policy_ms": 0.11063464406827163,
+        "env_step_ms": 2.2183587627119907
       },
       {
         "seed": 10001,
@@ -4298,8 +4298,8 @@
         "min_clearance_cm": 5.720207396435701,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.15099948040205716,
-        "env_step_ms": 4.627537107719
+        "policy_ms": 0.12677169607985328,
+        "env_step_ms": 3.870928078429433
       },
       {
         "seed": 10002,
@@ -4308,26 +4308,26 @@
         "cost": 0.0,
         "length": 200,
         "time_to_reach_s": null,
-        "base_rotation_deg": 12.180932983465171,
-        "min_clearance_cm": 5.2088140372128455,
+        "base_rotation_deg": 11.998807089331313,
+        "min_clearance_cm": 6.278412379152207,
         "obstacle": false,
-        "shield_interventions": 108,
-        "policy_ms": 0.14736630002516904,
-        "env_step_ms": 3.042034590007461
+        "shield_interventions": 106,
+        "policy_ms": 0.11683505000092964,
+        "env_step_ms": 2.4262909849984737
       },
       {
         "seed": 10003,
         "success": true,
         "collision": false,
         "cost": 0.0,
-        "length": 103,
-        "time_to_reach_s": 10.3,
-        "base_rotation_deg": 5.781660240415431,
-        "min_clearance_cm": 8.97340665478844,
+        "length": 107,
+        "time_to_reach_s": 10.700000000000001,
+        "base_rotation_deg": 5.756414240281859,
+        "min_clearance_cm": 8.881625130236074,
         "obstacle": true,
-        "shield_interventions": 23,
-        "policy_ms": 0.15043944669070822,
-        "env_step_ms": 5.006506359297895
+        "shield_interventions": 29,
+        "policy_ms": 0.11887690654303468,
+        "env_step_ms": 3.8803929158868273
       },
       {
         "seed": 10004,
@@ -4340,8 +4340,8 @@
         "min_clearance_cm": 5.94675877527686,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.1535629999034427,
-        "env_step_ms": 5.153183225047542
+        "policy_ms": 0.12078690000009829,
+        "env_step_ms": 3.9543134300006955
       },
       {
         "seed": 10005,
@@ -4350,40 +4350,40 @@
         "cost": 0.0,
         "length": 48,
         "time_to_reach_s": 4.800000000000001,
-        "base_rotation_deg": 5.922182676539958,
-        "min_clearance_cm": 11.320028722067189,
+        "base_rotation_deg": 5.911083005863019,
+        "min_clearance_cm": 11.343760181624663,
         "obstacle": false,
-        "shield_interventions": 0,
-        "policy_ms": 0.12794672924580178,
-        "env_step_ms": 2.841345187410601
+        "shield_interventions": 1,
+        "policy_ms": 0.12084604166654837,
+        "env_step_ms": 2.622820020833435
       },
       {
         "seed": 10006,
         "success": true,
         "collision": false,
         "cost": 0.0,
-        "length": 97,
-        "time_to_reach_s": 9.700000000000001,
-        "base_rotation_deg": 10.40694512608958,
-        "min_clearance_cm": 5.691922774035356,
+        "length": 101,
+        "time_to_reach_s": 10.100000000000001,
+        "base_rotation_deg": 10.509935556582224,
+        "min_clearance_cm": 6.478388283426958,
         "obstacle": false,
-        "shield_interventions": 3,
-        "policy_ms": 0.13660450512708341,
-        "env_step_ms": 2.6571608763446157
+        "shield_interventions": 7,
+        "policy_ms": 0.110303287127658,
+        "env_step_ms": 2.206024079209828
       },
       {
         "seed": 10007,
         "success": true,
         "collision": false,
         "cost": 0.0,
-        "length": 149,
-        "time_to_reach_s": 14.9,
-        "base_rotation_deg": 9.045315364825072,
-        "min_clearance_cm": 5.0321233915907415,
+        "length": 161,
+        "time_to_reach_s": 16.1,
+        "base_rotation_deg": 9.066409748280265,
+        "min_clearance_cm": 5.107981488816324,
         "obstacle": true,
-        "shield_interventions": 26,
-        "policy_ms": 0.13874283213959068,
-        "env_step_ms": 4.12875150334076
+        "shield_interventions": 38,
+        "policy_ms": 0.112173751552507,
+        "env_step_ms": 3.5054668571435585
       },
       {
         "seed": 10008,
@@ -4392,12 +4392,12 @@
         "cost": 0.0,
         "length": 200,
         "time_to_reach_s": null,
-        "base_rotation_deg": 4.015173218845943,
-        "min_clearance_cm": 6.112258001340126,
+        "base_rotation_deg": 3.8127770839476525,
+        "min_clearance_cm": 7.999068777074098,
         "obstacle": true,
-        "shield_interventions": 78,
-        "policy_ms": 0.2869139999984327,
-        "env_step_ms": 7.783224335043997
+        "shield_interventions": 89,
+        "policy_ms": 0.12074084499957394,
+        "env_step_ms": 4.057257150000453
       },
       {
         "seed": 10009,
@@ -4406,12 +4406,12 @@
         "cost": 0.0,
         "length": 200,
         "time_to_reach_s": null,
-        "base_rotation_deg": 10.358034326718203,
-        "min_clearance_cm": 7.244067815188079,
+        "base_rotation_deg": 10.346011755463971,
+        "min_clearance_cm": 7.529678834024878,
         "obstacle": true,
-        "shield_interventions": 0,
-        "policy_ms": 0.16556276000301295,
-        "env_step_ms": 4.850790635045996
+        "shield_interventions": 4,
+        "policy_ms": 0.12373230500017485,
+        "env_step_ms": 3.5210917750004
       },
       {
         "seed": 10010,
@@ -4424,8 +4424,8 @@
         "min_clearance_cm": 9.263469595935844,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.13588432263913414,
-        "env_step_ms": 2.4328916450969933
+        "policy_ms": 0.11595583870963135,
+        "env_step_ms": 2.229912129031904
       },
       {
         "seed": 10011,
@@ -4438,8 +4438,8 @@
         "min_clearance_cm": 15.73906714809208,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.13641511132947118,
-        "env_step_ms": 2.526921481384542
+        "policy_ms": 0.10220511111082554,
+        "env_step_ms": 2.0845507407414146
       },
       {
         "seed": 10012,
@@ -4452,8 +4452,8 @@
         "min_clearance_cm": 13.325337848504832,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.17879253573482856,
-        "env_step_ms": 3.08940007153069
+        "policy_ms": 0.10893714285385515,
+        "env_step_ms": 2.1584971071452026
       },
       {
         "seed": 10013,
@@ -4466,8 +4466,8 @@
         "min_clearance_cm": 7.112478931929242,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.3438170299796184,
-        "env_step_ms": 8.983368794933995
+        "policy_ms": 0.12531463500039308,
+        "env_step_ms": 3.4227844050003853
       },
       {
         "seed": 10014,
@@ -4476,12 +4476,12 @@
         "cost": 0.0,
         "length": 200,
         "time_to_reach_s": null,
-        "base_rotation_deg": 2.5230622047796105,
-        "min_clearance_cm": 3.0621061921277644,
+        "base_rotation_deg": 2.505785673445433,
+        "min_clearance_cm": 3.118133823147437,
         "obstacle": true,
-        "shield_interventions": 68,
-        "policy_ms": 0.15126514499570476,
-        "env_step_ms": 5.617696214967509
+        "shield_interventions": 69,
+        "policy_ms": 0.12150647000012782,
+        "env_step_ms": 4.579797674999355
       },
       {
         "seed": 10015,
@@ -4490,12 +4490,12 @@
         "cost": 0.0,
         "length": 200,
         "time_to_reach_s": null,
-        "base_rotation_deg": 2.7402353816775853,
-        "min_clearance_cm": 5.6704695301289405,
+        "base_rotation_deg": 2.804411401687675,
+        "min_clearance_cm": 5.272735654761737,
         "obstacle": false,
         "shield_interventions": 137,
-        "policy_ms": 0.1526332400226238,
-        "env_step_ms": 2.837103314959677
+        "policy_ms": 0.10953594499923724,
+        "env_step_ms": 2.3081600400008995
       },
       {
         "seed": 10016,
@@ -4508,8 +4508,8 @@
         "min_clearance_cm": 7.5263550095424945,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.14427916496970283,
-        "env_step_ms": 4.260235409965389
+        "policy_ms": 0.11705095999914761,
+        "env_step_ms": 3.4946088100001305
       },
       {
         "seed": 10017,
@@ -4522,22 +4522,22 @@
         "min_clearance_cm": 5.819584784663061,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.13898252245371212,
-        "env_step_ms": 3.7746494324908797
+        "policy_ms": 0.12054306306389342,
+        "env_step_ms": 3.3058362342351324
       },
       {
         "seed": 10018,
         "success": true,
         "collision": false,
         "cost": 0.0,
-        "length": 69,
-        "time_to_reach_s": 6.9,
-        "base_rotation_deg": 3.7363389050731413,
-        "min_clearance_cm": 4.598369353509703,
+        "length": 94,
+        "time_to_reach_s": 9.4,
+        "base_rotation_deg": 3.7769794755325616,
+        "min_clearance_cm": 6.152208717160078,
         "obstacle": false,
-        "shield_interventions": 20,
-        "policy_ms": 0.14645482588093728,
-        "env_step_ms": 3.372860478296955
+        "shield_interventions": 38,
+        "policy_ms": 0.11268411702244376,
+        "env_step_ms": 2.7118243617022553
       },
       {
         "seed": 10019,
@@ -4546,12 +4546,12 @@
         "cost": 0.0,
         "length": 200,
         "time_to_reach_s": null,
-        "base_rotation_deg": 1.9824292459340827,
-        "min_clearance_cm": 8.799289074911936,
+        "base_rotation_deg": 2.020231662813124,
+        "min_clearance_cm": 7.728493686323007,
         "obstacle": true,
-        "shield_interventions": 20,
-        "policy_ms": 0.14853962495180895,
-        "env_step_ms": 4.5816512950113975
+        "shield_interventions": 22,
+        "policy_ms": 0.1154398249995836,
+        "env_step_ms": 3.603383150001065
       },
       {
         "seed": 10020,
@@ -4564,8 +4564,8 @@
         "min_clearance_cm": 5.275956272566232,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.13581999997768435,
-        "env_step_ms": 4.113398445060739
+        "policy_ms": 0.11970037999944338,
+        "env_step_ms": 3.6278792750000832
       },
       {
         "seed": 10021,
@@ -4578,22 +4578,22 @@
         "min_clearance_cm": 5.384755241013369,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.12974009508070594,
-        "env_step_ms": 3.9867672399122966
+        "policy_ms": 0.12118882499834172,
+        "env_step_ms": 3.5669196550003335
       },
       {
         "seed": 10022,
         "success": true,
         "collision": false,
         "cost": 0.0,
-        "length": 124,
-        "time_to_reach_s": 12.4,
-        "base_rotation_deg": 9.393367734728516,
-        "min_clearance_cm": 3.167354402736893,
+        "length": 131,
+        "time_to_reach_s": 13.100000000000001,
+        "base_rotation_deg": 9.441371858471053,
+        "min_clearance_cm": 4.158624303047447,
         "obstacle": false,
-        "shield_interventions": 7,
-        "policy_ms": 0.14969730645750515,
-        "env_step_ms": 3.3892937661426736
+        "shield_interventions": 17,
+        "policy_ms": 0.11796538931230142,
+        "env_step_ms": 2.688339984734055
       },
       {
         "seed": 10023,
@@ -4606,8 +4606,8 @@
         "min_clearance_cm": 10.317000774342436,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.16116279353838533,
-        "env_step_ms": 2.6004223810372107
+        "policy_ms": 0.10315352380985132,
+        "env_step_ms": 2.050795682539808
       },
       {
         "seed": 10024,
@@ -4620,8 +4620,8 @@
         "min_clearance_cm": 9.048010438285448,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.1339916842832616,
-        "env_step_ms": 2.9142636314262695
+        "policy_ms": 0.11380734210768806,
+        "env_step_ms": 2.429544052630879
       },
       {
         "seed": 10025,
@@ -4634,8 +4634,8 @@
         "min_clearance_cm": 9.248583015565615,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.12882811114693704,
-        "env_step_ms": 2.4531354760371853
+        "policy_ms": 0.11977488888861546,
+        "env_step_ms": 2.2757775555533044
       },
       {
         "seed": 10026,
@@ -4644,26 +4644,26 @@
         "cost": 0.0,
         "length": 200,
         "time_to_reach_s": null,
-        "base_rotation_deg": 4.801868092105331,
+        "base_rotation_deg": 4.772860345125219,
         "min_clearance_cm": 7.77634794547703,
         "obstacle": true,
-        "shield_interventions": 0,
-        "policy_ms": 0.13292776990056154,
-        "env_step_ms": 4.71754012506608
+        "shield_interventions": 29,
+        "policy_ms": 0.1217114950017617,
+        "env_step_ms": 4.201024394999848
       },
       {
         "seed": 10027,
         "success": true,
         "collision": false,
         "cost": 0.0,
-        "length": 179,
-        "time_to_reach_s": 17.900000000000002,
-        "base_rotation_deg": 9.417950555834938,
-        "min_clearance_cm": 6.137840049680874,
+        "length": 189,
+        "time_to_reach_s": 18.900000000000002,
+        "base_rotation_deg": 9.456063191893058,
+        "min_clearance_cm": 6.407538810557645,
         "obstacle": false,
-        "shield_interventions": 77,
-        "policy_ms": 0.13491111180451426,
-        "env_step_ms": 2.8157561898688224
+        "shield_interventions": 88,
+        "policy_ms": 0.10514704232810372,
+        "env_step_ms": 2.3521476719592793
       },
       {
         "seed": 10028,
@@ -4676,8 +4676,8 @@
         "min_clearance_cm": 8.317760518791767,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.14023048698499738,
-        "env_step_ms": 3.2890079913277472
+        "policy_ms": 0.11294750434731411,
+        "env_step_ms": 2.6801179043490184
       },
       {
         "seed": 10029,
@@ -4690,8 +4690,8 @@
         "min_clearance_cm": 7.776136252121571,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.1401242649899359,
-        "env_step_ms": 4.784135705058361
+        "policy_ms": 0.1183262350011205,
+        "env_step_ms": 3.9105220750002445
       },
       {
         "seed": 10030,
@@ -4704,8 +4704,8 @@
         "min_clearance_cm": 7.776330390165715,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.14130090561216008,
-        "env_step_ms": 3.3830067358960734
+        "policy_ms": 0.11050102830214234,
+        "env_step_ms": 2.7202094811333426
       },
       {
         "seed": 10031,
@@ -4718,8 +4718,8 @@
         "min_clearance_cm": 6.649235122061311,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.13499507085661278,
-        "env_step_ms": 4.22327766666948
+        "policy_ms": 0.11464099290835086,
+        "env_step_ms": 3.684710957445338
       },
       {
         "seed": 10032,
@@ -4732,8 +4732,8 @@
         "min_clearance_cm": 8.927028361415621,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.1378982667423164,
-        "env_step_ms": 2.8134459777195135
+        "policy_ms": 0.11335071110604783,
+        "env_step_ms": 2.2975885111122807
       },
       {
         "seed": 10033,
@@ -4746,8 +4746,8 @@
         "min_clearance_cm": 8.691821936310005,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.13848808010152425,
-        "env_step_ms": 4.254290585004128
+        "policy_ms": 0.12436633499987693,
+        "env_step_ms": 3.5748658600005
       },
       {
         "seed": 10034,
@@ -4760,8 +4760,8 @@
         "min_clearance_cm": 16.041979372015852,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.13050342113274382,
-        "env_step_ms": 2.7792741841614386
+        "policy_ms": 0.10966699999633085,
+        "env_step_ms": 2.3257298947394127
       },
       {
         "seed": 10035,
@@ -4774,8 +4774,8 @@
         "min_clearance_cm": 7.774876758972332,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.1271812703585916,
-        "env_step_ms": 2.670804148692696
+        "policy_ms": 0.10333693243267503,
+        "env_step_ms": 2.197731797297737
       },
       {
         "seed": 10036,
@@ -4788,8 +4788,8 @@
         "min_clearance_cm": 7.999907485992116,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.14608683144860754,
-        "env_step_ms": 4.6351899887627095
+        "policy_ms": 0.11600940449548698,
+        "env_step_ms": 3.574513786516304
       },
       {
         "seed": 10037,
@@ -4802,22 +4802,22 @@
         "min_clearance_cm": 5.882657085236634,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.144154582575657,
-        "env_step_ms": 3.9222412348507256
+        "policy_ms": 0.11931073912691041,
+        "env_step_ms": 3.260277078263006
       },
       {
         "seed": 10038,
         "success": true,
         "collision": false,
         "cost": 0.0,
-        "length": 98,
-        "time_to_reach_s": 9.8,
-        "base_rotation_deg": 1.6581823031257037,
-        "min_clearance_cm": 7.77601229584079,
+        "length": 108,
+        "time_to_reach_s": 10.8,
+        "base_rotation_deg": 1.7763811026310983,
+        "min_clearance_cm": 7.768093539234281,
         "obstacle": false,
-        "shield_interventions": 65,
-        "policy_ms": 0.13690986734403923,
-        "env_step_ms": 3.2308718266217418
+        "shield_interventions": 71,
+        "policy_ms": 0.11210656481405631,
+        "env_step_ms": 2.6901951203718175
       },
       {
         "seed": 10039,
@@ -4830,8 +4830,8 @@
         "min_clearance_cm": 13.38777989117903,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.12809807512894622,
-        "env_step_ms": 2.430204724896612
+        "policy_ms": 0.10167174999722306,
+        "env_step_ms": 2.0491604000042685
       },
       {
         "seed": 10040,
@@ -4844,8 +4844,8 @@
         "min_clearance_cm": 14.736401596640292,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.14000863828844926,
-        "env_step_ms": 2.870867872495202
+        "policy_ms": 0.10409791489509033,
+        "env_step_ms": 2.2818038297848586
       },
       {
         "seed": 10041,
@@ -4854,12 +4854,12 @@
         "cost": 0.0,
         "length": 200,
         "time_to_reach_s": null,
-        "base_rotation_deg": 9.776057318106906,
+        "base_rotation_deg": 9.516501366861123,
         "min_clearance_cm": 7.774843417186195,
         "obstacle": true,
-        "shield_interventions": 21,
-        "policy_ms": 0.14761738006200176,
-        "env_step_ms": 4.926075109906378
+        "shield_interventions": 45,
+        "policy_ms": 0.12062458499855211,
+        "env_step_ms": 3.788984895002727
       },
       {
         "seed": 10042,
@@ -4872,8 +4872,8 @@
         "min_clearance_cm": 8.775517095446638,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.14615625974778146,
-        "env_step_ms": 4.1879162597908435
+        "policy_ms": 0.1177996883131539,
+        "env_step_ms": 3.371144298698665
       },
       {
         "seed": 10043,
@@ -4886,8 +4886,8 @@
         "min_clearance_cm": 7.776358879667833,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.13600631852802178,
-        "env_step_ms": 4.1865034248164505
+        "policy_ms": 0.10724202654783623,
+        "env_step_ms": 3.558392353983762
       },
       {
         "seed": 10044,
@@ -4900,8 +4900,8 @@
         "min_clearance_cm": 8.994646930009639,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.1388056249298744,
-        "env_step_ms": 3.8751004723407174
+        "policy_ms": 0.11120974999872463,
+        "env_step_ms": 3.1374259444451664
       },
       {
         "seed": 10045,
@@ -4914,8 +4914,8 @@
         "min_clearance_cm": 7.7720114197870505,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.13866274080269417,
-        "env_step_ms": 2.752659197439142
+        "policy_ms": 0.11361035802301446,
+        "env_step_ms": 2.2285684814790576
       },
       {
         "seed": 10046,
@@ -4924,12 +4924,12 @@
         "cost": 0.0,
         "length": 200,
         "time_to_reach_s": null,
-        "base_rotation_deg": 7.69881770079243,
+        "base_rotation_deg": 7.698090323283581,
         "min_clearance_cm": 6.501058089995151,
         "obstacle": true,
-        "shield_interventions": 0,
-        "policy_ms": 0.13778908498352394,
-        "env_step_ms": 4.180953095037694
+        "shield_interventions": 3,
+        "policy_ms": 0.11908365999971693,
+        "env_step_ms": 3.4892031750001706
       },
       {
         "seed": 10047,
@@ -4942,8 +4942,8 @@
         "min_clearance_cm": 7.989678197306688,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.13772602508652199,
-        "env_step_ms": 3.9784636750118807
+        "policy_ms": 0.11171989000033022,
+        "env_step_ms": 3.3576937699987752
       },
       {
         "seed": 10048,
@@ -4956,8 +4956,8 @@
         "min_clearance_cm": 12.90907715358603,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.13048936016275547,
-        "env_step_ms": 2.6256247199489735
+        "policy_ms": 0.10715816000129053,
+        "env_step_ms": 2.0833637999999155
       },
       {
         "seed": 10049,
@@ -4970,8 +4970,8 @@
         "min_clearance_cm": 9.027556063068904,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.14665735350968917,
-        "env_step_ms": 4.598225146435589
+        "policy_ms": 0.12612465516879418,
+        "env_step_ms": 3.9737130948244888
       },
       {
         "seed": 10050,
@@ -4984,8 +4984,8 @@
         "min_clearance_cm": 6.188588326995469,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.1363236599627271,
-        "env_step_ms": 4.0757460700751835
+        "policy_ms": 0.1119250849987452,
+        "env_step_ms": 3.3703886450012988
       },
       {
         "seed": 10051,
@@ -4998,8 +4998,8 @@
         "min_clearance_cm": 7.7729813190183155,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.1301526924110546,
-        "env_step_ms": 2.771693999875424
+        "policy_ms": 0.10605405768706952,
+        "env_step_ms": 2.4352783846185186
       },
       {
         "seed": 10052,
@@ -5012,8 +5012,8 @@
         "min_clearance_cm": 10.693237969551014,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.1347398054652634,
-        "env_step_ms": 2.7944276389462175
+        "policy_ms": 0.10238102777767229,
+        "env_step_ms": 2.154135361112234
       },
       {
         "seed": 10053,
@@ -5022,26 +5022,26 @@
         "cost": 0.0,
         "length": 200,
         "time_to_reach_s": null,
-        "base_rotation_deg": 15.327576027161673,
-        "min_clearance_cm": 6.9630318585491375,
+        "base_rotation_deg": 15.295646141457944,
+        "min_clearance_cm": 7.035738070586792,
         "obstacle": true,
-        "shield_interventions": 3,
-        "policy_ms": 0.1697969150973222,
-        "env_step_ms": 4.995697429922075
+        "shield_interventions": 6,
+        "policy_ms": 0.12428957000054197,
+        "env_step_ms": 3.888546370000938
       },
       {
         "seed": 10054,
         "success": true,
         "collision": false,
         "cost": 0.0,
-        "length": 177,
-        "time_to_reach_s": 17.7,
-        "base_rotation_deg": 10.029059956871729,
-        "min_clearance_cm": 5.575371107347357,
+        "length": 179,
+        "time_to_reach_s": 17.900000000000002,
+        "base_rotation_deg": 10.08259480774228,
+        "min_clearance_cm": 5.56792718407661,
         "obstacle": true,
-        "shield_interventions": 5,
-        "policy_ms": 0.12719535594329232,
-        "env_step_ms": 3.8945617401273758
+        "shield_interventions": 6,
+        "policy_ms": 0.11981041340799513,
+        "env_step_ms": 3.5775962905039216
       },
       {
         "seed": 10055,
@@ -5054,8 +5054,8 @@
         "min_clearance_cm": 13.00051341346839,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.1271872693345918,
-        "env_step_ms": 2.4377601536028894
+        "policy_ms": 0.10568315384882855,
+        "env_step_ms": 2.0823012307682975
       },
       {
         "seed": 10056,
@@ -5068,8 +5068,8 @@
         "min_clearance_cm": 14.672908867170845,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.13504805971024325,
-        "env_step_ms": 2.7137862999734352
+        "policy_ms": 0.10749735999866061,
+        "env_step_ms": 2.248181999998451
       },
       {
         "seed": 10057,
@@ -5082,8 +5082,8 @@
         "min_clearance_cm": 8.537838408962573,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.1431641568499389,
-        "env_step_ms": 3.0528389116964307
+        "policy_ms": 0.1206493137275112,
+        "env_step_ms": 2.54694298039217
       },
       {
         "seed": 10058,
@@ -5096,8 +5096,8 @@
         "min_clearance_cm": 5.965542623406381,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.13670402992829622,
-        "env_step_ms": 4.638081804978356
+        "policy_ms": 0.1112031200014485,
+        "env_step_ms": 3.7924950149997017
       },
       {
         "seed": 10059,
@@ -5110,8 +5110,8 @@
         "min_clearance_cm": 15.55643335343798,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.12984045720908657,
-        "env_step_ms": 2.421799000096923
+        "policy_ms": 0.10804600000580779,
+        "env_step_ms": 2.132894342857331
       },
       {
         "seed": 10060,
@@ -5124,22 +5124,22 @@
         "min_clearance_cm": 13.956064504367607,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.14775116661829607,
-        "env_step_ms": 2.9192661429208653
+        "policy_ms": 0.10380259523469162,
+        "env_step_ms": 2.1390553333352123
       },
       {
         "seed": 10061,
         "success": true,
         "collision": false,
         "cost": 0.0,
-        "length": 155,
-        "time_to_reach_s": 15.5,
-        "base_rotation_deg": 8.207443049898496,
+        "length": 164,
+        "time_to_reach_s": 16.400000000000002,
+        "base_rotation_deg": 8.202618946829215,
         "min_clearance_cm": 6.364737385971002,
         "obstacle": true,
-        "shield_interventions": 29,
-        "policy_ms": 0.15102110974699062,
-        "env_step_ms": 4.775927832240761
+        "shield_interventions": 42,
+        "policy_ms": 0.126658006094988,
+        "env_step_ms": 3.931980146339797
       },
       {
         "seed": 10062,
@@ -5148,12 +5148,12 @@
         "cost": 0.0,
         "length": 200,
         "time_to_reach_s": null,
-        "base_rotation_deg": 3.9483874414629154,
-        "min_clearance_cm": 3.360667922591017,
+        "base_rotation_deg": 2.204141830257567,
+        "min_clearance_cm": 6.459725108424311,
         "obstacle": true,
-        "shield_interventions": 28,
-        "policy_ms": 0.14578180491298554,
-        "env_step_ms": 4.606732170004761
+        "shield_interventions": 148,
+        "policy_ms": 0.11750373000126046,
+        "env_step_ms": 4.925732964998701
       },
       {
         "seed": 10063,
@@ -5166,8 +5166,8 @@
         "min_clearance_cm": 7.7756611866528935,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.1439813899287401,
-        "env_step_ms": 4.751431485001376
+        "policy_ms": 0.10974818000079267,
+        "env_step_ms": 3.7640833499992254
       },
       {
         "seed": 10064,
@@ -5176,12 +5176,12 @@
         "cost": 0.0,
         "length": 200,
         "time_to_reach_s": null,
-        "base_rotation_deg": 7.22576835874904,
+        "base_rotation_deg": 7.269328006454218,
         "min_clearance_cm": 8.445094662919427,
         "obstacle": true,
-        "shield_interventions": 69,
-        "policy_ms": 0.1409165850145655,
-        "env_step_ms": 4.393252975023643
+        "shield_interventions": 71,
+        "policy_ms": 0.11378574499474325,
+        "env_step_ms": 3.5942893550026156
       },
       {
         "seed": 10065,
@@ -5194,8 +5194,8 @@
         "min_clearance_cm": 8.967700164946423,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.162625057211179,
-        "env_step_ms": 2.90457580013026
+        "policy_ms": 0.10699597143489623,
+        "env_step_ms": 2.1976009142869253
       },
       {
         "seed": 10066,
@@ -5208,22 +5208,22 @@
         "min_clearance_cm": 9.491774853653897,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.14177587502217648,
-        "env_step_ms": 2.909079577960938
+        "policy_ms": 0.11181821875272391,
+        "env_step_ms": 2.221402203120171
       },
       {
         "seed": 10067,
         "success": true,
         "collision": false,
         "cost": 0.0,
-        "length": 76,
-        "time_to_reach_s": 7.6000000000000005,
-        "base_rotation_deg": 9.545434377342007,
-        "min_clearance_cm": 2.748674444813541,
+        "length": 105,
+        "time_to_reach_s": 10.5,
+        "base_rotation_deg": 9.506863652489432,
+        "min_clearance_cm": 3.0619354624509403,
         "obstacle": false,
-        "shield_interventions": 6,
-        "policy_ms": 0.14741136828888557,
-        "env_step_ms": 2.700369578968476
+        "shield_interventions": 28,
+        "policy_ms": 0.10360273333249313,
+        "env_step_ms": 2.127404066660737
       },
       {
         "seed": 10068,
@@ -5236,8 +5236,8 @@
         "min_clearance_cm": 7.776195127913349,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.1315928722210946,
-        "env_step_ms": 2.6974264883604118
+        "policy_ms": 0.10677496511350403,
+        "env_step_ms": 2.2160568372099574
       },
       {
         "seed": 10069,
@@ -5250,8 +5250,8 @@
         "min_clearance_cm": 9.630554704389047,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.14439410024351673,
-        "env_step_ms": 2.6342378997469496
+        "policy_ms": 0.11244624999164898,
+        "env_step_ms": 2.1991766500008225
       },
       {
         "seed": 10070,
@@ -5264,8 +5264,8 @@
         "min_clearance_cm": 7.776339147353594,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.1809798308479516,
-        "env_step_ms": 5.262749999933592
+        "policy_ms": 0.11685762051252496,
+        "env_step_ms": 3.7320357897422185
       },
       {
         "seed": 10071,
@@ -5278,8 +5278,8 @@
         "min_clearance_cm": 7.641933135971349,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.15069119048608368,
-        "env_step_ms": 4.66956243462846
+        "policy_ms": 0.13078166071083042,
+        "env_step_ms": 3.9538659285762194
       },
       {
         "seed": 10072,
@@ -5292,8 +5292,8 @@
         "min_clearance_cm": 7.776291132511254,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.1486378954886372,
-        "env_step_ms": 3.5197274627358612
+        "policy_ms": 0.11324558208662662,
+        "env_step_ms": 2.7551052985124933
       },
       {
         "seed": 10073,
@@ -5306,8 +5306,8 @@
         "min_clearance_cm": 6.508847251375788,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.14158022500851075,
-        "env_step_ms": 4.266174750036953
+        "policy_ms": 0.11892122000176641,
+        "env_step_ms": 3.563694240000075
       },
       {
         "seed": 10074,
@@ -5320,8 +5320,8 @@
         "min_clearance_cm": 9.503238139302233,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.13215993109544547,
-        "env_step_ms": 2.673946310096653
+        "policy_ms": 0.10895386207784181,
+        "env_step_ms": 2.117199724133225
       },
       {
         "seed": 10075,
@@ -5334,8 +5334,8 @@
         "min_clearance_cm": 7.9976334669653895,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.1348974306236212,
-        "env_step_ms": 2.7883679861133714
+        "policy_ms": 0.1130276805562226,
+        "env_step_ms": 2.3422315138914325
       },
       {
         "seed": 10076,
@@ -5348,8 +5348,8 @@
         "min_clearance_cm": 16.29459186170022,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.13980857147544157,
-        "env_step_ms": 2.6300164857405304
+        "policy_ms": 0.10234360000172923,
+        "env_step_ms": 2.0770067428640817
       },
       {
         "seed": 10077,
@@ -5362,8 +5362,8 @@
         "min_clearance_cm": 4.0954919649791925,
         "obstacle": true,
         "shield_interventions": 10,
-        "policy_ms": 0.14461953000136418,
-        "env_step_ms": 4.281992205023926
+        "policy_ms": 0.1167763799995214,
+        "env_step_ms": 3.519317430001081
       },
       {
         "seed": 10078,
@@ -5376,8 +5376,8 @@
         "min_clearance_cm": 7.776247471881032,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.13428423920666557,
-        "env_step_ms": 2.7285874780911556
+        "policy_ms": 0.10614893477993617,
+        "env_step_ms": 2.2004861956536783
       },
       {
         "seed": 10079,
@@ -5390,8 +5390,8 @@
         "min_clearance_cm": 6.392710951463314,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.15414382057945028,
-        "env_step_ms": 4.488185698613588
+        "policy_ms": 0.12135823717712285,
+        "env_step_ms": 3.646930615383909
       },
       {
         "seed": 10080,
@@ -5404,8 +5404,8 @@
         "min_clearance_cm": 7.776304274442497,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.1270748647633858,
-        "env_step_ms": 2.622358783834922
+        "policy_ms": 0.11732127027059776,
+        "env_step_ms": 2.417441027022493
       },
       {
         "seed": 10081,
@@ -5414,12 +5414,12 @@
         "cost": 0.0,
         "length": 200,
         "time_to_reach_s": null,
-        "base_rotation_deg": 0.21378226846432133,
+        "base_rotation_deg": 0.3662529811893813,
         "min_clearance_cm": 7.984251904932105,
         "obstacle": true,
-        "shield_interventions": 0,
-        "policy_ms": 0.13801338504890737,
-        "env_step_ms": 4.42723781488894
+        "shield_interventions": 8,
+        "policy_ms": 0.11712028500085125,
+        "env_step_ms": 3.700317670000004
       },
       {
         "seed": 10082,
@@ -5432,8 +5432,8 @@
         "min_clearance_cm": 14.855896971347931,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.14863669678037916,
-        "env_step_ms": 2.69150206077029
+        "policy_ms": 0.10846115152114152,
+        "env_step_ms": 2.1350481818144957
       },
       {
         "seed": 10083,
@@ -5446,8 +5446,8 @@
         "min_clearance_cm": 12.708026355792986,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.14178175993341333,
-        "env_step_ms": 3.0055124534313413
+        "policy_ms": 0.12243089333196622,
+        "env_step_ms": 2.7152223466669057
       },
       {
         "seed": 10084,
@@ -5460,8 +5460,8 @@
         "min_clearance_cm": 7.997882751300753,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.12945436360082982,
-        "env_step_ms": 3.220492931921564
+        "policy_ms": 0.12830234090379442,
+        "env_step_ms": 3.1734283181906036
       },
       {
         "seed": 10085,
@@ -5474,8 +5474,8 @@
         "min_clearance_cm": 8.254461729850501,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.1342727214078083,
-        "env_step_ms": 3.7705523292187753
+        "policy_ms": 0.11885079746716772,
+        "env_step_ms": 3.245993379747216
       },
       {
         "seed": 10086,
@@ -5488,8 +5488,8 @@
         "min_clearance_cm": 15.767920473547475,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.13932435584878075,
-        "env_step_ms": 2.635840254312162
+        "policy_ms": 0.10833981356026308,
+        "env_step_ms": 2.0722270508455134
       },
       {
         "seed": 10087,
@@ -5502,8 +5502,8 @@
         "min_clearance_cm": 7.999445285994988,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.16670873998918978,
-        "env_step_ms": 5.152238809996561
+        "policy_ms": 0.12092913000117278,
+        "env_step_ms": 3.7841990349986077
       },
       {
         "seed": 10088,
@@ -5516,8 +5516,8 @@
         "min_clearance_cm": 7.999967088640495,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.1464659736532332,
-        "env_step_ms": 3.104524341946863
+        "policy_ms": 0.11257397368443603,
+        "env_step_ms": 2.417211789474107
       },
       {
         "seed": 10089,
@@ -5530,8 +5530,8 @@
         "min_clearance_cm": 17.548349164615576,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.12487004538673897,
-        "env_step_ms": 2.5141071818407825
+        "policy_ms": 0.10922638635949253,
+        "env_step_ms": 2.09286211363297
       },
       {
         "seed": 10090,
@@ -5540,12 +5540,12 @@
         "cost": 0.0,
         "length": 200,
         "time_to_reach_s": null,
-        "base_rotation_deg": 5.434490055065553,
-        "min_clearance_cm": 6.08208734204848,
+        "base_rotation_deg": 5.402828978421077,
+        "min_clearance_cm": 6.286721384424148,
         "obstacle": true,
-        "shield_interventions": 0,
-        "policy_ms": 0.13803858995743212,
-        "env_step_ms": 4.013303780093338
+        "shield_interventions": 10,
+        "policy_ms": 0.11983135999940941,
+        "env_step_ms": 3.4817254450013024
       },
       {
         "seed": 10091,
@@ -5554,12 +5554,12 @@
         "cost": 0.0,
         "length": 200,
         "time_to_reach_s": null,
-        "base_rotation_deg": 7.041966886659671,
-        "min_clearance_cm": 3.700405613838216,
+        "base_rotation_deg": 8.420850611504049,
+        "min_clearance_cm": 5.18253118505511,
         "obstacle": false,
-        "shield_interventions": 128,
-        "policy_ms": 0.14488208503280475,
-        "env_step_ms": 3.2461167350629694
+        "shield_interventions": 140,
+        "policy_ms": 0.11298053999809099,
+        "env_step_ms": 2.5047985900025083
       },
       {
         "seed": 10092,
@@ -5568,12 +5568,12 @@
         "cost": 0.0,
         "length": 99,
         "time_to_reach_s": 9.9,
-        "base_rotation_deg": 5.506623241209629,
-        "min_clearance_cm": 5.399451579622892,
+        "base_rotation_deg": 5.48989235205818,
+        "min_clearance_cm": 5.505432276945352,
         "obstacle": true,
-        "shield_interventions": 0,
-        "policy_ms": 0.1439098688033574,
-        "env_step_ms": 4.733683171702932
+        "shield_interventions": 1,
+        "policy_ms": 0.12590808080748309,
+        "env_step_ms": 4.116144424244794
       },
       {
         "seed": 10093,
@@ -5586,8 +5586,8 @@
         "min_clearance_cm": 6.849242470129862,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.13245392997305316,
-        "env_step_ms": 4.626549445056298
+        "policy_ms": 0.11713332500249862,
+        "env_step_ms": 3.864283569999998
       },
       {
         "seed": 10094,
@@ -5600,8 +5600,8 @@
         "min_clearance_cm": 6.2253934782643325,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.1427722292162698,
-        "env_step_ms": 4.015601000125379
+        "policy_ms": 0.11087239449817815,
+        "env_step_ms": 3.3576286421999955
       },
       {
         "seed": 10095,
@@ -5610,26 +5610,26 @@
         "cost": 0.0,
         "length": 200,
         "time_to_reach_s": null,
-        "base_rotation_deg": 10.165177212195127,
-        "min_clearance_cm": 7.457935112794339,
+        "base_rotation_deg": 10.051951387114535,
+        "min_clearance_cm": 8.561105658235185,
         "obstacle": true,
-        "shield_interventions": 46,
-        "policy_ms": 0.14374610995218973,
-        "env_step_ms": 4.485128209998948
+        "shield_interventions": 57,
+        "policy_ms": 0.117559859999119,
+        "env_step_ms": 3.753286319999063
       },
       {
         "seed": 10096,
         "success": true,
         "collision": false,
         "cost": 0.0,
-        "length": 158,
-        "time_to_reach_s": 15.8,
-        "base_rotation_deg": 12.691063871150748,
-        "min_clearance_cm": 3.9616343839445554,
+        "length": 175,
+        "time_to_reach_s": 17.5,
+        "base_rotation_deg": 12.655015045508481,
+        "min_clearance_cm": 5.190008553039915,
         "obstacle": false,
-        "shield_interventions": 0,
-        "policy_ms": 0.15249572788889054,
-        "env_step_ms": 3.472214120272009
+        "shield_interventions": 23,
+        "policy_ms": 0.11641921714401958,
+        "env_step_ms": 2.9438068514270657
       },
       {
         "seed": 10097,
@@ -5642,8 +5642,8 @@
         "min_clearance_cm": 5.298618141170709,
         "obstacle": true,
         "shield_interventions": 21,
-        "policy_ms": 0.13396928501606453,
-        "env_step_ms": 4.5986491500025295
+        "policy_ms": 0.11403194500104519,
+        "env_step_ms": 3.8343750600003546
       },
       {
         "seed": 10098,
@@ -5656,8 +5656,8 @@
         "min_clearance_cm": 11.828107614240436,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.12998947840969777,
-        "env_step_ms": 2.9695408478722167
+        "policy_ms": 0.10871769565621593,
+        "env_step_ms": 2.5650086304341606
       },
       {
         "seed": 10099,
@@ -5670,8 +5670,8 @@
         "min_clearance_cm": 17.166607848614255,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.1307612942315138,
-        "env_step_ms": 2.641940764560251
+        "policy_ms": 0.11804814706091052,
+        "env_step_ms": 2.5852635294072837
       }
     ],
     "prior (reflex off)": [
@@ -5686,8 +5686,8 @@
         "min_clearance_cm": 7.77632689400844,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0038361808463455516,
-        "env_step_ms": 2.387893319230878
+        "policy_ms": 0.003163063833286055,
+        "env_step_ms": 1.9692736063813725
       },
       {
         "seed": 10001,
@@ -5700,8 +5700,8 @@
         "min_clearance_cm": -0.23681167611097967,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0036192500024648886,
-        "env_step_ms": 3.3380354037805002
+        "policy_ms": 0.0032836730733484167,
+        "env_step_ms": 2.9926496923090657
       },
       {
         "seed": 10002,
@@ -5714,8 +5714,8 @@
         "min_clearance_cm": 4.454990597004145,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.005500743269149741,
-        "env_step_ms": 2.267124053057071
+        "policy_ms": 0.002646681417320753,
+        "env_step_ms": 1.8684510707982827
       },
       {
         "seed": 10003,
@@ -5728,8 +5728,8 @@
         "min_clearance_cm": -0.008934796851987892,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.003282186298747547,
-        "env_step_ms": 3.2425940463686262
+        "policy_ms": 0.0029699534878958266,
+        "env_step_ms": 2.8552605348863835
       },
       {
         "seed": 10004,
@@ -5742,8 +5742,8 @@
         "min_clearance_cm": 7.775471548881765,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0035684500289789867,
-        "env_step_ms": 2.79891016257352
+        "policy_ms": 0.0030383250013699126,
+        "env_step_ms": 2.493633450001198
       },
       {
         "seed": 10005,
@@ -5756,8 +5756,8 @@
         "min_clearance_cm": -0.11704966492888311,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.003216532399340893,
-        "env_step_ms": 2.9478912580499683
+        "policy_ms": 0.005271629030476693,
+        "env_step_ms": 2.964876564519617
       },
       {
         "seed": 10006,
@@ -5770,8 +5770,8 @@
         "min_clearance_cm": 7.776388779585075,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0037278495481696426,
-        "env_step_ms": 2.24492290989221
+        "policy_ms": 0.0026093684185009196,
+        "env_step_ms": 1.9551883533824224
       },
       {
         "seed": 10007,
@@ -5784,8 +5784,8 @@
         "min_clearance_cm": -0.5225086732857931,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0029630999658062742,
-        "env_step_ms": 2.741833133253143
+        "policy_ms": 0.0028534499932675317,
+        "env_step_ms": 2.4445872166703944
       },
       {
         "seed": 10008,
@@ -5798,8 +5798,8 @@
         "min_clearance_cm": -0.889113584875198,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0033183569030370563,
-        "env_step_ms": 2.7132877620758897
+        "policy_ms": 0.002846023815685666,
+        "env_step_ms": 2.4083201190443386
       },
       {
         "seed": 10009,
@@ -5812,8 +5812,8 @@
         "min_clearance_cm": -0.13376399522108673,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.003532272631827101,
-        "env_step_ms": 3.0826291818670284
+        "policy_ms": 0.003005558441641783,
+        "env_step_ms": 2.599895662335151
       },
       {
         "seed": 10010,
@@ -5826,8 +5826,8 @@
         "min_clearance_cm": 9.235798441286583,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.004822155622403241,
-        "env_step_ms": 2.3510234221450648
+        "policy_ms": 0.0026521111092531807,
+        "env_step_ms": 1.9388777555554446
       },
       {
         "seed": 10011,
@@ -5840,8 +5840,8 @@
         "min_clearance_cm": 15.665610136905883,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.00300008168221898,
-        "env_step_ms": 2.1551415510267753
+        "policy_ms": 0.002981673468852654,
+        "env_step_ms": 2.1894014898015373
       },
       {
         "seed": 10012,
@@ -5854,8 +5854,8 @@
         "min_clearance_cm": 13.793822059018652,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0029838331881494795,
-        "env_step_ms": 2.1769288573739773
+        "policy_ms": 0.003988809527841329,
+        "env_step_ms": 1.767036095236292
       },
       {
         "seed": 10013,
@@ -5868,8 +5868,8 @@
         "min_clearance_cm": -0.35600570329816783,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0029537333224046356,
-        "env_step_ms": 2.7819196499876853
+        "policy_ms": 0.0032657166675183666,
+        "env_step_ms": 2.4328073999991298
       },
       {
         "seed": 10014,
@@ -5882,8 +5882,8 @@
         "min_clearance_cm": -0.030785667401980743,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.00442611427778112,
-        "env_step_ms": 3.2104869999914496
+        "policy_ms": 0.0025604000029488816,
+        "env_step_ms": 2.446544171433678
       },
       {
         "seed": 10015,
@@ -5896,8 +5896,8 @@
         "min_clearance_cm": 4.064706948266743,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0029828812731173427,
-        "env_step_ms": 2.197722288240014
+        "policy_ms": 0.002625220337973834,
+        "env_step_ms": 1.9106706271182023
       },
       {
         "seed": 10016,
@@ -5910,8 +5910,8 @@
         "min_clearance_cm": -0.47171853908509614,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0036048998663318343,
-        "env_step_ms": 3.2309850999808987
+        "policy_ms": 0.0028550999991239223,
+        "env_step_ms": 2.6501526199979253
       },
       {
         "seed": 10017,
@@ -5924,8 +5924,8 @@
         "min_clearance_cm": -0.3481759809901681,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0039233131952750595,
-        "env_step_ms": 3.1023503733425724
+        "policy_ms": 0.004257119403077854,
+        "env_step_ms": 2.5827797910475097
       },
       {
         "seed": 10018,
@@ -5938,8 +5938,8 @@
         "min_clearance_cm": -1.0867484581876559,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0029802954899919728,
-        "env_step_ms": 3.378277045530095
+        "policy_ms": 0.0030431136405116954,
+        "env_step_ms": 2.7315172272698813
       },
       {
         "seed": 10019,
@@ -5952,8 +5952,8 @@
         "min_clearance_cm": -0.7584588451394342,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.003025526032280667,
-        "env_step_ms": 3.18233215804005
+        "policy_ms": 0.002688473677225327,
+        "env_step_ms": 2.5268398947365482
       },
       {
         "seed": 10020,
@@ -5966,8 +5966,8 @@
         "min_clearance_cm": -0.07556891235020319,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.003456569080801022,
-        "env_step_ms": 3.252482068938693
+        "policy_ms": 0.0031346724168103937,
+        "env_step_ms": 2.910742206897167
       },
       {
         "seed": 10021,
@@ -5980,8 +5980,8 @@
         "min_clearance_cm": -0.09200263437040002,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0029852604487518564,
-        "env_step_ms": 3.307415767042971
+        "policy_ms": 0.002542999999922645,
+        "env_step_ms": 2.7973560821910475
       },
       {
         "seed": 10022,
@@ -5994,8 +5994,8 @@
         "min_clearance_cm": 3.0633679483037644,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.003060239740154604,
-        "env_step_ms": 2.701156047955359
+        "policy_ms": 0.002368136988059333,
+        "env_step_ms": 2.086894130136225
       },
       {
         "seed": 10023,
@@ -6008,8 +6008,8 @@
         "min_clearance_cm": -0.4323691162887361,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.002808410792048172,
-        "env_step_ms": 2.8877582856888955
+        "policy_ms": 0.00262603571294611,
+        "env_step_ms": 2.4294371071422103
       },
       {
         "seed": 10024,
@@ -6022,8 +6022,8 @@
         "min_clearance_cm": 8.388244704937906,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.00290136842139825,
-        "env_step_ms": 2.382368894662553
+        "policy_ms": 0.0027274210506140917,
+        "env_step_ms": 1.9808389298243143
       },
       {
         "seed": 10025,
@@ -6036,8 +6036,8 @@
         "min_clearance_cm": 7.776115292933689,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0034633693766417317,
-        "env_step_ms": 2.3990295946229403
+        "policy_ms": 0.0026385225215267995,
+        "env_step_ms": 2.1438162972969566
       },
       {
         "seed": 10026,
@@ -6050,8 +6050,8 @@
         "min_clearance_cm": -0.5101595349805504,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.002840309553860044,
-        "env_step_ms": 3.923319214490697
+        "policy_ms": 0.0032083095261116667,
+        "env_step_ms": 3.204914142854488
       },
       {
         "seed": 10027,
@@ -6064,8 +6064,8 @@
         "min_clearance_cm": -0.27225755165102977,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.003041687591576192,
-        "env_step_ms": 2.468191812340592
+        "policy_ms": 0.002506291664872151,
+        "env_step_ms": 1.9112683750025876
       },
       {
         "seed": 10028,
@@ -6078,8 +6078,8 @@
         "min_clearance_cm": -0.4812634784822585,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0036356552363000006,
-        "env_step_ms": 2.9396692758884204
+        "policy_ms": 0.002830362063832581,
+        "env_step_ms": 2.1880753965515867
       },
       {
         "seed": 10029,
@@ -6092,8 +6092,8 @@
         "min_clearance_cm": -0.4008642950786248,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.00364287495813187,
-        "env_step_ms": 3.457281916629048
+        "policy_ms": 0.002593958331686963,
+        "env_step_ms": 2.4710750000013584
       },
       {
         "seed": 10030,
@@ -6106,8 +6106,8 @@
         "min_clearance_cm": -0.16518736099043613,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0038712051742223618,
-        "env_step_ms": 3.713869538445672
+        "policy_ms": 0.0023615256445270625,
+        "env_step_ms": 2.710542641026246
       },
       {
         "seed": 10031,
@@ -6120,8 +6120,8 @@
         "min_clearance_cm": -0.2083816414444925,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.003387499994763251,
-        "env_step_ms": 3.5743409832624216
+        "policy_ms": 0.002608249995243265,
+        "env_step_ms": 3.1098269000049563
       },
       {
         "seed": 10032,
@@ -6134,8 +6134,8 @@
         "min_clearance_cm": 9.020043943782522,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0029686494103357704,
-        "env_step_ms": 2.6703786104019844
+        "policy_ms": 0.002948714288984113,
+        "env_step_ms": 2.375784168828863
       },
       {
         "seed": 10033,
@@ -6148,8 +6148,8 @@
         "min_clearance_cm": -1.0099318047148795,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0034887777676178506,
-        "env_step_ms": 3.3875970279950707
+        "policy_ms": 0.004051277781198021,
+        "env_step_ms": 2.499883833326382
       },
       {
         "seed": 10034,
@@ -6162,8 +6162,8 @@
         "min_clearance_cm": 16.3951675289437,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.003577313257108526,
-        "env_step_ms": 2.34978822389628
+        "policy_ms": 0.002443208954765165,
+        "env_step_ms": 1.839605298506903
       },
       {
         "seed": 10035,
@@ -6176,8 +6176,8 @@
         "min_clearance_cm": 7.776166316600561,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.00265746677743866,
-        "env_step_ms": 2.3949760776102065
+        "policy_ms": 0.0025010555519757974,
+        "env_step_ms": 2.1107408222222706
       },
       {
         "seed": 10036,
@@ -6190,8 +6190,8 @@
         "min_clearance_cm": -0.16388479921065346,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.003911735214334091,
-        "env_step_ms": 4.162500382496065
+        "policy_ms": 0.002747294119257383,
+        "env_step_ms": 2.505609558820719
       },
       {
         "seed": 10037,
@@ -6204,8 +6204,8 @@
         "min_clearance_cm": -0.33998630252917716,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.004091174531144105,
-        "env_step_ms": 2.733671412652401
+        "policy_ms": 0.0026171587290856036,
+        "env_step_ms": 2.3171257301613415
       },
       {
         "seed": 10038,
@@ -6218,8 +6218,8 @@
         "min_clearance_cm": -0.03299361592620231,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.00437085186098961,
-        "env_step_ms": 2.62291051856462
+        "policy_ms": 0.0023408148055952755,
+        "env_step_ms": 2.263047074079707
       },
       {
         "seed": 10039,
@@ -6232,8 +6232,8 @@
         "min_clearance_cm": 12.321948029040247,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0039030302022266287,
-        "env_step_ms": 2.131384030359517
+        "policy_ms": 0.003721378782233153,
+        "env_step_ms": 1.9593986818232556
       },
       {
         "seed": 10040,
@@ -6246,8 +6246,8 @@
         "min_clearance_cm": 14.524601662296362,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0033087108460611225,
-        "env_step_ms": 2.534017843419247
+        "policy_ms": 0.0026741445808456557,
+        "env_step_ms": 1.9149323132506126
       },
       {
         "seed": 10041,
@@ -6260,8 +6260,8 @@
         "min_clearance_cm": -0.8483919571840921,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.003260141693317564,
-        "env_step_ms": 3.819052674983444
+        "policy_ms": 0.00311054166578136,
+        "env_step_ms": 3.190067808333197
       },
       {
         "seed": 10042,
@@ -6274,8 +6274,8 @@
         "min_clearance_cm": -0.6454102875694583,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.003426040020713117,
-        "env_step_ms": 3.700755879835924
+        "policy_ms": 0.003619159999743715,
+        "env_step_ms": 2.6570576599976903
       },
       {
         "seed": 10043,
@@ -6288,8 +6288,8 @@
         "min_clearance_cm": -0.3269331151344368,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0032517032945339292,
-        "env_step_ms": 4.448227285787913
+        "policy_ms": 0.002572571426234,
+        "env_step_ms": 3.116028967033694
       },
       {
         "seed": 10044,
@@ -6302,8 +6302,8 @@
         "min_clearance_cm": -0.3243714069579857,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0032863658040097527,
-        "env_step_ms": 2.840041024461332
+        "policy_ms": 0.0029302195188636955,
+        "env_step_ms": 2.4280934877998424
       },
       {
         "seed": 10045,
@@ -6316,8 +6316,8 @@
         "min_clearance_cm": 7.775991649611052,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.004335452974614743,
-        "env_step_ms": 2.479652162433829
+        "policy_ms": 0.0027114871787707047,
+        "env_step_ms": 2.0399889401702263
       },
       {
         "seed": 10046,
@@ -6330,8 +6330,8 @@
         "min_clearance_cm": -0.9493491304866208,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0036351647020851753,
-        "env_step_ms": 3.396455917669193
+        "policy_ms": 0.003074811765787565,
+        "env_step_ms": 2.7478855176448578
       },
       {
         "seed": 10047,
@@ -6344,8 +6344,8 @@
         "min_clearance_cm": -0.10314777061936065,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.003528166686279561,
-        "env_step_ms": 3.33459166675446
+        "policy_ms": 0.0026456296316828905,
+        "env_step_ms": 2.896759166664727
       },
       {
         "seed": 10048,
@@ -6358,8 +6358,8 @@
         "min_clearance_cm": 12.860028671452381,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.003102912950967236,
-        "env_step_ms": 2.102371152036737
+        "policy_ms": 0.0029205434756200384,
+        "env_step_ms": 1.8833852826093256
       },
       {
         "seed": 10049,
@@ -6372,8 +6372,8 @@
         "min_clearance_cm": -0.3549928595896784,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0031958946860150285,
-        "env_step_ms": 3.1528815790424183
+        "policy_ms": 0.002838052635848056,
+        "env_step_ms": 2.8678650526276934
       },
       {
         "seed": 10050,
@@ -6386,8 +6386,8 @@
         "min_clearance_cm": -1.0709053556759731,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0031023619471695916,
-        "env_step_ms": 3.0734843967679653
+        "policy_ms": 0.002940827585987414,
+        "env_step_ms": 2.821175999995689
       },
       {
         "seed": 10051,
@@ -6400,8 +6400,8 @@
         "min_clearance_cm": -0.2732672627625263,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.003628351023827124,
-        "env_step_ms": 3.1718209824918486
+        "policy_ms": 0.0028410701722286673,
+        "env_step_ms": 2.8654396842125207
       },
       {
         "seed": 10052,
@@ -6414,8 +6414,8 @@
         "min_clearance_cm": -0.06486065529848761,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0028707498813673737,
-        "env_step_ms": 2.852947406097428
+        "policy_ms": 0.0027579375014852303,
+        "env_step_ms": 2.3518690000035036
       },
       {
         "seed": 10053,
@@ -6428,8 +6428,8 @@
         "min_clearance_cm": 4.341516681397345,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0035348361340711465,
-        "env_step_ms": 4.109247311452897
+        "policy_ms": 0.0029927595635014315,
+        "env_step_ms": 3.379679278688601
       },
       {
         "seed": 10054,
@@ -6442,8 +6442,8 @@
         "min_clearance_cm": -0.32148902871197427,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0032882981988797454,
-        "env_step_ms": 3.8834260000536838
+        "policy_ms": 0.0026699999964102175,
+        "env_step_ms": 3.0329159035108875
       },
       {
         "seed": 10055,
@@ -6456,8 +6456,8 @@
         "min_clearance_cm": 12.983047751525758,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0037565475958260884,
-        "env_step_ms": 2.5234194762604254
+        "policy_ms": 0.0028935476220361862,
+        "env_step_ms": 1.9026055714272432
       },
       {
         "seed": 10056,
@@ -6470,8 +6470,8 @@
         "min_clearance_cm": 11.14841984147534,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.003527285766072704,
-        "env_step_ms": 2.5194189869840296
+        "policy_ms": 0.0035332207785772466,
+        "env_step_ms": 2.1807730779225682
       },
       {
         "seed": 10057,
@@ -6484,8 +6484,8 @@
         "min_clearance_cm": 7.776089990364338,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0033995469509221963,
-        "env_step_ms": 2.489224658083369
+        "policy_ms": 0.002544230769341768,
+        "env_step_ms": 2.2889884444446142
       },
       {
         "seed": 10058,
@@ -6498,8 +6498,8 @@
         "min_clearance_cm": -0.09487940311331267,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.002908931712612905,
-        "env_step_ms": 3.7668545606775847
+        "policy_ms": 0.0025351439416688277,
+        "env_step_ms": 3.1405061893941664
       },
       {
         "seed": 10059,
@@ -6512,8 +6512,8 @@
         "min_clearance_cm": 15.148653710188595,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.003909666626592904,
-        "env_step_ms": 2.2079276249845257
+        "policy_ms": 0.0032708749984067254,
+        "env_step_ms": 2.4031280833346123
       },
       {
         "seed": 10060,
@@ -6526,8 +6526,8 @@
         "min_clearance_cm": -0.32771172736160287,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0030891025324728196,
-        "env_step_ms": 2.5838611538627165
+        "policy_ms": 0.002979282057297566,
+        "env_step_ms": 2.2792496666648403
       },
       {
         "seed": 10061,
@@ -6540,8 +6540,8 @@
         "min_clearance_cm": -0.03973665122646991,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.003147414711903122,
-        "env_step_ms": 2.761686024447355
+        "policy_ms": 0.0025959268344461347,
+        "env_step_ms": 2.4546988536507697
       },
       {
         "seed": 10062,
@@ -6554,8 +6554,8 @@
         "min_clearance_cm": -0.26569977952409646,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0030604048463698874,
-        "env_step_ms": 3.00267842872667
+        "policy_ms": 0.0025980714285976448,
+        "env_step_ms": 2.36027476190007
       },
       {
         "seed": 10063,
@@ -6568,8 +6568,8 @@
         "min_clearance_cm": -0.061403938047334405,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.003220629676232218,
-        "env_step_ms": 4.200568533323584
+        "policy_ms": 0.0027345629641112516,
+        "env_step_ms": 3.3648960518529814
       },
       {
         "seed": 10064,
@@ -6582,8 +6582,8 @@
         "min_clearance_cm": -0.26584392843979066,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.003050719226992346,
-        "env_step_ms": 2.834825070175085
+        "policy_ms": 0.003206087715250505,
+        "env_step_ms": 2.6993123157964014
       },
       {
         "seed": 10065,
@@ -6596,8 +6596,8 @@
         "min_clearance_cm": 8.414533311070052,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0037645332971199728,
-        "env_step_ms": 2.2145085778498066
+        "policy_ms": 0.0028448000004270093,
+        "env_step_ms": 1.967025133329672
       },
       {
         "seed": 10066,
@@ -6610,8 +6610,8 @@
         "min_clearance_cm": -0.79865497943018,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0029580713934202712,
-        "env_step_ms": 2.6800059464611485
+        "policy_ms": 0.00247903571550166,
+        "env_step_ms": 2.278987517855618
       },
       {
         "seed": 10067,
@@ -6624,8 +6624,8 @@
         "min_clearance_cm": -0.07755434129700575,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0031027334443933796,
-        "env_step_ms": 2.461727724858065
+        "policy_ms": 0.002943274999248994,
+        "env_step_ms": 1.9768135583310216
       },
       {
         "seed": 10068,
@@ -6638,8 +6638,8 @@
         "min_clearance_cm": 7.776265235273428,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.003160852683385899,
-        "env_step_ms": 2.512447938087032
+        "policy_ms": 0.0030014263564035627,
+        "env_step_ms": 2.014347480620162
       },
       {
         "seed": 10069,
@@ -6652,8 +6652,8 @@
         "min_clearance_cm": 9.468202481175513,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0030129310822491697,
-        "env_step_ms": 2.169999620585666
+        "policy_ms": 0.002637206903429991,
+        "env_step_ms": 1.9719428965458974
       },
       {
         "seed": 10070,
@@ -6666,8 +6666,8 @@
         "min_clearance_cm": 4.565888583007147,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.003122549942418118,
-        "env_step_ms": 3.8814269499835063
+        "policy_ms": 0.0025688850021765575,
+        "env_step_ms": 3.250281899998413
       },
       {
         "seed": 10071,
@@ -6680,8 +6680,8 @@
         "min_clearance_cm": -0.23449671347620937,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0027541482492700726,
-        "env_step_ms": 3.192646864197651
+        "policy_ms": 0.0031269259241604613,
+        "env_step_ms": 3.270383000000616
       },
       {
         "seed": 10072,
@@ -6694,8 +6694,8 @@
         "min_clearance_cm": -1.0610580144384998,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.004043925872354992,
-        "env_step_ms": 3.325198851800653
+        "policy_ms": 0.002626333328921478,
+        "env_step_ms": 2.592337722226737
       },
       {
         "seed": 10073,
@@ -6708,8 +6708,8 @@
         "min_clearance_cm": -1.018124970159412,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0032082571643903585,
-        "env_step_ms": 2.5904936573039907
+        "policy_ms": 0.0027177428608281063,
+        "env_step_ms": 2.367011171429567
       },
       {
         "seed": 10074,
@@ -6722,8 +6722,8 @@
         "min_clearance_cm": 9.458038896847972,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.003229203718580754,
-        "env_step_ms": 2.2713766296268054
+        "policy_ms": 0.0027878148163954057,
+        "env_step_ms": 1.9284947037097784
       },
       {
         "seed": 10075,
@@ -6736,8 +6736,8 @@
         "min_clearance_cm": 7.998594046039845,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.002870733290668189,
-        "env_step_ms": 2.3879344000609612
+        "policy_ms": 0.002535024999398653,
+        "env_step_ms": 2.015472433335693
       },
       {
         "seed": 10076,
@@ -6750,8 +6750,8 @@
         "min_clearance_cm": 15.875654180568905,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.00330241174892495,
-        "env_step_ms": 2.0799040882647044
+        "policy_ms": 0.0033974852969135207,
+        "env_step_ms": 1.762909279409207
       },
       {
         "seed": 10077,
@@ -6764,8 +6764,8 @@
         "min_clearance_cm": -0.8233263695120008,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0031283787558839486,
-        "env_step_ms": 3.3097279546464877
+        "policy_ms": 0.0026524545443283964,
+        "env_step_ms": 3.147346681821477
       },
       {
         "seed": 10078,
@@ -6778,8 +6778,8 @@
         "min_clearance_cm": 7.774447247410454,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0032821579608073655,
-        "env_step_ms": 2.4064509209079246
+        "policy_ms": 0.0024444210514442794,
+        "env_step_ms": 1.9556450394723495
       },
       {
         "seed": 10079,
@@ -6792,8 +6792,8 @@
         "min_clearance_cm": -0.09371004421441648,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.00313597566429696,
-        "env_step_ms": 3.190225536522254
+        "policy_ms": 0.0027619024358389696,
+        "env_step_ms": 2.724769317079036
       },
       {
         "seed": 10080,
@@ -6806,8 +6806,8 @@
         "min_clearance_cm": 7.775699975434705,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0032416348172802597,
-        "env_step_ms": 2.2535742063198647
+        "policy_ms": 0.0026514126987075585,
+        "env_step_ms": 1.9536239523826484
       },
       {
         "seed": 10081,
@@ -6820,8 +6820,8 @@
         "min_clearance_cm": 4.308308459778777,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0029084400102874497,
-        "env_step_ms": 3.4900685400225484
+        "policy_ms": 0.002518820001569111,
+        "env_step_ms": 3.2147122049988752
       },
       {
         "seed": 10082,
@@ -6834,8 +6834,8 @@
         "min_clearance_cm": 13.528384524232347,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.002988884011426927,
-        "env_step_ms": 2.177584652283416
+        "policy_ms": 0.002660289854814608,
+        "env_step_ms": 1.8738607246382015
       },
       {
         "seed": 10083,
@@ -6848,8 +6848,8 @@
         "min_clearance_cm": 7.873582252850161,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0027957481117954633,
-        "env_step_ms": 2.5132467710400377
+        "policy_ms": 0.002781778624650806,
+        "env_step_ms": 2.1885007099218936
       },
       {
         "seed": 10084,
@@ -6862,8 +6862,8 @@
         "min_clearance_cm": -0.32045111666297244,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.002887521749590119,
-        "env_step_ms": 3.1151740867758435
+        "policy_ms": 0.003528652175942704,
+        "env_step_ms": 2.9664926521688715
       },
       {
         "seed": 10085,
@@ -6876,8 +6876,8 @@
         "min_clearance_cm": -0.34598104819152375,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0030916208147416533,
-        "env_step_ms": 2.5391087928537988
+        "policy_ms": 0.0026403448248010107,
+        "env_step_ms": 2.3879076896534945
       },
       {
         "seed": 10086,
@@ -6890,8 +6890,8 @@
         "min_clearance_cm": 11.640887677191245,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0035446667988296775,
-        "env_step_ms": 2.1213994094675095
+        "policy_ms": 0.002869885715231898,
+        "env_step_ms": 2.0433941999997494
       },
       {
         "seed": 10087,
@@ -6904,8 +6904,8 @@
         "min_clearance_cm": -0.05692846207834973,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0037012667841433236,
-        "env_step_ms": 3.4349314443210863
+        "policy_ms": 0.0027042666652555957,
+        "env_step_ms": 3.1653030666651225
       },
       {
         "seed": 10088,
@@ -6918,8 +6918,8 @@
         "min_clearance_cm": 7.998186011871519,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0027916714316233993,
-        "env_step_ms": 2.4269480284471814
+        "policy_ms": 0.002591600003500259,
+        "env_step_ms": 2.011923514280462
       },
       {
         "seed": 10089,
@@ -6932,8 +6932,8 @@
         "min_clearance_cm": 15.397355005949873,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.003044967607204472,
-        "env_step_ms": 2.1887766936654978
+        "policy_ms": 0.002590483871340292,
+        "env_step_ms": 1.9504037419327718
       },
       {
         "seed": 10090,
@@ -6946,8 +6946,8 @@
         "min_clearance_cm": -0.03119089026525773,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.002970162778754372,
-        "env_step_ms": 2.589793604657157
+        "policy_ms": 0.003823046507625614,
+        "env_step_ms": 2.028450790703573
       },
       {
         "seed": 10091,
@@ -6960,8 +6960,8 @@
         "min_clearance_cm": -0.3143549823316133,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0028153948924706414,
-        "env_step_ms": 2.572974776285264
+        "policy_ms": 0.0028543815803136327,
+        "env_step_ms": 2.1727114342119673
       },
       {
         "seed": 10092,
@@ -6974,8 +6974,8 @@
         "min_clearance_cm": 3.3226109036086053,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0032837613433153033,
-        "env_step_ms": 3.9223753762239997
+        "policy_ms": 0.003029926608424505,
+        "env_step_ms": 3.268985284402659
       },
       {
         "seed": 10093,
@@ -6988,8 +6988,8 @@
         "min_clearance_cm": -0.33376109166634793,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.002870999954514749,
-        "env_step_ms": 3.4296091527923838
+        "policy_ms": 0.0034711666690630714,
+        "env_step_ms": 3.402940847220432
       },
       {
         "seed": 10094,
@@ -7002,8 +7002,8 @@
         "min_clearance_cm": -0.02352717591917186,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0039818592149843,
-        "env_step_ms": 3.6516863239201895
+        "policy_ms": 0.0026739577475049193,
+        "env_step_ms": 2.942147140845624
       },
       {
         "seed": 10095,
@@ -7016,8 +7016,8 @@
         "min_clearance_cm": -0.775233556214161,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.00309831669558965,
-        "env_step_ms": 3.434304783331754
+        "policy_ms": 0.0028351333346184524,
+        "env_step_ms": 2.957017333332601
       },
       {
         "seed": 10096,
@@ -7030,8 +7030,8 @@
         "min_clearance_cm": -0.12711717959601743,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.003804781855168668,
-        "env_step_ms": 3.259579345566718
+        "policy_ms": 0.0033750000005222155,
+        "env_step_ms": 2.7595893090867984
       },
       {
         "seed": 10097,
@@ -7044,8 +7044,8 @@
         "min_clearance_cm": -0.5345066612901725,
         "obstacle": true,
         "shield_interventions": 0,
-        "policy_ms": 0.0032741414598245738,
-        "env_step_ms": 3.5875811715937522
+        "policy_ms": 0.002486383841136962,
+        "env_step_ms": 3.1754336969673647
       },
       {
         "seed": 10098,
@@ -7058,8 +7058,8 @@
         "min_clearance_cm": 8.036259098447212,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.003058820061341158,
-        "env_step_ms": 2.7116627303319016
+        "policy_ms": 0.0031770112328875543,
+        "env_step_ms": 2.4434760449460127
       },
       {
         "seed": 10099,
@@ -7072,10 +7072,10 @@
         "min_clearance_cm": 16.214052587321945,
         "obstacle": false,
         "shield_interventions": 0,
-        "policy_ms": 0.0029716119665388406,
-        "env_step_ms": 2.1547089998611186
+        "policy_ms": 0.0025876119398569935,
+        "env_step_ms": 1.8210317910393994
       }
     ]
   },
-  "minutes": 1.087587109699992
+  "minutes": 0.9185908585833337
 }

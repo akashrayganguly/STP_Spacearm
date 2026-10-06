@@ -153,7 +153,8 @@ ppo:
   curriculum_frac: 0.5         # difficulty ramps 0 -> 1 over this share of training
 
 shield:
-  self_margin: 0.05            # covers DistanceNet error + encoder bias (validation: 3 cm let 5 % collide, 5 cm 2.5 %)
+  self_margin: 0.06            # covers DistanceNet error + encoder bias (validation: 3 cm let 5 % collide, 5 cm 2.5 %;
+                               # Phase 7: 5 cm let 2/40 S4 episodes graze the bus, worst estimate error ~5.5 cm)
   obstacle_margin: 0.05
   lookahead_steps: 2
   scales: [1.0, 0.5, 0.25]
