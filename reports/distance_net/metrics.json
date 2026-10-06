@@ -1,0 +1,57 @@
+{
+  "test_uniform": {
+    "n": 20000,
+    "mae_all_cm": 0.6777669303119183,
+    "mae_near10_cm": 1.2249093502759933,
+    "mae_body_cm": 1.2060382403433323,
+    "mae_self_cm": 0.1494956435635686,
+    "sign_accuracy": 0.982699990272522,
+    "false_safe_rate": 0.0012000000569969416,
+    "false_safe_any_rate": 0.008200000040233135,
+    "collision_share": 0.1302500069141388,
+    "max_overestimate_cm": 13.378779590129852,
+    "self_near_surface_n": 12,
+    "self_near_surface_mae_cm": 4.069420322775841
+  },
+  "validation_train_distribution": {
+    "n": 10000,
+    "mae_all_cm": 0.6637303158640862,
+    "mae_near10_cm": 1.0679752565920353,
+    "mae_body_cm": 1.1781337670981884,
+    "mae_self_cm": 0.14932695776224136,
+    "sign_accuracy": 0.9528999924659729,
+    "false_safe_rate": 0.00139999995008111,
+    "false_safe_any_rate": 0.023800000548362732,
+    "collision_share": 0.2071000039577484,
+    "max_overestimate_cm": 8.337946981191635,
+    "self_near_surface_n": 16,
+    "self_near_surface_mae_cm": 1.51832839474082
+  },
+  "targets": {
+    "mae_all_cm": {
+      "target": "<= 1.0",
+      "got": 0.6777669303119183,
+      "pass": true
+    },
+    "mae_near10_cm": {
+      "target": "<= 2.0",
+      "got": 1.2249093502759933,
+      "pass": true
+    },
+    "sign_accuracy": {
+      "target": ">= 0.97",
+      "got": 0.982699990272522,
+      "pass": true
+    },
+    "false_safe_rate": {
+      "target": "<= 0.005",
+      "got": 0.0012000000569969416,
+      "pass": true
+    }
+  },
+  "params": 135938,
+  "epochs": 60,
+  "seed": 0,
+  "train_seconds": 48.72599031699997,
+  "threads": 4
+}

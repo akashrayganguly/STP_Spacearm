@@ -1,0 +1,29 @@
+{
+  "prior": {
+    "success": 0.47,
+    "collision": 0.05,
+    "cost": 1.21,
+    "return": 9.363448390640038,
+    "length": 149.48,
+    "success_length": 105.76595744680851,
+    "n_episodes": 100
+  },
+  "rl_best": {
+    "success": 0.67,
+    "collision": 0.06,
+    "cost": 0.26,
+    "return": 9.554012994146074,
+    "length": 109.42,
+    "success_length": 76.94029850746269,
+    "n_episodes": 100
+  },
+  "rl_final": {
+    "success": 0.68,
+    "collision": 0.05,
+    "cost": 0.39,
+    "return": 9.81548418009261,
+    "length": 110.13,
+    "success_length": 77.23529411764706,
+    "n_episodes": 100
+  }
+}

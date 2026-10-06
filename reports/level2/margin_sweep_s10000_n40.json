@@ -1,0 +1,59 @@
+{
+  "seed_base": 10000,
+  "episodes": 40,
+  "scenario": "S4",
+  "margins": {
+    "0.050": {
+      "prior+shield": {
+        "n": 40,
+        "success": 0.45,
+        "collision": 0.025,
+        "mean_cost": 0.125,
+        "time_to_reach_s": 11.972222222222221,
+        "base_rotation_deg": 5.311422599926479,
+        "shield_interventions_per_episode": 19.0,
+        "shield_intervention_rate": 0.11751971547858357,
+        "policy_ms_per_step": 0.0032671238013507256,
+        "env_step_ms": 3.836722232144615
+      },
+      "rl+shield": {
+        "n": 40,
+        "success": 0.6,
+        "collision": 0.05,
+        "mean_cost": 0.875,
+        "time_to_reach_s": 8.354166666666668,
+        "base_rotation_deg": 6.393213315895528,
+        "shield_interventions_per_episode": 14.85,
+        "shield_intervention_rate": 0.11674528301886793,
+        "policy_ms_per_step": 0.1527101635208361,
+        "env_step_ms": 3.95661171663616
+      }
+    },
+    "0.060": {
+      "prior+shield": {
+        "n": 40,
+        "success": 0.4,
+        "collision": 0.025,
+        "mean_cost": 0.125,
+        "time_to_reach_s": 11.40625,
+        "base_rotation_deg": 5.273378690608905,
+        "shield_interventions_per_episode": 22.2,
+        "shield_intervention_rate": 0.13584212941716384,
+        "policy_ms_per_step": 0.003313743504476081,
+        "env_step_ms": 3.977151120824547
+      },
+      "rl+shield": {
+        "n": 40,
+        "success": 0.6,
+        "collision": 0.0,
+        "mean_cost": 0.225,
+        "time_to_reach_s": 8.429166666666667,
+        "base_rotation_deg": 6.359526922450952,
+        "shield_interventions_per_episode": 19.875,
+        "shield_intervention_rate": 0.15221137277426766,
+        "policy_ms_per_step": 0.13518285170051195,
+        "env_step_ms": 3.658448998725377
+      }
+    }
+  }
+}

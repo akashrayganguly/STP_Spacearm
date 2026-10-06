@@ -127,6 +127,13 @@ def test_zero_residual_follows_the_prior(env):
     assert info["d_tcp"] < d0
 
 
+def test_targets_lie_within_the_reach_fraction(cfg, env):
+    """Design change (Phase 5, option B): targets are sampled within env.target_reach_frac of the arm's reach."""
+    for seed in range(20):
+        env.reset(seed=seed)
+        assert np.linalg.norm(env.target_w - env.shoulder) <= cfg["env"]["target_reach_frac"] * env.max_reach + 1e-9
+
+
 def test_difficulty_is_clamped(env):
     env.set_difficulty(3.0)
     assert env.difficulty == 1.0

@@ -34,6 +34,7 @@ robot:
     max_velocity: 0.5          # rad/s, every joint
     max_torque: 100.0          # N*m, velocity-motor force limit
     tool_offset: 0.15          # tool centre point (TCP) along link7 +z
+    tcp_mass: 0.01             # kg, the TCP frame is a link of its own (DESIGN §4 table)
   # Allowed-collision matrix: pairs never checked (parent-child pairs are skipped automatically).
   # Each pair below either never changes distance with q, or is "structurally adjacent"
   # (always < 0.10 m apart yet unable to collide within joint limits). test_p1 verifies this.
@@ -72,7 +73,9 @@ distance_net:
   clip: [-0.05, 0.30]          # training-target clipping (m)
   near_band: 0.05
   near_weight: 10.0
+  huber_beta: 0.02             # m, Huber (smooth-L1) transition (DESIGN §5.2)
   lr: 2.0e-3                   # cosine-decayed to 0
+  weight_decay: 0.01           # AdamW (= PyTorch default, pinned here)
   batch: 1024
   epochs: 60
 
@@ -86,12 +89,15 @@ traj:
   w_coll: 1000.0
   w_smooth: 0.1
   lr: 3.0e-4                   # cosine-decayed to 0
+  weight_decay: 0.01           # AdamW (= PyTorch default, pinned here)
+  grad_clip: 1.0               # gradient-norm clip (validation-build lesson 9)
   batch: 256
   steps: 10000
   refine_steps: 30             # test-time Adam steps on the network output
   retry_refine_steps: 100      # second attempt if PyBullet verification fails
   refine_lr: 0.05
   polish_iters: 10             # damped-least-squares IK steps on the exact FK (mm precision)
+  polish_damping: 0.01         # DLS damping of the polish step (DESIGN §5.4)
   success_tol: 0.02            # m, reach tolerance
   min_target_dist: 0.20        # m, start TCP to target
 
@@ -113,6 +119,8 @@ env:
   max_steps: 200               # 20 s at 10 Hz
   self_clearance: net          # "net" = Level-1 distance net (deployment-faithful), "sim" = PyBullet (tests)
   distance_net_path: models/distance_net.pt
+  target_reach_frac: 0.85      # targets lie within this fraction of the arm's reach from the shoulder (joint 2);
+                               # near-full-stretch targets drift out of reach as the base recoils (Phase 5 finding)
   success_dist: 0.02
   success_speed: 0.05
   reward: {progress: 10.0, action_rate: 0.01, time: 0.005, success: 5.0, residual: 0.02}
@@ -145,7 +153,8 @@ ppo:
   curriculum_frac: 0.5         # difficulty ramps 0 -> 1 over this share of training
 
 shield:
-  self_margin: 0.05            # covers DistanceNet error + encoder bias (validation: 3 cm let 5 % collide, 5 cm 2.5 %)
+  self_margin: 0.06            # covers DistanceNet error + encoder bias (validation: 3 cm let 5 % collide, 5 cm 2.5 %;
+                               # Phase 7: 5 cm let 2/40 S4 episodes graze the bus, worst estimate error ~5.5 cm)
   obstacle_margin: 0.05
   lookahead_steps: 2
   scales: [1.0, 0.5, 0.25]
