@@ -8,6 +8,11 @@ Everything is simulated in PyBullet and runs on a CPU. The trained models are in
 ![demo: prior only (left) vs RL residual + shield (right)](reports/figures/demo_strip.png)
 Demo video: [`reports/demo.mp4`](reports/demo.mp4). The same episode is shown twice. A surprise obstacle appears at about 4 s on the way to the target. The classical reflex (left) hovers safely beside it and times out 3.3 cm short. The RL residual with the safety shield (right) re-routes around it and arrives at 11.1 s.
 
+**New in v1.1**
+* 📖 **[Detailed writeup](docs/WRITEUP.md):** an illustrated, story-style tour of every model (world, dataset, DistanceNet, TrajNet, planner stages, Level-2 environment, RL policy, shield) with plots of every part and tables for every variant.
+* 🖥️ **Interactive explorer:** `pip install gradio plotly`, then `python scripts/gui.py`. Three tabs: a pose and clearance viewer (true `d_body`/`d_self` vs DistanceNet), a stage-by-stage planner, and a Level-2 mission simulator (choose the controller, start, target, obstacle, faults and sensor noise; compare all four controllers; replay any report episode).
+* 🔬 **New analyses:** the planner stage by stage (refine alone *lowers* success; refine + polish is what reaches 100 %), and a 17-variant Level-2 study (obstacles drive the failures; faults and noise barely matter; the shield does not yet model moving obstacles).
+
 ## Results
 
 ### Level 1 — neural collision-distance field and planner
@@ -33,6 +38,8 @@ Planner, on queries from unseen test configurations. Every success is verified i
 ¹ A transient on the shared cloud VM; re-timed it is a steady 8 ms (the IK polish is a fixed 10 iterations).
 
 Targets: random ≥ 95 %, hard ≥ 90 %, median plan time < 0.5 s; all met. Played open-loop on the free-floating spacecraft, these perfect body-frame plans miss an inertially fixed target by **17 cm** (median; max 33 cm), because the spacecraft rotates **6.4°** in reaction. That is why Level 2 closes the loop.
+
+**Stage by stage** (same queries; [`reports/level1/stages.md`](reports/level1/stages.md)). Success on random / hard queries: TrajNet alone 85 / 66 %; + refine 56 / 54 % (it clears collisions but pulls the tip 1–2 cm off the target); + IK polish 98 / 93 %; refine + polish 99.5 / 100 %; full planner 100 / 100 %. Refine buys clearance, polish buys precision.
 
 ### Level 2 — residual PPO-Lagrangian policy + safety shield
 
@@ -77,11 +84,24 @@ Latency on one CPU thread (control period 100 ms):
 | Safety shield, command accepted / escape | 0.18 / 3.3 ms | 0.38 / 4.5 ms |
 | Full control step incl. physics, features, policy, prior, shield | 4.5 ms | 7.3 ms |
 
+**Variant study (v1.1)**: 17 variants × 4 controllers × 100 fresh episodes (seeds 40000+); [`reports/level2/variants.md`](reports/level2/variants.md) and [writeup §10](docs/WRITEUP.md#10-results). Success / collisions:
+
+| Variant | Reflex | RL + shield |
+|---|---|---|
+| difficulty d = 0 → 1 | 89 % → 49 % | 89 % → 61 % (0 % collisions throughout) |
+| static ball, 5–12 cm | 37 % / 3 % | 53 % / 0 % |
+| drifting ball, ≤ 3 cm/s | 63 % / 3 % | 68 % / 1 % |
+| faults only (bias, weak motors or slip) | 83–89 % / 1–2 % | 86–89 % / 0 % |
+| sensor noise only (× 1 and × 3) | 89 % / 1 % | 89–90 % / 0 % |
+| stress: ball drifting ≤ 6 cm/s | 68 % / 5 % | 76 % / 2 % |
+
 ### Honest limits
 * **Shield margin raised from 5 to 6 cm (Phase 7, agreed).** At 5 cm, 2 of the 100 S4 episodes, both inside the 40 used by the acceptance test, grazed the spacecraft. The robot's own clearance estimate (DistanceNet on encoder angles carrying up to 3.6° of bias after a slip) was about 5.5 cm too optimistic. At 6 cm: 0 collisions in all four scenarios, for about 2 points of success (`reports/level2/margin_sweep_*.json`).
 * **The shield is a model-based filter, not a proof:** it only knows the measured joint angles, the DistanceNet and the obstacle as seen by vision.
 * **Targets are sampled within 85 % of the arm's reach.** With unrestricted targets, about 20 % of nominal episodes were unwinnable: the base recoil carried near-full-stretch targets out of reach.
 * **The PPO-Lagrangian constraint (≤ 1 near-miss step per episode) rarely bound** (λ ≤ 0.45). Collision safety comes mostly from the reflex and the shield, not from the learned constraint.
+* **The shield does not predict obstacle motion** (it looks 0.2 s ahead for the arm only), so drifting balls still cause 1–2 % collisions in the variant study, and 2–3 % at twice the trained speed.
+* **A static ball on the straight path is the hardest case** (37 % success for the reflex, 53–54 % with RL).
 
 ## Reproduce on a Windows workstation (Anaconda Prompt)
 ```bat
@@ -92,7 +112,7 @@ REM Python 3.11 + PyBullet from conda-forge (PLAN.md Phase 0), then this package
 conda env create -f environment.yml
 conda activate spacearm
 pip install -e .
-REM fast tests (about 15 s); add -m "slow or not slow" for everything (about 2 min, 77 tests)
+REM fast tests (about 20 s); add -m "slow or not slow" for everything (about 3 min, 86 tests)
 pytest
 REM evaluations with the committed models
 python scripts\gen_data.py
@@ -101,7 +121,13 @@ python scripts\eval_level1.py
 python scripts\eval_level2.py
 python scripts\export_policy.py
 python scripts\demo_video.py
-REM GUI viewers (workstation only)
+REM interactive explorer in the browser (pip install gradio plotly)
+python scripts\gui.py
+REM new v1.1 analyses (data\ needed for the stage study and the figures)
+python scripts\eval_level1_stages.py
+python scripts\eval_level2_variants.py
+python scripts\make_writeup_figures.py
+REM PyBullet GUI viewers (workstation only)
 python scripts\view_robot.py
 python scripts\play_env.py --gui --difficulty 1.0 --episodes 3
 REM watch the trained policy behind the shield
@@ -121,12 +147,15 @@ python scripts\train_ppo_lag.py --n-envs 7 --fresh
 ## Repository layout
 ```
 configs/default.yaml     all parameters (single source of truth)
-docs/                    DESIGN (architecture, contracts, targets), PLAN, CHECKLIST, PROGRESS (status + decisions)
+docs/                    WRITEUP (illustrated tour), DESIGN (architecture, contracts, targets), PLAN, CHECKLIST,
+                         PROGRESS (status + decisions)
 src/spacearm/            config, robot_model, sim, kinematics, datagen, models/ (distance_net, traj_net), losses,
-                         planner, control, envs/ (space_reach_env, toy_env), rl/ (vec_env, ppo_lag), safety/shield, export
+                         planner, control, envs/ (space_reach_env, toy_env), rl/ (vec_env, ppo_lag), safety/shield, export,
+                         gui/ (scene, backend, app: the interactive explorer)
 scripts/                 one script per step: make_urdf, render_robot, view_robot, check_world_model, gen_data,
                          train_distance_net, train_traj_net, eval_level1, play_env, train_ppo_lag, eval_level2,
-                         export_policy, demo_video
+                         export_policy, demo_video; v1.1: gui, eval_level1_stages, eval_level2_variants,
+                         make_writeup_figures
 tests/                   executable contracts, one file per phase
 models/                  trained weights (committed): distance_net, traj_net, ppo_lag (+ checkpoint), actor.npz/.onnx
 reports/                 metrics JSON, progress CSVs, plots, tables, phase reports, demo video

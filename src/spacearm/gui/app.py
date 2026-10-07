@@ -154,7 +154,7 @@ def mission_view(controller, seed, start_src, target_src, source, obstacle, radi
     s = traces[0]["sampled"]
     what = (f"Start {np.round(s['start_deg'], 0).astype(int).tolist()}° · target "
             f"({s['target'][0]:+.2f}, {s['target'][1]:+.2f}, {s['target'][2]:+.2f}) m · "
-            + (f"obstacle at {s['obstacle_s']:.1f} s · " if s["obstacle_s"] else "no obstacle · ")
+            + obstacle_text(s, traces)
             + f"max |encoder bias| {max(abs(v) for v in s['bias_deg']):.1f}° · weakest motor {100 * min(s['gains']):.0f} % · "
             + (f"slip at {s['slip_s']:.1f} s · " if s["slip_s"] else "no slip · ")
             + f"encoder noise {s['noise_enc_deg']:.2f}°")
@@ -162,6 +162,18 @@ def mission_view(controller, seed, start_src, target_src, source, obstacle, radi
     return (video, [B.mission_summary(tr) for tr in traces], B.mission_chart(traces), what, traces,
             gr.update(maximum=last, value=last), gr.update(choices=names, value=names[-1]),
             B.mission_scene(traces[-1], last))
+
+
+def obstacle_text(s, traces):
+    if not s["obstacle_s"]:
+        return "no obstacle · "
+    if s["obstacle_s"] > max(tr["t"][-1] for tr in traces):
+        return f"obstacle due at {s['obstacle_s']:.1f} s (every run ended before) · "
+    seen = [tr["sampled"]["obstacle_seen_s"] for tr in traces]
+    if all(v is None for v in seen):
+        return (f"obstacle due at {s['obstacle_s']:.1f} s but no free spot between the hand and the target "
+                "(training rule), so none appeared · ")
+    return f"obstacle appeared at {s['obstacle_s']:.1f} s · "
 
 
 def scrub(traces, which, k):

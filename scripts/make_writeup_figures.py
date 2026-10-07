@@ -688,7 +688,7 @@ def fig14_variants():
     keys = [k for k in VARIANT_ORDER if k in v]
     y = np.arange(len(keys))[::-1].astype(float)
     # gaps between groups
-    gaps, prev = [], None
+    prev = None
     for i, k in enumerate(keys):
         if prev is not None and v[k]["group"] != prev:
             y[i:] -= 0.8

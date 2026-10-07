@@ -10,6 +10,9 @@ requires-python = ">=3.11"
 # Dependencies are installed by environment.yml (conda-forge) + pip (torch); nothing is pulled here on purpose.
 dependencies = []
 
+[project.optional-dependencies]
+gui = ["gradio", "plotly"]          # pip install -e .[gui]  ->  python scripts/gui.py
+
 [tool.setuptools.packages.find]
 where = ["src"]
 

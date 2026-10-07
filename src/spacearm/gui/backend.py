@@ -31,6 +31,7 @@ from spacearm.models.distance_net import DistanceNet
 from spacearm.models.traj_net import TrajNet
 from spacearm.planner import Level1Planner, ik_baseline, plan_and_verify, verify_trajectory
 from spacearm.rl.ppo_lag import PPOLagAgent
+from spacearm.robot_model import panel_centres
 from spacearm.safety.shield import shield_from_config
 from spacearm.sim import SpaceRobotSim
 
@@ -184,8 +185,7 @@ def check_target(target) -> tuple[bool, str]:
     if dist > reach:
         return False, f"Target is {dist:.2f} m from the shoulder; the arm reaches at most {reach:.2f} m."
     r = m.cfg["robot"]
-    boxes = [([0, 0, 0], r["bus"]["size"])] + [(c, r["panels"]["size"]) for c in
-                                                 __import__("spacearm.robot_model", fromlist=["x"]).panel_centres(m.cfg).values()]
+    boxes = [([0, 0, 0], r["bus"]["size"])] + [(c, r["panels"]["size"]) for c in panel_centres(m.cfg).values()]
     boxes += [(pl["xyz"], pl["size"]) for pl in r["payloads"]]
     for c, s in boxes:
         if np.all(np.abs(t - np.asarray(c)) <= np.asarray(s) / 2 + 0.02):
@@ -427,6 +427,9 @@ def run_mission(controller: str, spec: MissionSpec, render: bool = True, size=(4
             if te or tr:
                 break
         out = {k: (np.asarray(v, float) if k not in ("obs_center", "obs_radius") else v) for k, v in rec.items()}
+        seen = [i for i, c in enumerate(rec["obs_center"]) if c is not None]
+        # The training rule needs a free spot between the hand and the target; without one there is no ball.
+        sampled["obstacle_seen_s"] = rec["t"][seen[0]] if seen else None
         out.update(controller=controller, outcome=outcome, frames=frames, target=env.target_w.copy(),
                    sampled=sampled, interventions=int(np.sum(out["shield"])), dt=env.dt,
                    base_rotation_deg=info["base_rotation_deg"])
@@ -508,7 +511,8 @@ def mission_chart(traces: list[dict]) -> go.Figure:
     fig.add_hline(y=2, line={"color": MARGIN_INK, "width": 1}, row=1, col=1, annotation_text="2 cm success radius",
                   annotation_position="top right")
     s = traces[0]["sampled"]
-    for t_ev, label in ((s["obstacle_s"], "obstacle appears"), (s["slip_s"], "encoder slip")):
+    seen = [tr["sampled"]["obstacle_seen_s"] for tr in traces if tr["sampled"]["obstacle_seen_s"] is not None]
+    for t_ev, label in ((min(seen) if seen else None, "obstacle appears"), (s["slip_s"], "encoder slip")):
         if t_ev is not None:
             for row in (1, 2):
                 fig.add_vline(x=t_ev, line={"color": MARGIN_INK, "width": 1}, row=row, col=1)
