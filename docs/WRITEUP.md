@@ -273,7 +273,7 @@ In the demo episode (Fig. 13), the reflex is held up beside the ball for about 3
 
 ## 11. Try it yourself: the interactive explorer
 
-`pip install gradio plotly`, then `python scripts/gui.py`, opens a local web app (`src/spacearm/gui/`).
+`pip install "gradio>=6" plotly`, then `python scripts/gui.py`, opens a local web app (`src/spacearm/gui/`).
 
 * **① Pose & clearance:** 7 joint sliders. Shows the arm, the true `d_body` and `d_self` beside DistanceNet's prediction, and the closest link pairs drawn as segments.
 * **② Path planner:** a start pose and a target point. Every stage (baseline, TrajNet, + refine, + polish, full planner) is checked in PyBullet, with clearance-along-path and control-point charts. The default query is the hard one of Fig. 8.

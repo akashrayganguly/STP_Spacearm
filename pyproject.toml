@@ -11,7 +11,7 @@ requires-python = ">=3.11"
 dependencies = []
 
 [project.optional-dependencies]
-gui = ["gradio", "plotly"]          # pip install -e .[gui]  ->  python scripts/gui.py
+gui = ["gradio>=6", "plotly"]          # pip install -e .[gui]  ->  python scripts/gui.py
 
 [tool.setuptools.packages.find]
 where = ["src"]

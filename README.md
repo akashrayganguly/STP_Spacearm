@@ -10,7 +10,7 @@ Demo video: [`reports/demo.mp4`](reports/demo.mp4). The same episode is shown tw
 
 **New in v1.1**
 * 📖 **[Detailed writeup](docs/WRITEUP.md):** an illustrated, story-style tour of every model (world, dataset, DistanceNet, TrajNet, planner stages, Level-2 environment, RL policy, shield) with plots of every part and tables for every variant.
-* 🖥️ **Interactive explorer:** `pip install gradio plotly`, then `python scripts/gui.py`. Three tabs: a pose and clearance viewer (true `d_body`/`d_self` vs DistanceNet), a stage-by-stage planner, and a Level-2 mission simulator (choose the controller, start, target, obstacle, faults and sensor noise; compare all four controllers; replay any report episode).
+* 🖥️ **Interactive explorer:** `pip install "gradio>=6" plotly`, then `python scripts/gui.py`. Three tabs: a pose and clearance viewer (true `d_body`/`d_self` vs DistanceNet), a stage-by-stage planner, and a Level-2 mission simulator (choose the controller, start, target, obstacle, faults and sensor noise; compare all four controllers; replay any report episode).
 * 🔬 **New analyses:** the planner stage by stage (refine alone *lowers* success; refine + polish is what reaches 100 %), and a 17-variant Level-2 study (obstacles drive the failures; faults and noise barely matter; the shield does not yet model moving obstacles).
 
 ## Results

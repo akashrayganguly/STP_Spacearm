@@ -23,6 +23,6 @@ dependencies:
       - gymnasium>=1.1,<2
       - onnx
       - onnxruntime
-      - gradio             # interactive explorer: python scripts\gui.py (v1.1)
+      - gradio>=6          # interactive explorer: python scripts\gui.py (v1.1)
       - plotly             # 3D scenes in the explorer and the writeup figures
       - kaleido            # optional: static 3D renders for scripts\make_writeup_figures.py (uses Chrome)
