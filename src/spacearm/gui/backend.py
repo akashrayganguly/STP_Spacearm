@@ -233,10 +233,20 @@ def plan_report(q_start_deg, target, baseline: bool = True) -> dict:
         rows.append({"name": "Full planner (verified" + (", retried)" if info["retried"] else ")"), "Q": Q,
                      "cp": info["control_points"], "time": time.perf_counter() - t0,
                      **{k: info[k] for k in ("success", "collision_free", "min_dist", "reach_err", "within_limits")}})
-    for r in rows:
+    for r in rep_rows_dedupe(rows):
         r["clearance"] = clearance_along(r["Q"])
         r["tip"] = tip_path(r["Q"])
     return {"q_start": q, "target": t, "rows": rows}
+
+
+def rep_rows_dedupe(rows):
+    """When the full planner passed its check first time, its path IS the '+ refine + IK polish' path: say so and
+    draw one line instead of hiding one under the other."""
+    full, prev = rows[-1], rows[-2]
+    if np.allclose(full["Q"], prev["Q"]):
+        prev["name"] = "+ refine + IK polish = full planner (verified first try)"
+        full["same_as_previous"] = True
+    return rows
 
 
 def stage_color(name: str, k: int) -> str:
@@ -264,6 +274,8 @@ def plan_figure(rep: dict, height: int = 600) -> go.Figure:
     traces.append(scene.arm_trace(m.kin, final["Q"][-1], name="goal pose (full planner)"))
     offset = 0 if rep["rows"][0]["name"].startswith("Baseline") else 1
     for k, r in enumerate(rep["rows"]):
+        if r.get("same_as_previous"):
+            continue
         traces.append(scene.line_trace(r["tip"], stage_color(r["name"], k + offset), f"tip path: {r['name']}", width=6))
     traces.append(scene.point_trace(rep["target"], scene.COLORS["target"], "target", size=8))
     fig = go.Figure(traces, layout=scene.layout(height=height, uirevision="plan"))
@@ -286,6 +298,8 @@ def plan_clearance_chart(rep: dict) -> go.Figure:
     offset = 0 if rep["rows"][0]["name"].startswith("Baseline") else 1
     s = np.linspace(0, 1, len(rep["rows"][0]["clearance"]))
     for k, r in enumerate(rep["rows"]):
+        if r.get("same_as_previous"):
+            continue
         fig.add_scatter(x=s, y=100 * r["clearance"], mode="lines", name=r["name"],
                         line={"color": stage_color(r["name"], k + offset), "width": 2})
     fig.add_hline(y=0, line={"color": CRITICAL, "width": 1}, annotation_text="contact", annotation_position="bottom right")

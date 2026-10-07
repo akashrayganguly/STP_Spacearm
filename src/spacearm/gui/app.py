@@ -247,7 +247,7 @@ def build() -> gr.Blocks:
                         c2 = gr.Number(value=0, visible=False)
                     with gr.Column(scale=3):
                         head2 = gr.Markdown()
-                        plot2 = gr.Plot(label="Tool-tip path of every stage; start pose ghosted, goal pose solid")
+                        plot2 = gr.Plot(label="Tool-tip path of every stage · grey ghosts: start pose and the arm 1/3 and 2/3 along the final path · solid: goal pose")
                         table2 = gr.Dataframe(headers=["Stage", "PyBullet verdict", "Min. clearance (true)",
                                                        "Reach error", "Time"], interactive=False)
                         with gr.Row():
