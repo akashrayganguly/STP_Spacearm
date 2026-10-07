@@ -131,18 +131,35 @@ class SpaceReachEnv(gym.Env):
 
     # ------------------------------------------------------------------ gym API
     def reset(self, *, seed: int | None = None, options: dict | None = None):
+        """Sample an episode (start, target, surprises) from `seed` and the difficulty.
+
+        `options` (all keys optional) pins parts of the episode; everything not given is sampled exactly
+        as without options (same random draws for the same seed):
+          q_start  (7,) rad      start joint angles (the caller checks they are collision-free)
+          target   (3,) m        target in the inertial frame (= body frame at t = 0)
+          obstacle None          no obstacle this episode
+                   dict          {"time": s, "radius": m, "velocity": (3,) m/s, "center": (3,) m or None};
+                                 center None = the training rule (between TCP and target at spawn time)
+          faults   dict          {"bias_deg": (7,) or scalar, "gains": (7,) or scalar,
+                                  "slip_time": s or None, "slip_joint": int, "slip_deg": deg}
+          noise    dict          {"encoder_deg": deg, "vision_m": m, "gyro": rad/s} (standard deviations)
+        """
         super().reset(seed=seed)
         rng, d, e = self.np_random, self.difficulty, self.e
+        opts = options or {}
         self._remove_obstacle()
         self.sim.reset()
-        q_start = self._free_config(rng)
+        q_start = np.asarray(opts["q_start"], float) if opts.get("q_start") is not None else self._free_config(rng)
         tcp_start = self._tcp_fk(q_start)
-        while True:
-            q_t = self._free_config(rng)
-            target = self._tcp_fk(q_t)
-            if (np.linalg.norm(target - tcp_start) >= self.cfg["traj"]["min_target_dist"]
-                    and np.linalg.norm(target - self.shoulder) <= e["target_reach_frac"] * self.max_reach):
-                break
+        if opts.get("target") is not None:
+            target = np.asarray(opts["target"], float)
+        else:
+            while True:
+                q_t = self._free_config(rng)
+                target = self._tcp_fk(q_t)
+                if (np.linalg.norm(target - tcp_start) >= self.cfg["traj"]["min_target_dist"]
+                        and np.linalg.norm(target - self.shoulder) <= e["target_reach_frac"] * self.max_reach):
+                    break
         self.sim.reset(q=q_start)                          # base at the origin: body frame == inertial frame
         self.target_w = target
 
@@ -162,12 +179,14 @@ class SpaceReachEnv(gym.Env):
 
         o = e["obstacle"]
         self.spawn_step = -1
+        self.spawn_center = None
         if rng.random() < o["prob"] * d:
             self.spawn_step = int(round(rng.uniform(*o["spawn_time"]) / self.dt))
             self.spawn_radius = rng.uniform(*o["radius"])
             moving = rng.random() < o["move_prob"]
             direction = _unit(rng.normal(size=3))
             self.spawn_vel = direction * rng.uniform(0.0, o["max_speed"]) if moving else np.zeros(3)
+        self._apply_options(opts)
 
         self.t = 0
         self.shield_interventions = 0
@@ -227,8 +246,39 @@ class SpaceReachEnv(gym.Env):
         self.sim.close()
 
     # ------------------------------------------------------------------ internals
+    def _apply_options(self, opts: dict) -> None:
+        """Pin the surprises given in reset(options=...) (faults, noise, obstacle); see `reset`."""
+        if "faults" in opts:
+            f = opts["faults"] or {}
+            if "bias_deg" in f:
+                self.bias = np.radians(np.broadcast_to(np.asarray(f["bias_deg"], float), (7,))).copy()
+            if "gains" in f:
+                self.gains = np.broadcast_to(np.asarray(f["gains"], float), (7,)).copy()
+            if "slip_time" in f:
+                self.slip_step, self.slip = -1, np.zeros(7)
+                if f["slip_time"] is not None:
+                    self.slip_step = max(1, int(round(float(f["slip_time"]) / self.dt)))
+                    self.slip[int(f.get("slip_joint", 0))] = np.radians(float(f.get("slip_deg", 3.0)))
+        if "noise" in opts:
+            n = opts["noise"] or {}
+            self.sig_enc = np.radians(float(n.get("encoder_deg", np.degrees(self.sig_enc))))
+            self.sig_vis = float(n.get("vision_m", self.sig_vis))
+            self.sig_gyro = float(n.get("gyro", self.sig_gyro))
+        if "obstacle" in opts:
+            o = opts["obstacle"]
+            self.spawn_step = -1
+            if o is not None:
+                self.spawn_step = max(1, int(round(float(o.get("time", 2.0)) / self.dt)))
+                self.spawn_radius = float(o.get("radius", 0.08))
+                self.spawn_vel = np.asarray(o.get("velocity", np.zeros(3)), float).reshape(3)
+                self.spawn_center = None if o.get("center") is None else np.asarray(o["center"], float).reshape(3)
+
     def _spawn_obstacle(self) -> None:
-        """Sphere between the TCP and the target (+-5 cm), not inside the arm, not covering the target."""
+        """Sphere between the TCP and the target (+-5 cm), not inside the arm, not covering the target.
+        A centre pinned via reset(options=...) is used as given."""
+        if self.spawn_center is not None:
+            self.place_obstacle(self.spawn_center, self.spawn_radius, self.spawn_vel)
+            return
         rng, margin = self.np_random, self.cfg["collision"]["plan_margin"]
         tcp = self.sim.tcp_world()
         for _ in range(_SPAWN_TRIES):

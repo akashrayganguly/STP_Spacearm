@@ -9,6 +9,7 @@
 | 5 — Level-2 environment | DONE | 15/15 tests (incl. check_env); prior only (40 ep): d=0 72.5 % success / 0 % coll., d=1 35.0 % / 0 % (val. build ~80 % / ~45 %, 3–8 %); env 3.6 ms/step, 726 steps/s with 4 workers | 2026-10-05 |
 | 6 — PPO-Lagrangian | DONE | 9/9 tests (slow toy: 100 % / cost 0.86); 3.0 M steps in 13 segments (~1 h 45 min); 100 unseen ep at d=1: RL 67–68 % success vs prior 47 %, collisions 5–6 % vs 5 %, near-miss cost 0.26 vs 1.21 | 2026-10-05 |
 | 7 — Shield, evaluation, export, demo | DONE | S4 (100 ep): RL+shield 58 % success / 0 % coll. vs prior 45 % / 7 % (target ≤ 3 %); S1 89 % / 0 %, near-miss 0.00 vs 0.38; RL+shield 0 collisions in 400 ep; actor 0.012 ms (NumPy); demo.mp4; suite 77 passed (shield self-margin 6 cm) | 2026-10-06 |
+| v1.1 — Writeup, interactive explorer, stage + variant studies | DONE (PR) | docs/WRITEUP.md (story, 20 figures); GUI `scripts/gui.py` (pose/clearance, planner stages, mission simulator); Level-1 stages: refine alone 56 % / 54 % (random / hard), refine + polish 99.5 % / 100 %; Level-2 17 variants × 4 methods × 100 eps: obstacles drive failures (static ball: reflex 37 %, RL + shield 53 %), faults/noise alone 81–89 % for all; shield 1–2 % collisions with drifting balls; suite 86 passed | 2026-10-07 |
 
 ## Decisions and deviations
 * **Dotfiles were missing from the upload.** `.gitignore` and `.claude/` (the hook that CLAUDE.md §1 depends on) were not in the repo. Added both: `.claude/settings.json` + `.claude/hooks/session-start.sh` (puts `~/.venvs/spacearm/bin` on PATH, builds the venv via `cloud/setup.sh` if missing, `pip install -e .`), and a `.gitignore` for `data/ runs/ videos/` plus Python caches.
@@ -27,6 +28,11 @@
 * Phase 7: shield evaluates its 3 scales in one batch, escape via autograd.grad; eval_level2 uses explicit per-episode seeds (identical episodes for every method); seeds: selection 20000+, independent/margin study 30000+, final table 10000+; demo picks an episode where RL met the obstacle; pure-RL ablation not run; v1.0 tag left for main after the merge.
 * Phase 7 decision (B, agreed): `shield.self_margin` 5 → 6 cm (DESIGN §6.4 + config). At 5 cm the 40-episode S4 acceptance test had 2/40 bus grazes (~5.5 cm clearance-estimate error); at 6 cm RL+shield has 0 collisions in all 400 eval episodes for −0 to −2 points of success; suite 77/77. `play_env.py` gained `--policy/--shield`.
 
+* v1.1 (Part B change, engineer's request): `SpaceReachEnv.reset(options=...)` pins start, target, obstacle (time, radius, velocity, centre), faults (bias, gains, slip) and noise; additive, the default path is unchanged (24/24 published S4 episodes reproduced exactly; new test file `tests/test_env_options.py`). `Level1Planner.plan` info also returns the control points (additive). No DESIGN or config numbers changed.
+* v1.1: new dependencies for the GUI and figures only: gradio, plotly (+ kaleido for static 3D renders); added to environment.yml, cloud/setup.sh and `pyproject.toml` extra `[gui]`. The core package does not import them. GUI videos are WebM/VP9 (plays in every Chromium build, Chrome, Edge, Firefox).
+* v1.1: this session's cloud VM was ~1.7× slower than the v1.0 one (same `plan()` call: 167 ms vs 99 ms), so stage timings in `reports/level1/stages.md` are relative; the writeup quotes v1.0's absolute times.
+* v1.1: variant seeds 40000+ (never used before). In the variant runs the obstacle is placed between the *current* hand and the target when it appears, so each controller meets its own ball position (always in its way); this is the training rule, now stated in the writeup.
+
 ## Open issues
 * Environment settings (fix in the claude.ai cloud environment menu → Edit):
   * Network access: add `download.pytorch.org` to allowed domains (keep the default package-manager list) → 200 MB CPU torch instead of the 6 GB CUDA build.
@@ -37,6 +43,8 @@
 * For Phase 7: the DistanceNet over-estimates clearance by > 5 cm on 2.2 % of colliding test configs; 0.05 % of configs it rates ≥ 5 cm are actually colliding (worst: true −4.4 cm, predicted +9.0 cm). The 5 cm shield margin is not a guarantee; report it.
 * RL alone did not reduce collisions (the near-miss constraint rarely binds, lambda ≤ 0.45); the shield does (S1–S4 at 6 cm: 13 → 0 for RL, 21 → 2 for the prior).
 * Unpinned versions: if a later phase breaks on a library update, pin versions in `cloud/setup.sh` and `environment.yml` together.
+* (v1.1) The shield ignores obstacle motion (0.2 s lookahead for the arm only): 1–2 % collisions with drifting balls, 2–3 % at 6 cm/s. Next fix: predict the ball over the lookahead.
+* (v1.1) Refine alone drifts off the target (smoothness pulls the goal back): harmless in the full planner (polish follows), but worth fixing if refine is ever used alone.
 
 ## Next step
-Merge the PR (Phases 0–7) into `main`, then tag `v1.0` on `main`. Optional: Phase 8 (dual arm, DESIGN §10; write tests first); environment settings above (pytorch index, timeout variables, setup script) for faster future sessions.
+Review and merge the v1.1 PR (writeup, GUI, stage and variant studies), then publish release v1.1 (v1.0 tag/release first if not yet published). Candidate v1.2 work, ranked in docs/WRITEUP.md §12: obstacle-velocity-aware shield, re-planning around static obstacles, an over-estimate-averse DistanceNet loss.

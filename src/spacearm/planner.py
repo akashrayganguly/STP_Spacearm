@@ -114,7 +114,8 @@ class Level1Planner:
         Q = Q.double().numpy()
         Q[0] = np.asarray(q_start, float)                    # exact start (no float32 round-off)
         info = {"plan_time": time.perf_counter() - t0, "refine_steps": steps, "polish": polish,
-                "pred_min_clearance": clear.min().item(), "fk_reach_err": reach, "refine_loss": loss_val}
+                "pred_min_clearance": clear.min().item(), "fk_reach_err": reach, "refine_loss": loss_val,
+                "control_points": P[0].double().numpy()}
         return Q, info
 
 

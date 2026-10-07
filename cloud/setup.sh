@@ -37,6 +37,9 @@ if [ -x "$PY" ]; then
       "gymnasium>=1.1,<2" onnx onnxruntime imageio imageio-ffmpeg \
     || echo "WARN: package install failed"
 
+  # 3b) Interactive explorer and writeup figures (v1.1): gradio + plotly (+ kaleido for static 3D renders).
+  uv pip install --python "$PY" "gradio>=6" plotly kaleido || echo "WARN: GUI package install failed"
+
   # 4) Activate the venv in every shell Claude opens.
   grep -q "venvs/spacearm/bin/activate" "$HOME/.bashrc" 2>/dev/null \
     || echo 'source "$HOME/.venvs/spacearm/bin/activate"' >> "$HOME/.bashrc"
