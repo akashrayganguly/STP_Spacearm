@@ -121,7 +121,7 @@ python scripts\eval_level1.py
 python scripts\eval_level2.py
 python scripts\export_policy.py
 python scripts\demo_video.py
-REM interactive explorer in the browser (pip install gradio plotly)
+REM interactive explorer in the browser (pip install "gradio>=6" plotly)
 python scripts\gui.py
 REM new v1.1 analyses (data\ needed for the stage study and the figures)
 python scripts\eval_level1_stages.py
