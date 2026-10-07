@@ -444,7 +444,7 @@ def _font(size):
     if size not in _FONTS:
         try:
             _FONTS[size] = ImageFont.load_default(size=size)
-        except TypeError:                           # Pillow < 10.1
+        except Exception:                           # Pillow < 10.1 or built without FreeType
             _FONTS[size] = ImageFont.load_default()
     return _FONTS[size]
 
@@ -465,9 +465,14 @@ def _annotate(frame, title, info, shield_on, outcome):
 
 def save_video(frames, name: str = "mission", fps: int = 10) -> str:
     """WebM (VP9): plays in Chrome, Edge, Firefox and every Chromium build (H.264 is missing from some)."""
-    path = Path(tempfile.mkdtemp(prefix="spacearm_gui_")) / f"{name}.webm"
-    imageio.mimsave(path, frames, fps=fps, codec="libvpx-vp9", macro_block_size=8,
-                    ffmpeg_params=["-deadline", "realtime", "-cpu-used", "8", "-b:v", "1500k"])
+    folder = Path(tempfile.mkdtemp(prefix="spacearm_gui_"))
+    try:
+        path = folder / f"{name}.webm"
+        imageio.mimsave(path, frames, fps=fps, codec="libvpx-vp9", macro_block_size=8,
+                        ffmpeg_params=["-deadline", "realtime", "-cpu-used", "8", "-b:v", "1500k"])
+    except Exception:                               # ffmpeg build without VP9: fall back to H.264 MP4
+        path = folder / f"{name}.mp4"
+        imageio.mimsave(path, frames, fps=fps, macro_block_size=8)
     return str(path)
 
 

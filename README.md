@@ -121,6 +121,8 @@ python scripts\eval_level1.py
 python scripts\eval_level2.py
 python scripts\export_policy.py
 python scripts\demo_video.py
+REM Windows + pip torch + conda-forge numpy can load two OpenMP runtimes ("OMP: Error #15", or a silent abort):
+REM   conda env config vars set KMP_DUPLICATE_LIB_OK=TRUE   then  conda deactivate & conda activate <env>
 REM interactive explorer in the browser (pip install "gradio>=6" plotly)
 python scripts\gui.py
 REM new v1.1 analyses (data\ needed for the stage study and the figures)

@@ -10,6 +10,8 @@ Tab 3  Mission simulator (Level 2): start, target, controller and surprises (obs
 """
 from __future__ import annotations
 
+import tempfile
+
 import gradio as gr
 import numpy as np
 
@@ -359,6 +361,7 @@ def main(argv=None) -> None:
     demo = build()
     demo.queue(default_concurrency_limit=1)
     demo.launch(server_name=args.host, server_port=args.port, inbrowser=not args.no_browser, share=args.share,
+                show_error=True, allowed_paths=[tempfile.gettempdir()],
                 theme=gr.themes.Soft(primary_hue="blue", neutral_hue="stone",
                                      font=[gr.themes.Font(f) for f in ("ui-sans-serif", "system-ui", "Segoe UI",
                                                                        "sans-serif")]),
